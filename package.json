@@ -1,0 +1,13 @@
+{
+  "name": "finprosper",
+  "version": "1.0.0",
+  "description": "FinProsper — plataforma de educação financeira (HTML, CSS, SASS, Bootstrap 5, JavaScript e jQuery)",
+  "private": true,
+  "scripts": {
+    "build:css": "sass --no-source-map --style=compressed --quiet-deps scss/bootstrap-finprosper.scss css/bootstrap.css"
+  },
+  "devDependencies": {
+    "bootstrap": "5.3.3",
+    "sass": "1.77.8"
+  }
+}

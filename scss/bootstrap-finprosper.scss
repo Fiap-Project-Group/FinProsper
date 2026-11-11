@@ -1,0 +1,24 @@
+// Bootstrap 5 customizado com a paleta do FinProsper (Fase 5 — SASS)
+$blue:    #1e40af;
+$primary: #1e40af;
+$secondary: #006398;
+$body-bg: #faf8ff;
+$body-color: #131b2e;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$enable-cssgrid: true;
+$enable-negative-margins: true;
+$link-decoration: none;
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 2,
+  7: $spacer * 2.5,
+  8: $spacer * 4,
+  9: $spacer * 5
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
