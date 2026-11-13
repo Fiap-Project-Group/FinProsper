@@ -6,10 +6,14 @@
 
 // ---------- MOBILE: abas ----------
 function abrirAba(aba) {
-  $(".tela-s9 .tab-btn").removeClass("fp-bg-primary fp-text-on-primary fp-shadow-sm");
+  $(".tela-s9 .tab-btn").removeClass(
+    "fp-bg-primary fp-text-on-primary fp-shadow-sm",
+  );
   $(".tela-s9 .tab-btn").addClass("fp-text-on-surface-variant");
   $("[data-tab='" + aba + "']").removeClass("fp-text-on-surface-variant");
-  $("[data-tab='" + aba + "']").addClass("fp-bg-primary fp-text-on-primary fp-shadow-sm");
+  $("[data-tab='" + aba + "']").addClass(
+    "fp-bg-primary fp-text-on-primary fp-shadow-sm",
+  );
 
   $(".tela-s9 .tab-pane").addClass("d-none");
   $("#" + aba).removeClass("d-none");
@@ -45,7 +49,7 @@ function simularMobile() {
 
   var anos;
   if (meses % 12 == 0) {
-    anos = "" + (meses / 12);
+    anos = "" + meses / 12;
   } else {
     anos = formatarNumero(meses / 12, 1);
   }
@@ -98,7 +102,8 @@ function calcularJuros() {
   var taxaRealAnual = (1 + taxaAnual) / 1.04 - 1;
   var taxaRealMensal = (1 + taxaRealAnual) ** (1 / 12) - 1;
   var fatorReal = (1 + taxaRealMensal) ** meses;
-  var totalReal = inicial * fatorReal + mensal * ((fatorReal - 1) / taxaRealMensal);
+  var totalReal =
+    inicial * fatorReal + mensal * ((fatorReal - 1) / taxaRealMensal);
 
   // Renda passiva estimada a 0,83% ao mês
   var rendaPassiva = totalAcumulado * 0.0083;
@@ -140,10 +145,14 @@ function escolherTaxa(taxa) {
   var seletor = "[data-rate='" + taxa + "']";
 
   // desmarca todos os cartões
-  $(".tela-s0 .rate-card").removeClass("fp-bg-blue-50 fp-border fp-border-blue-200");
+  $(".tela-s0 .rate-card").removeClass(
+    "fp-bg-blue-50 fp-border fp-border-blue-200",
+  );
   $(".tela-s0 .rate-card").addClass("fp-bg-surface-container-low");
   $(".tela-s0 .rate-card span:first-child").removeClass("fp-text-blue-700");
-  $(".tela-s0 .rate-card span:first-child").addClass("fp-text-on-surface-variant");
+  $(".tela-s0 .rate-card span:first-child").addClass(
+    "fp-text-on-surface-variant",
+  );
   $(".tela-s0 .rate-card span:nth-child(2)").removeClass("fp-text-blue-700");
   $(".tela-s0 .rate-card span:nth-child(2)").addClass("fp-text-on-surface");
 
@@ -166,10 +175,18 @@ function ligarTaxa(taxa) {
 }
 
 function escolherObjetivo(objetivo) {
-  $(".tela-s0 .objective-btn").removeClass("fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold");
-  $(".tela-s0 .objective-btn").addClass("fp-bg-transparent fp-text-on-surface-variant");
-  $("[data-target='" + objetivo + "']").removeClass("fp-bg-transparent fp-text-on-surface-variant");
-  $("[data-target='" + objetivo + "']").addClass("fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold");
+  $(".tela-s0 .objective-btn").removeClass(
+    "fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold",
+  );
+  $(".tela-s0 .objective-btn").addClass(
+    "fp-bg-transparent fp-text-on-surface-variant",
+  );
+  $("[data-target='" + objetivo + "']").removeClass(
+    "fp-bg-transparent fp-text-on-surface-variant",
+  );
+  $("[data-target='" + objetivo + "']").addClass(
+    "fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold",
+  );
 
   // valores sugeridos para cada objetivo
   var anos;
@@ -211,18 +228,30 @@ $(document).ready(function () {
   ligarAba("tab-simulador");
   ligarAba("tab-metas");
 
-  document.getElementById("input-renda").addEventListener("keyup", atualizarFluxo);
-  document.getElementById("input-fixos").addEventListener("keyup", atualizarFluxo);
-  document.getElementById("input-variaveis").addEventListener("keyup", atualizarFluxo);
+  document
+    .getElementById("input-renda")
+    .addEventListener("keyup", atualizarFluxo);
+  document
+    .getElementById("input-fixos")
+    .addEventListener("keyup", atualizarFluxo);
+  document
+    .getElementById("input-variaveis")
+    .addEventListener("keyup", atualizarFluxo);
 
   $("#btn-atualizar-modelo").click(function () {
     atualizarFluxo();
     abrirAba("tab-regra");
   });
 
-  document.getElementById("slider-inicial").addEventListener("change", simularMobile);
-  document.getElementById("slider-mensal").addEventListener("change", simularMobile);
-  document.getElementById("slider-prazo").addEventListener("change", simularMobile);
+  document
+    .getElementById("slider-inicial")
+    .addEventListener("change", simularMobile);
+  document
+    .getElementById("slider-mensal")
+    .addEventListener("change", simularMobile);
+  document
+    .getElementById("slider-prazo")
+    .addEventListener("change", simularMobile);
 
   // Desktop
   ligarCampoESlider("initial-val", "slider-initial");
@@ -242,7 +271,9 @@ $(document).ready(function () {
 
   textoBotaoSalvar = $("#save-sim-btn").html();
   $("#save-sim-btn").click(function () {
-    $("#save-sim-btn").html('<i aria-hidden="true" class="fa-solid fa-check fp-icon fp-text-18px"></i><span>Simulação Salva!</span>');
+    $("#save-sim-btn").html(
+      '<i aria-hidden="true" class="fa-solid fa-check fp-icon fp-text-18px"></i><span>Simulação Salva!</span>',
+    );
     $("#save-sim-btn").removeClass("fp-bg-blue-600");
     $("#save-sim-btn").addClass("fp-salvo");
     simulacaoSalva = true;

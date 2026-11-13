@@ -5,7 +5,7 @@
 var naturezaInicial = "";
 
 function enviarProposta(evento) {
-  evento.preventDefault();   // não recarrega a página
+  evento.preventDefault(); // não recarrega a página
 
   // mostra a mensagem de sucesso
   $("#form-feedback").removeClass("d-none");

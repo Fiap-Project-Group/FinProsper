@@ -17,13 +17,13 @@ apresentado no 1º ano de Engenharia de Software (FIAP).
 
 ## Páginas
 
-| Arquivo | Conteúdo |
-|---|---|
-| `index.html` | Início / Dashboard |
-| `pages/noticias.html` | Notícias e glossário financeiro |
-| `pages/solucao.html` | Simulador de juros compostos e regra 50/30/20 |
-| `pages/impacto.html` | Painel de impacto e métricas |
-| `pages/equipe.html` | Equipe, cultura e formulário de parcerias |
+| Arquivo               | Conteúdo                                      |
+| --------------------- | --------------------------------------------- |
+| `index.html`          | Início / Dashboard                            |
+| `pages/noticias.html` | Notícias e glossário financeiro               |
+| `pages/solucao.html`  | Simulador de juros compostos e regra 50/30/20 |
+| `pages/impacto.html`  | Painel de impacto e métricas                  |
+| `pages/equipe.html`   | Equipe, cultura e formulário de parcerias     |
 
 Cada página tem uma versão para celular/tablet (até 991 px) e outra para desktop (a partir de 992 px),
 alternadas com as classes `d-lg-none` e `d-none d-lg-block` do Bootstrap.

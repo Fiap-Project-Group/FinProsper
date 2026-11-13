@@ -27,8 +27,8 @@ function formatarNumero(valor, casas) {
     valor = -valor;
   }
   var fator = 10 ** casas;
-  var total = valor * fator + 0.5;   // + 0,5 para arredondar
-  total = total - (total % 1);       // tira a parte quebrada
+  var total = valor * fator + 0.5; // + 0,5 para arredondar
+  total = total - (total % 1); // tira a parte quebrada
   var parteDecimal = total % fator;
   var parteInteira = (total - parteDecimal) / fator;
   var texto = sinal + separarMilhar(parteInteira);
@@ -65,7 +65,10 @@ function aparar(texto) {
   while (texto.length > 0 && texto.substring(0, 1) == " ") {
     texto = texto.substring(1, texto.length);
   }
-  while (texto.length > 0 && texto.substring(texto.length - 1, texto.length) == " ") {
+  while (
+    texto.length > 0 &&
+    texto.substring(texto.length - 1, texto.length) == " "
+  ) {
     texto = texto.substring(0, texto.length - 1);
   }
   return texto;
@@ -74,7 +77,7 @@ function aparar(texto) {
 // Deixa o texto em minúsculas e sem acentos, para comparar buscas
 // ("Inflação" e "inflacao" passam a ser iguais)
 var LETRAS_ORIGINAIS = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÉÊÍÓÔÕÚÇáàâãéêíóôõúç";
-var LETRAS_TROCADAS  = "abcdefghijklmnopqrstuvwxyzaaaaeeiooouc" + "aaaaeeiooouc";
+var LETRAS_TROCADAS = "abcdefghijklmnopqrstuvwxyzaaaaeeiooouc" + "aaaaeeiooouc";
 
 function normalizar(texto) {
   var resultado = "";

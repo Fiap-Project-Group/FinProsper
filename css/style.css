@@ -6,836 +6,2819 @@
    ========================================================== */
 
 /* Fontes do Google Fonts (via @import) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap");
 
 /* ---------- Base ---------- */
 /* toda borda começa zerada e sólida: as classes .fp-border* só definem largura e cor */
-*, *::before, *::after { border-width: 0; border-style: solid; border-color: #e5e7eb; }
-body { font-family: 'Inter', sans-serif; background-color: #faf8ff; color: #131b2e; }
-h1, h2, h3, h4, h5, h6 { margin: 0; font-size: inherit; font-weight: inherit; line-height: inherit; }
-p, figure, blockquote { margin: 0; }
-ul, ol { list-style: none; margin: 0; padding: 0; }
-a { color: inherit; text-decoration: none; }
-button { background-color: transparent; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; }
-input, select, textarea { font: inherit; color: inherit; border: 0; background-color: transparent; }
-input:focus, select:focus, textarea:focus { outline: none; }
-img { display: block; max-width: 100%; }
-table { border-collapse: collapse; }
-.fp-icon { font-size: 24px; width: 1em; height: 1em; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #faf8ff;
+  color: #131b2e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+.fp-icon {
+  font-size: 24px;
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 /* o desenho do Font Awesome ocupa a caixa toda; reduzimos para ficar do tamanho visual dos ícones do projeto */
-.fp-icon::before { font-size: 0.8em; }
+.fp-icon::before {
+  font-size: 0.8em;
+}
 /* fundo do cartão "Compromisso Social": cor sólida + bg-gradient do Bootstrap */
-.fp-bg-gradiente { background-color: #1e40af; }
-.fp-logo-link { color: inherit; }
-.modal-content, [data-modal-content] { border: 0; }
-.form-check-input:checked { background-color: #2563eb; border-color: #2563eb; }
+.fp-bg-gradiente {
+  background-color: #1e40af;
+}
+.fp-logo-link {
+  color: inherit;
+}
+.modal-content,
+[data-modal-content] {
+  border: 0;
+}
+.form-check-input:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
 
 /* ---------- Estados controlados pelos scripts ---------- */
-.fp-salvo { background-color: #1e40af; }
+.fp-salvo {
+  background-color: #1e40af;
+}
 /* etiqueta sobre a foto quadrada (.ratio do Bootstrap estica todos os filhos; a etiqueta não deve esticar) */
-.ratio > span { width: auto; height: auto; top: auto; }
+.ratio > span {
+  width: auto;
+  height: auto;
+  top: auto;
+}
 /* pílula de filtro ativa na tela de notícias (mobile) */
-.tela-s4 .filter-pill.active { background-color: #1e40af; color: #ffffff; }
+.tela-s4 .filter-pill.active {
+  background-color: #1e40af;
+  color: #ffffff;
+}
 /* Acordeão do glossário: a seta vira para cima quando o termo está aberto */
-.tela-s8 .glossary-item button[aria-expanded="true"] .fa-chevron-down::before { content: "\f077"; }
+.tela-s8 .glossary-item button[aria-expanded="true"] .fa-chevron-down::before {
+  content: "\f077";
+}
 /* Cartões da equipe ganham sombra maior ao passar o mouse */
-.tela-s5 article:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+.tela-s5 article:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
 
 /* ---------- Telas (geradas a partir do design do Stitch) ---------- */
 
 /* ---------- Cabeçalho padrão (desktop) ---------- */
-.cab { background-color: rgba(250, 248, 255, 0.95); border-bottom: 1px solid #e2e7ff; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04); }
-.cab-conteudo { height: 5rem; max-width: 1280px; }
-.cab-marca { font-family: 'Manrope', sans-serif; font-size: 1.75rem; line-height: 2.25rem; font-weight: 700; letter-spacing: -0.025em; color: #131b2e; }
-.cab-selo { padding: 0 0.25rem; border-radius: 9999px; background-color: #1e40af; color: #ffffff; font-family: 'Inter', sans-serif; font-size: 0.75rem; line-height: 1.25rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-.cab-link { padding: 0.5rem 1rem; border-radius: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; text-align: center; color: #444653; }
-.cab-link:hover { background-color: #f2f3ff; color: #131b2e; }
-.cab-link-ativo, .cab-link-ativo:hover { background-color: #1e40af; color: #ffffff; font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
-.cab-botao { padding: 0.5rem 1rem; border-radius: 0.5rem; background-color: #1e40af; color: #ffffff; font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
-.cab-botao:hover { background-color: #1d4ed8; color: #ffffff; }
-.cab-status { padding: 0.25rem 0.5rem; border-radius: 9999px; background-color: #f2f3ff; color: #444653; font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; }
-.cab-ponto { width: 0.5rem; height: 0.5rem; border-radius: 9999px; background-color: #1e40af; }
-.cab-ponto-claro { background-color: #2563eb; }
-.cab-avatar { width: 2rem; height: 2rem; border-radius: 9999px; background-color: #1e40af; color: #ffffff; }
-.cab-icone-20 { font-size: 20px; }
-.cab-icone-18 { font-size: 18px; }
+.cab {
+  background-color: rgba(250, 248, 255, 0.95);
+  border-bottom: 1px solid #e2e7ff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+.cab-conteudo {
+  height: 5rem;
+  max-width: 1280px;
+}
+.cab-marca {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #131b2e;
+}
+.cab-selo {
+  padding: 0 0.25rem;
+  border-radius: 9999px;
+  background-color: #1e40af;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.cab-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  color: #444653;
+}
+.cab-link:hover {
+  background-color: #f2f3ff;
+  color: #131b2e;
+}
+.cab-link-ativo,
+.cab-link-ativo:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.cab-botao {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #1e40af;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.cab-botao:hover {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+.cab-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: #f2f3ff;
+  color: #444653;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.cab-ponto {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #1e40af;
+}
+.cab-ponto-claro {
+  background-color: #2563eb;
+}
+.cab-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #1e40af;
+  color: #ffffff;
+}
+.cab-icone-20 {
+  font-size: 20px;
+}
+.cab-icone-18 {
+  font-size: 18px;
+}
 
 /* ---------- Cabeçalho padrão (mobile) ---------- */
-.cab-mobile { background-color: rgba(250, 248, 255, 0.9); border-bottom: 1px solid #e2e7ff; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04); }
-.cab-mobile-conteudo { height: 4rem; }
-.cab-logo { height: 2rem; width: auto; }
-.cab-mobile-marca { font-family: 'Manrope', sans-serif; font-size: 1.25rem; line-height: 1; font-weight: 600; letter-spacing: -0.025em; color: #131b2e; }
-.cab-mobile-selo { padding: 0 0.25rem; border-radius: 9999px; background-color: #eff6ff; color: #1d4ed8; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-.cab-mobile-pagina { font-family: 'Inter', sans-serif; font-size: 0.75rem; line-height: 1rem; font-weight: 400; color: #444653; }
-.cab-mobile-status { padding: 0.25rem 0.5rem; border-radius: 9999px; background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; font-family: 'Inter', sans-serif; font-size: 0.75rem; line-height: 1rem; font-weight: 500; }
-.cab-mobile-avatar { width: 2rem; height: 2rem; border-radius: 9999px; border: 2px solid rgba(30, 64, 175, 0.2); object-fit: cover; }
+.cab-mobile {
+  background-color: rgba(250, 248, 255, 0.9);
+  border-bottom: 1px solid #e2e7ff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+.cab-mobile-conteudo {
+  height: 4rem;
+}
+.cab-logo {
+  height: 2rem;
+  width: auto;
+}
+.cab-mobile-marca {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #131b2e;
+}
+.cab-mobile-selo {
+  padding: 0 0.25rem;
+  border-radius: 9999px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.cab-mobile-pagina {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+  color: #444653;
+}
+.cab-mobile-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.cab-mobile-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(30, 64, 175, 0.2);
+  object-fit: cover;
+}
 
 /* ---------- Barra de navegação inferior padrão (mobile) ---------- */
-.nav-inf { background-color: rgba(250, 248, 255, 0.95); border-top: 1px solid #e2e7ff; box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.04); }
-.nav-inf-conteudo { height: 4rem; }
-.nav-inf-link { min-width: 56px; min-height: 44px; padding: 0.25rem 0; color: #444653; font-family: 'Inter', sans-serif; font-size: 0.75rem; line-height: 1; font-weight: 500; }
-.nav-inf-link:hover { color: #1e40af; }
-.nav-inf-ativo { color: #1e40af; font-weight: 600; }
-.nav-inf-icone { font-size: 22px; }
+.nav-inf {
+  background-color: rgba(250, 248, 255, 0.95);
+  border-top: 1px solid #e2e7ff;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.04);
+}
+.nav-inf-conteudo {
+  height: 4rem;
+}
+.nav-inf-link {
+  min-width: 56px;
+  min-height: 44px;
+  padding: 0.25rem 0;
+  color: #444653;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 500;
+}
+.nav-inf-link:hover {
+  color: #1e40af;
+}
+.nav-inf-ativo {
+  color: #1e40af;
+  font-weight: 600;
+}
+.nav-inf-icone {
+  font-size: 22px;
+}
 
 /* ---------- Telas (conteúdo de cada página) ---------- */
-.fp-h-14 { height: 3.5rem; }
-.tela-s5 .fp-h-2 { height: .5rem; }
-.tela-s5 .fp-h-8 { height: 2rem; }
-.tela-s4 .fp-h-1_5 { height: .375rem; }
-.fp-w-14 { width: 3.5rem; }
-.tela-s5 .fp-w-2 { width: .5rem; }
-.tela-s5 .fp-w-8 { width: 2rem; }
-.tela-s4 .fp-h-2 { height: .5rem; }
-.fp-h-36 { height: 9rem; }
-.fp-h-6 { height: 1.5rem; }
-.tela-s4 .fp-h-8 { height: 2rem; }
-.tela-s5 .fp-min-w-0 { min-width: 0; }
-.tela-s0 .fp-h-1_5 { height: .375rem; }
-.tela-s0 .fp-h-10 { height: 2.5rem; }
-.tela-s0 .fp-h-2_5 { height: .625rem; }
-.fp-h-28 { height: 7rem; }
-.tela-s4 .fp-w-2 { width: .5rem; }
-.tela-s0 .fp-h-4 { height: 1rem; }
-.tela-s4 .fp-w-6 { width: 1.5rem; }
-.fp-h-40 { height: 10rem; }
-.tela-s4 .fp-w-8 { width: 2rem; }
-.tela-s0 .fp-h-8 { height: 2rem; }
-.fp-h-100pct { height: 100%; }
-.fp-h-20pct { height: 20%; }
-.fp-h-24pct { height: 24%; }
-.fp-h-12 { height: 3rem; }
-.fp-h-28pct { height: 28%; }
-.fp-h-16 { height: 4rem; }
-.fp-h-35pct { height: 35%; }
-.tela-s1 .fp-h-2 { height: .5rem; }
-.fp-h-44pct { height: 44%; }
-.tela-s1 .fp-h-44 { height: 11rem; }
-.tela-s2 .fp-h-1_5 { height: .375rem; }
-.fp-h-48pct { height: 48%; }
-.tela-s1 .fp-h-8 { height: 2rem; }
-.tela-s2 .fp-h-2 { height: .5rem; }
-.tela-s9 .fp-h-10 { height: 2.5rem; }
-.fp-h-52pct { height: 52%; }
-.tela-s2 .fp-h-2_5 { height: .625rem; }
-.fp-h-60pct { height: 60%; }
-.tela-s9 .fp-h-2 { height: .5rem; }
-.fp-min-h-44px { min-height: 44px; }
-.fp-h-20 { height: 5rem; }
-.fp-h-62pct { height: 62%; }
-.fp-h-11 { height: 2.75rem; }
-.tela-s6 .fp-h-2 { height: .5rem; }
-.tela-s3 .fp-h-2 { height: .5rem; }
-.tela-s2 .fp-h-3 { height: .75rem; }
-.tela-s9 .fp-h-3 { height: .75rem; }
-.fp-h-75pct { height: 75%; }
-.fp-w-12 { width: 3rem; }
-.tela-s6 .fp-h-2_5 { height: .625rem; }
-.fp-h-32 { height: 8rem; }
-.fp-h-5 { height: 1.25rem; }
-.fp-h-82pct { height: 82%; }
-.tela-s9 .fp-h-8 { height: 2rem; }
-.tela-s1 .fp-w-2 { width: .5rem; }
-.tela-s2 .fp-h-44 { height: 11rem; }
-.tela-s3 .fp-h-3 { height: .75rem; }
-.tela-s1 .fp-w-8 { width: 2rem; }
-.tela-s5 .fp-rounded-full { border-radius: 9999px; }
-.fp-h-7 { height: 1.75rem; }
-.fp-h-9 { height: 2.25rem; }
-.fp-h-56 { height: 14rem; }
-.tela-s2 .fp-h-8 { height: 2rem; }
-.tela-s6 .fp-h-8 { height: 2rem; }
-.tela-s5 .fp-rounded-lg { border-radius: .5rem; }
-.tela-s0 .fp-w-10 { width: 2.5rem; }
-.fp-h-1 { height: .25rem; }
-.tela-s3 .fp-h-8 { height: 2rem; }
-.tela-s5 .fp-rounded-xl { border-radius: .75rem; }
-.tela-s1 .fp-min-w-0 { min-width: 0; }
-.tela-s7 .fp-h-10 { height: 2.5rem; }
-.tela-s5 .fp-border { border-width: 1px; }
-.tela-s7 .fp-h-2 { height: .5rem; }
-.fp-min-w-56px { min-width: 56px; }
-.fp-min-h-calc100vh-5rem { min-height: 100vh; }
-.tela-s0 .fp-w-2_5 { width: .625rem; }
-.fp-h-px { height: 1px; }
-.tela-s5 .fp-border-t { border-top-width: 1px; }
-.tela-s7 .fp-h-2_5 { height: .625rem; }
-.tela-s9 .fp-w-10 { width: 2.5rem; }
-.fp-w-24 { width: 6rem; }
-.tela-s9 .fp-w-2 { width: .5rem; }
-.fp-w-1_5 { width: .375rem; }
-.tela-s5 .fp-border-blue-100 { border-color: rgb(219,234,254); }
-.tela-s0 .fp-w-3 { width: .75rem; }
-.fp-w-11 { width: 2.75rem; }
-.tela-s9 .fp-w-8 { width: 2rem; }
-.tela-s5 .fp-border-blue-200 { border-color: rgb(191,219,254); }
-.tela-s2 .fp-w-2 { width: .5rem; }
-.tela-s6 .fp-w-2 { width: .5rem; }
-.tela-s3 .fp-w-2 { width: .5rem; }
-.fp-space-y-1 > * + * { margin-top: .25rem; margin-bottom: 0; }
-.tela-s7 .fp-h-4 { height: 1rem; }
-.tela-s5 .fp-border-blue-50 { border-color: rgb(239,246,255); }
-.tela-s1 .fp-cursor-pointer { cursor: pointer; }
-.tela-s2 .fp-w-2_5 { width: .625rem; }
-.tela-s6 .fp-w-2_5 { width: .625rem; }
-.fp-space-y-2 > * + * { margin-top: .5rem; margin-bottom: 0; }
-.fp-w-9 { width: 2.25rem; }
-.tela-s3 .fp-w-3 { width: .75rem; }
-.tela-s0 .fp-w-8 { width: 2rem; }
-.tela-s7 .fp-h-8 { height: 2rem; }
-.fp-w-5 { width: 1.25rem; }
-.tela-s4 .fp-space-y-space-md > * + * { margin-top: 1rem; margin-bottom: 0; }
-.tela-s6 .fp-w-6 { width: 1.5rem; }
-.fp-bg-eff6ff { background-color: rgb(239,246,255); }
-.tela-s3 .fp-w-8 { width: 2rem; }
-.tela-s5 .fp-bg-blue-100 { background-color: rgb(219,234,254); }
-.fp-w-7 { width: 1.75rem; }
-.fp-space-y-space-sm > * + * { margin-top: .5rem; margin-bottom: 0; }
-.tela-s2 .fp-w-8 { width: 2rem; }
-.tela-s6 .fp-w-8 { width: 2rem; }
-.tela-s5 .fp-bg-blue-400 { background-color: rgb(96,165,250); }
-.fp-space-y-space-xs > * + * { margin-top: .25rem; margin-bottom: 0; }
-.tela-s0 .fp-max-w-2xl { max-width: 42rem; }
-.tela-s5 .fp-bg-blue-50 { background-color: rgb(239,246,255); }
-.tela-s0 .fp-max-w-1280px { max-width: 1280px; }
-.fp-w-1 { width: .25rem; }
-.tela-s2 .fp-max-w-1280px { max-width: 1280px; }
-.tela-s3 .fp-max-w-2xl { max-width: 42rem; }
-.tela-s7 .fp-w-10 { width: 2.5rem; }
-.tela-s7 .fp-w-2 { width: .5rem; }
-.tela-s5 .fp-bg-blue-600 { background-color: rgb(37,99,235); }
-.tela-s0 .fp-cursor-pointer { cursor: pointer; }
-.fp-max-w-90px { max-width: 90px; }
-.tela-s9 .fp-cursor-pointer { cursor: pointer; }
-.tela-s3 .fp-max-w-1280px { max-width: 1280px; }
-.tela-s7 .fp-w-2_5 { width: .625rem; }
-.tela-s5 .fp-bg-blue-700 { background-color: rgb(29,78,216); }
-.tela-s4 .fp-rounded-full { border-radius: 9999px; }
-.tela-s5 .fp-bg-secondary-container { background-color: rgb(218,226,253); background-color: #eff6ff !important; color: #1e40af !important; }
-.fp-max-w-28px { max-width: 28px; }
-.tela-s4 .fp-rounded-lg { border-radius: .5rem; }
-.tela-s5 .fp-bg-surface { background-color: rgb(248,249,255); }
-.tela-s7 .fp-w-8 { width: 2rem; }
-.tela-s8 .fp-h-2 { height: .5rem; }
-.tela-s4 .fp-rounded-xl { border-radius: .75rem; }
-.tela-s5 .fp-bg-surface-container-high { background-color: rgb(220,233,255); background-color: #eff6ff !important; }
-.tela-s5 .fp-bg-surface-container-low { background-color: rgb(239,244,255); background-color: #f0f7ff !important; }
-.fp-rounded-t-2xl { border-top-left-radius: 1rem; border-top-right-radius: 1rem; }
-.tela-s4 .fp-border { border-width: 1px; }
-.tela-s5 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s7 .fp-max-w-2xl { max-width: 42rem; }
-.tela-s5 .fp-bg-surface-80 { background-color: rgba(248,249,255,.8); }
-.tela-s4 .fp-border-b { border-bottom-width: 1px; }
-.tela-s7 .fp-max-w-1280px { max-width: 1280px; }
-.tela-s8 .fp-h-4 { height: 1rem; }
-.tela-s8 .fp-h-44 { height: 11rem; }
-.fp-max-w-xl { max-width: 36rem; }
-.tela-s4 .fp-bg-primary { background-color: rgb(0,105,72); }
-.tela-s5 .fp-bg-white { background-color: rgb(255,255,255); }
-.tela-s8 .fp-h-8 { height: 2rem; }
-.tela-s7 .fp-cursor-pointer { cursor: pointer; }
-.tela-s1 .fp-rounded-2xl { border-radius: 1rem; }
-.tela-s4 .fp-bg-primary-10 { background-color: rgba(0,105,72,.1); }
-.fp-resize-none { resize: none; }
-.tela-s1 .fp-rounded-full { border-radius: 9999px; }
-.tela-s4 .fp-bg-surface { background-color: rgb(248,249,255); }
-.tela-s1 .fp-rounded-lg { border-radius: .5rem; }
-.tela-s4 .fp-bg-surface-container { background-color: rgb(229,238,255); }
-.tela-s4 .fp-bg-surface-container-low { background-color: rgb(239,244,255); }
-.tela-s1 .fp-rounded-xl { border-radius: .75rem; }
-.fp-min-h-260px { min-height: 260px; }
-.tela-s1 .fp-border { border-width: 1px; }
-.tela-s4 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s4 .fp-bg-surface-80 { background-color: rgba(248,249,255,.8); }
-.tela-s1 .fp-border-b { border-bottom-width: 1px; }
-.tela-s8 .fp-w-2 { width: .5rem; }
-.tela-s1 .fp-border-t { border-top-width: 1px; }
-.fp-bg-surface-85 { background-color: rgba(248,249,255,.85); }
-.fp-w-36 { width: 9rem; }
-.fp-border-blue-100-60 { border-color: rgba(219,234,254,.6); }
-.tela-s4 .fp-bg-transparent { background-color: transparent; }
-.fp-w-4 { width: 1rem; }
-.tela-s1 .fp-border-blue-200 { border-color: rgb(191,219,254); }
-.tela-s1 .fp-border-blue-50 { border-color: rgb(239,246,255); }
-.tela-s0 .fp-rounded { border-radius: .125rem; }
-.tela-s1 .fp-border-surface-container { border-color: rgb(234,237,255); }
-.tela-s8 .fp-w-8 { width: 2rem; }
-.tela-s0 .fp-rounded-2xl { border-radius: 1rem; }
-.tela-s0 .fp-rounded-full { border-radius: .75rem; }
-.tela-s2 .fp-rounded-2xl { border-radius: 1rem; }
-.fp-border-white-10 { border-color: hsla(0,0%,100%,.1); }
-.fp-divide-slate-100 > * + * { border-color: rgb(241,245,249); }
-.tela-s0 .fp-rounded-lg { border-radius: .25rem; }
-.tela-s2 .fp-rounded-full { border-radius: .75rem; }
-.tela-s6 .fp-rounded-full { border-radius: 9999px; }
-.fp-border-white-20 { border-color: hsla(0,0%,100%,.2); }
-.tela-s2 .fp-rounded-lg { border-radius: .25rem; }
-.tela-s6 .fp-rounded-lg { border-radius: .5rem; }
-.tela-s9 .fp-rounded-full { border-radius: 9999px; }
-.tela-s1 .fp-bg-blue-100 { background-color: rgb(219,234,254); }
-.tela-s0 .fp-rounded-xl { border-radius: .5rem; }
-.fp-w-fit { width: -moz-fit-content; width: fit-content; }
-.tela-s9 .fp-rounded-lg { border-radius: .5rem; }
-.tela-s2 .fp-rounded-xl { border-radius: .5rem; }
-.tela-s6 .fp-rounded-xl { border-radius: .75rem; }
-.tela-s1 .fp-bg-blue-400 { background-color: rgb(96,165,250); }
-.tela-s0 .fp-rounded-t-sm { border-top-left-radius: .125rem; border-top-right-radius: .125rem; }
-.tela-s1 .fp-bg-blue-50 { background-color: rgb(239,246,255); }
-.tela-s0 .fp-border { border-width: 1px; }
-.tela-s9 .fp-rounded-xl { border-radius: .75rem; }
-.fp-rounded-t { border-top-left-radius: .125rem; border-top-right-radius: .125rem; }
-.fp-w-px { width: 1px; }
-.tela-s3 .fp-rounded { border-radius: .125rem; }
-.tela-s6 .fp-rounded-t-sm { border-top-left-radius: .125rem; border-top-right-radius: .125rem; }
-.tela-s0 .fp-border-b { border-bottom-width: 1px; }
-.tela-s3 .fp-rounded-full { border-radius: .75rem; }
-.tela-s2 .fp-border { border-width: 1px; }
-.tela-s6 .fp-border { border-width: 1px; }
-.fp-bg-blue-500 { background-color: rgb(59,130,246); }
-.tela-s7 .fp-space-y-space-md > * + * { margin-top: 1rem; margin-bottom: 0; }
-.tela-s8 .fp-max-w-2xl { max-width: 42rem; }
-.fp-rounded-l-full { border-top-left-radius: 9999px; border-bottom-left-radius: 9999px; }
-.tela-s2 .fp-border-b { border-bottom-width: 1px; }
-.tela-s6 .fp-border-b { border-bottom-width: 1px; }
-.tela-s3 .fp-rounded-lg { border-radius: .25rem; }
-.tela-s1 .fp-bg-blue-600 { background-color: rgb(37,99,235); }
-.tela-s0 .fp-border-t { border-top-width: 1px; }
-.fp-max-w-3xl { max-width: 48rem; }
-.fp-rounded-r-full { border-top-right-radius: 9999px; border-bottom-right-radius: 9999px; }
-.tela-s1 .fp-bg-primary { background-color: rgb(30,64,175); }
-.tela-s9 .fp-border { border-width: 1px; }
-.tela-s3 .fp-rounded-xl { border-radius: .5rem; }
-.tela-s2 .fp-border-t { border-top-width: 1px; }
-.tela-s6 .fp-border-t { border-top-width: 1px; }
-.tela-s8 .fp-max-w-1280px { max-width: 1280px; }
-.tela-s0 .fp-border-blue-100 { border-color: rgb(219,234,254); }
-.tela-s9 .fp-border-b { border-bottom-width: 1px; }
-.tela-s0 .fp-border-blue-200 { border-color: rgb(191,219,254); }
-.tela-s1 .fp-bg-surface { background-color: rgb(250,248,255); }
-.fp-border-blue-50-80 { border-color: rgba(239,246,255,.8); }
-.tela-s7 .fp-rounded { border-radius: .125rem; }
-.tela-s6 .fp-border-blue-100 { border-color: rgb(219,234,254); }
-.fp-rounded-t-md { border-top-left-radius: .375rem; border-top-right-radius: .375rem; }
-.tela-s2 .fp-border-surface-container { border-color: rgb(239,246,255); }
-.tela-s0 .fp-border-surface-container { border-color: rgb(234,237,255); }
-.tela-s3 .fp-border { border-width: 1px; }
-.tela-s7 .fp-rounded-2xl { border-radius: 1rem; }
-.tela-s1 .fp-bg-surface-container-high { background-color: rgb(226,231,255); }
-.tela-s9 .fp-border-t { border-top-width: 1px; }
-.tela-s3 .fp-border-b { border-bottom-width: 1px; }
-.tela-s1 .fp-bg-surface-container-low { background-color: rgb(242,243,255); }
-.tela-s5 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s5 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s2 .fp-bg-background { background-color: rgb(248,250,252); }
-.tela-s9 .fp-border-blue-100 { border-color: rgb(219,234,254); }
-.fp-border-surface-container-high { border-color: rgb(226,231,255); }
-.fp-border-slate-100 { border-color: rgb(241,245,249); }
-.fp-rounded-3xl { border-radius: 1.5rem; }
-.tela-s2 .fp-bg-primary { background-color: rgb(29,78,216); }
-.tela-s5 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s7 .fp-rounded-full { border-radius: .75rem; }
-.tela-s9 .fp-border-blue-200 { border-color: rgb(191,219,254); }
-.tela-s1 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s3 .fp-border-t { border-top-width: 1px; }
-.tela-s0 .fp-bg-background { background-color: rgb(250,248,255); }
-.fp-border-slate-200-80 { border-color: rgba(226,232,240,.8); }
-.tela-s5 .fp-font-display { font-family: Manrope, sans-serif; }
-.tela-s1 .fp-bg-surface-80 { background-color: rgba(250,248,255,.8); }
-.tela-s9 .fp-border-surface-container { border-color: rgb(234,237,255); }
-.tela-s7 .fp-rounded-lg { border-radius: .25rem; }
-.tela-s0 .fp-bg-blue-100 { background-color: rgb(219,234,254); }
-.tela-s6 .fp-bg-blue-100 { background-color: rgb(219,234,254); }
-.tela-s5 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s2 .fp-bg-primary-container { background-color: rgb(30,64,175); }
-.fp-cursor-not-allowed { cursor: not-allowed; }
-.fp-border-1D4ED8 { border-color: rgb(29,78,216); }
-.tela-s3 .fp-border-surface-container { border-color: rgb(234,237,255); }
-.tela-s5 .fp-text-10px { font-size: 10px; }
-.tela-s7 .fp-rounded-xl { border-radius: .5rem; }
-.tela-s8 .fp-cursor-pointer { cursor: pointer; }
-.tela-s1 .fp-bg-surface-90 { background-color: rgba(250,248,255,.9); }
-.tela-s2 .fp-bg-secondary { background-color: rgb(2,132,199); }
-.fp-border-transparent { border-color: transparent; }
-.fp-bg-blue-50-70 { background-color: rgba(239,246,255,.7); }
-.tela-s9 .fp-bg-blue-100 { background-color: rgb(219,234,254); }
-.tela-s7 .fp-border { border-width: 1px; }
-.fp-bg-white-10 { background-color: hsla(0,0%,100%,.1); }
-.tela-s5 .fp-text-16px { font-size: 16px; }
-.fp-bg-slate-300 { background-color: rgb(203,213,225); }
-.tela-s0 .fp-bg-blue-300 { background-color: rgb(147,197,253); }
-.fp-bg-blue-50-80 { background-color: rgba(239,246,255,.8); }
-.tela-s7 .fp-border-b { border-bottom-width: 1px; }
-.tela-s5 .fp-text-22px { font-size: 22px; }
-.fp-bg-white-15 { background-color: hsla(0,0%,100%,.15); }
-.tela-s6 .fp-bg-blue-600 { background-color: rgb(37,99,235); }
-.tela-s0 .fp-bg-blue-400 { background-color: rgb(96,165,250); }
-.fp-bg-slate-400 { background-color: rgb(148,163,184); }
-.fp-bg-blue-200 { background-color: rgb(191,219,254); }
-.fp-border-surface-container-low { border-color: rgb(242,243,255); }
-.tela-s7 .fp-border-surface-container { border-color: rgb(234,237,255); }
-.tela-s0 .fp-bg-blue-50 { background-color: rgb(239,246,255); }
-.tela-s5 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; letter-spacing: 0; font-weight: 400; }
-.tela-s2 .fp-bg-surface-container { background-color: rgb(239,246,255); }
-.tela-s9 .fp-bg-blue-300 { background-color: rgb(147,197,253); }
-.tela-s6 .fp-bg-blue-700 { background-color: rgb(29,78,216); }
-.fp-bg-1D4ED8 { background-color: rgb(29,78,216); }
-.tela-s5 .fp-text-body-sm { font-size: .875rem; line-height: 1.375rem; letter-spacing: 0; font-weight: 400; }
-.tela-s2 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s9 .fp-bg-blue-400 { background-color: rgb(96,165,250); }
-.fp-bg-blue-800 { background-color: rgb(30,64,175); }
-.fp-bg-1E40AF { background-color: rgb(30,64,175); }
-.tela-s9 .fp-bg-blue-50 { background-color: rgb(239,246,255); }
-.tela-s0 .fp-bg-blue-600 { background-color: rgb(37,99,235); }
-.tela-s7 .fp-bg-background { background-color: rgb(250,248,255); }
-.fp-bg-surface-tint { background-color: rgb(37,99,235); }
-.fp-bg-slate-100 { background-color: rgb(241,245,249); }
-.fp-bg-2563EB { background-color: rgb(37,99,235); }
-.tela-s5 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s7 .fp-bg-blue-600 { background-color: rgb(37,99,235); }
-.fp-bg-white-95 { background-color: hsla(0,0%,100%,.95); }
-.tela-s0 .fp-bg-primary-container { background-color: rgb(30,64,175); }
-.fp-bg-slate-200 { background-color: rgb(226,232,240); }
-.fp-bg-FFFFFF { background-color: rgb(255,255,255); }
-.tela-s9 .fp-bg-primary { background-color: rgb(30,64,175); }
-.tela-s5 .fp-text-label-md { font-size: .75rem; line-height: 1rem; letter-spacing: .02em; font-weight: 600; }
-.tela-s3 .fp-bg-background { background-color: rgb(250,248,255); }
-.fp-bg-primary-fixed { background-color: rgb(221,225,255); }
-.tela-s7 .fp-bg-blue-700 { background-color: rgb(29,78,216); }
-.tela-s6 .fp-bg-surface { background-color: rgb(248,250,252); }
-.tela-s0 .fp-bg-surface-container { background-color: rgb(234,237,255); }
-.tela-s9 .fp-bg-secondary { background-color: rgb(0,99,152); }
-.tela-s3 .fp-bg-inverse-surface { background-color: rgb(40,48,68); }
-.fp-bg-blue-900 { background-color: rgb(30,58,138); }
-.tela-s3 .fp-bg-primary { background-color: rgb(30,64,175); }
-.tela-s9 .fp-bg-surface { background-color: rgb(250,248,255); }
-.tela-s6 .fp-bg-white { background-color: rgb(255,255,255); }
-.tela-s7 .fp-bg-inverse-surface { background-color: rgb(40,48,68); }
-.tela-s9 .fp-bg-surface-container-low { background-color: rgb(242,243,255); }
-.tela-s0 .fp-bg-surface-container-low { background-color: rgb(242,243,255); }
-.tela-s4 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s4 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.fp-bg-white-90 { background-color: hsla(0,0%,100%,.9); }
-.tela-s3 .fp-bg-secondary-container { background-color: rgb(224,237,255); }
-.fp-bg-outline-variant { background-color: rgb(196,197,213); }
-.tela-s4 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s9 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s4 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.tela-s7 .fp-bg-surface-container { background-color: rgb(234,237,255); }
-.fp-bg-surface-container-low-50 { background-color: rgba(242,243,255,.5); }
-.fp-bg-secondary-fixed-dim { background-color: rgb(147,204,255); }
-.tela-s4 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s7 .fp-bg-surface-container-low { background-color: rgb(242,243,255); }
-.tela-s4 .fp-font-label-lg { font-family: Inter, sans-serif; }
-.tela-s0 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s9 .fp-bg-surface-90 { background-color: rgba(250,248,255,.9); }
-.tela-s3 .fp-bg-surface-container { background-color: rgb(234,237,255); }
-.tela-s4 .fp-text-10px { font-size: 10px; }
-.tela-s3 .fp-bg-surface-container-low { background-color: rgb(242,243,255); }
-.tela-s7 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s0 .fp-bg-surface-90 { background-color: rgba(250,248,255,.9); }
-.tela-s9 .fp-bg-white { background-color: rgb(255,255,255); }
-.tela-s5 .fp-leading-relaxed { line-height: 1.625; }
-.tela-s3 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s4 .fp-text-16px { font-size: 16px; }
-.tela-s7 .fp-bg-surface-90 { background-color: rgba(250,248,255,.9); }
-.tela-s0 .fp-bg-transparent { background-color: transparent; }
-.tela-s5 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s3 .fp-bg-surface-90 { background-color: rgba(250,248,255,.9); }
-.tela-s4 .fp-text-18px { font-size: 18px; }
-.tela-s4 .fp-text-20px { font-size: 20px; }
-.tela-s5 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s4 .fp-text-22px { font-size: 22px; }
-.fp-divide-y > * + * { border-top-width: 1px; border-bottom-width: 0; }
-.fp-text-1e40af { color: rgb(30,64,175); }
-.fp-text-40px { font-size: 40px; }
-.fp-divide-surface-container-60 > * + * { border-color: rgba(234,237,255,.6); }
-.tela-s5 .fp-text-blue-600 { color: rgb(37,99,235); }
-.tela-s4 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; letter-spacing: 0; font-weight: 400; }
-.tela-s5 .fp-text-blue-700 { color: rgb(29,78,216); }
-.tela-s4 .fp-text-body-sm { font-size: .875rem; line-height: 1.375rem; letter-spacing: 0; font-weight: 400; }
-.tela-s8 .fp-rounded { border-radius: .125rem; }
-.tela-s5 .fp-text-blue-900 { color: rgb(30,58,138); }
-.tela-s8 .fp-rounded-2xl { border-radius: 1rem; }
-.fp-text-on-secondary-fixed { color: rgb(19,27,46); color: #1e40af !important; }
-.tela-s5 .fp-text-on-surface { color: rgb(11,28,48); }
-.tela-s8 .fp-rounded-full { border-radius: .75rem; }
-.tela-s4 .fp-text-headline-md { font-size: 1.875rem; line-height: 2.375rem; letter-spacing: -.02em; font-weight: 600; }
-.tela-s8 .fp-rounded-lg { border-radius: .25rem; }
-.tela-s4 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s5 .fp-text-on-surface-variant { color: rgb(61,74,66); }
-.tela-s5 .fp-text-primary { color: rgb(0,105,72); color: #1e40af !important; }
-.tela-s1 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s8 .fp-rounded-xl { border-radius: .5rem; }
-.tela-s4 .fp-text-label-lg { font-size: .875rem; line-height: 1.25rem; letter-spacing: .01em; font-weight: 600; }
-.tela-s1 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s1 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s4 .fp-text-label-md { font-size: .75rem; line-height: 1rem; letter-spacing: .02em; font-weight: 600; }
-.tela-s8 .fp-border { border-width: 1px; }
-.fp-font-headline-lg-mobile { font-family: Manrope, sans-serif; }
-.tela-s5 .fp-text-secondary { color: rgb(86,94,116); }
-.tela-s8 .fp-border-b { border-bottom-width: 1px; }
-.tela-s1 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s1 .fp-font-label-lg { font-family: Inter, sans-serif; }
-.tela-s5 .fp-text-white { color: rgb(255,255,255); }
-.tela-s1 .fp-text-10px { font-size: 10px; }
-.tela-s2 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s2 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s8 .fp-border-t { border-top-width: 1px; }
-.tela-s1 .fp-text-11px { font-size: 11px; }
-.tela-s2 .fp-font-data-mono { font-family: JetBrains Mono, monospace; }
-.fp-border-surface-container-40 { border-color: rgba(234,237,255,.4); }
-.tela-s2 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s1 .fp-text-16px { font-size: 16px; }
-.tela-s2 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.fp-border-surface-container-60 { border-color: rgba(234,237,255,.6); }
-.tela-s1 .fp-text-20px { font-size: 20px; }
-.tela-s2 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s6 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s6 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s6 .fp-font-data-mono { font-family: Inter, sans-serif; }
-.fp-border-surface-container-80 { border-color: rgba(234,237,255,.8); }
-.tela-s6 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s1 .fp-text-22px { font-size: 22px; }
-.tela-s8 .fp-bg-background { background-color: rgb(250,248,255); }
-.fp-text-1_875rem { font-size: 1.875rem; }
-.tela-s4 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s6 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s7 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s1 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; letter-spacing: 0; font-weight: 400; }
-.tela-s6 .fp-font-label-lg { font-family: Inter, sans-serif; }
-.tela-s5 .fp-shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s7 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.fp-text-base { font-size: 1rem; line-height: 1.5rem; }
-.tela-s2 .fp-text-11px { font-size: 11px; }
-.tela-s6 .fp-text-10px { font-size: 10px; }
-.tela-s1 .fp-text-body-sm { letter-spacing: 0; font-weight: 400; font-size: .875rem; line-height: 1.375rem; }
-.tela-s7 .fp-font-data-mono { font-family: JetBrains Mono, monospace; }
-.tela-s2 .fp-text-12px { font-size: 12px; }
-.tela-s5 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s7 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s4 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s7 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.tela-s6 .fp-text-18px { font-size: 18px; }
-.tela-s2 .fp-text-13px { font-size: 13px; }
-.tela-s7 .fp-font-headline-lg { font-family: Manrope, sans-serif; }
-.fp-bg-outline-variant-40 { background-color: rgba(196,197,213,.4); }
-.tela-s7 .fp-font-display { font-family: Manrope, sans-serif; }
-.tela-s8 .fp-bg-primary { background-color: rgb(30,64,175); }
-.tela-s4 .fp-text-on-primary { color: rgb(255,255,255); }
-.tela-s6 .fp-text-20px { font-size: 20px; }
-.tela-s7 .fp-font-label-md { font-family: Inter, sans-serif; }
-.fp-text-headline-lg-mobile { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -.02em; font-weight: 700; }
-.tela-s2 .fp-text-14px { font-size: 14px; }
-.tela-s1 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s6 .fp-text-22px { font-size: 22px; }
-.tela-s7 .fp-text-11px { font-size: 11px; }
-.tela-s2 .fp-text-16px { font-size: 16px; }
-.tela-s8 .fp-bg-primary-10 { background-color: rgba(30,64,175,.1); }
-.tela-s4 .fp-text-on-surface { color: rgb(11,28,48); }
-.tela-s0 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s3 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s6 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; letter-spacing: 0; font-weight: 400; }
-.tela-s1 .fp-text-label-lg { font-size: .875rem; line-height: 1.25rem; letter-spacing: .01em; font-weight: 600; }
-.tela-s0 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s3 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s2 .fp-text-18px { font-size: 18px; }
-.tela-s7 .fp-text-12px { font-size: 12px; }
-.tela-s2 .fp-text-20px { font-size: 20px; }
-.tela-s1 .fp-text-label-md { letter-spacing: .02em; font-weight: 600; font-size: .75rem; line-height: 1rem; }
-.tela-s4 .fp-text-on-surface-variant { color: rgb(61,74,66); }
-.tela-s6 .fp-text-body-sm { font-size: .875rem; line-height: 1.375rem; letter-spacing: 0; font-weight: 400; }
-.tela-s8 .fp-bg-surface-container { background-color: rgb(234,237,255); }
-.tela-s7 .fp-text-18px { font-size: 18px; }
-.tela-s0 .fp-font-data-mono { font-family: JetBrains Mono, monospace; }
-.tela-s3 .fp-font-data-mono { font-family: JetBrains Mono, monospace; }
-.tela-s7 .fp-text-20px { font-size: 20px; }
-.tela-s0 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s3 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s4 .fp-text-primary { color: rgb(0,105,72); }
-.tela-s8 .fp-bg-surface-container-low { background-color: rgb(242,243,255); }
-.fp-text-xs { font-size: .75rem; line-height: 1rem; }
-.tela-s0 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.tela-s3 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.tela-s0 .fp-font-headline-lg { font-family: Manrope, sans-serif; }
-.tela-s3 .fp-font-headline-lg { font-family: Manrope, sans-serif; }
-.tela-s6 .fp-text-data-mono { font-size: 1.125rem; line-height: 1.5rem; letter-spacing: -.01em; font-weight: 600; }
-.tela-s3 .fp-font-display { font-family: Manrope, sans-serif; }
-.tela-s0 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s3 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s8 .fp-bg-surface-container-lowest { background-color: rgb(255,255,255); }
-.tela-s7 .fp-text-22px { font-size: 22px; }
-.tela-s4 .fp-text-secondary { color: rgb(86,94,116); }
-.tela-s6 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s0 .fp-text-10px { font-size: 10px; }
-.fp-bg-surface-container-lowest-95 { background-color: hsla(0,0%,100%,.95); }
-.fp-font-title-md { font-family: Manrope, sans-serif; }
-.tela-s7 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
-.tela-s6 .fp-text-label-lg { font-size: .875rem; line-height: 1.25rem; letter-spacing: .01em; font-weight: 600; }
-.tela-s0 .fp-text-16px { font-size: 16px; }
-.tela-s3 .fp-text-16px { font-size: 16px; }
-.tela-s8 .fp-bg-transparent { background-color: transparent; }
-.fp-shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,.25); }
-.tela-s6 .fp-text-label-md { font-size: .75rem; line-height: 1rem; letter-spacing: .02em; font-weight: 600; }
-.tela-s7 .fp-text-body-sm { font-size: .875rem; line-height: 1.25rem; font-weight: 400; }
-.tela-s0 .fp-text-18px { font-size: 18px; }
-.tela-s3 .fp-text-18px { font-size: 18px; }
-.tela-s8 .fp-bg-white { background-color: rgb(255,255,255); }
-.tela-s0 .fp-text-20px { font-size: 20px; }
-.tela-s3 .fp-text-20px { font-size: 20px; }
-.tela-s2 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s7 .fp-text-display { font-size: 3.5rem; line-height: 4.25rem; letter-spacing: -.03em; font-weight: 800; }
-.tela-s9 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s9 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s0 .fp-text-22px { font-size: 22px; }
-.fp-tracking-wide { letter-spacing: .025em; }
-.tela-s9 .fp-font-data-mono { font-family: Inter, sans-serif; }
-.fp-shadow-0_1px_8px_rgba0-0-0-0_04 { box-shadow: 0 1px 8px rgba(0,0,0,.04); }
-.tela-s7 .fp-text-headline-lg { font-size: 2.5rem; line-height: 3rem; letter-spacing: -.02em; font-weight: 700; }
-.tela-s9 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s2 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s1 .fp-leading-relaxed { line-height: 1.625; }
-.tela-s4 .fp-shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s9 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.tela-s7 .fp-text-headline-md { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s2 .fp-text-on-primary { color: rgb(255,255,255); }
-.tela-s7 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.01em; font-weight: 600; }
-.tela-s9 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s0 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
-.tela-s3 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
-.tela-s9 .fp-font-label-lg { font-family: Inter, sans-serif; }
-.tela-s1 .fp-leading-snug { line-height: 1.375; }
-.tela-s4 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s2 .fp-text-on-surface { color: rgb(15,23,42); }
-.tela-s1 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s9 .fp-text-10px { font-size: 10px; }
-.tela-s7 .fp-text-label-md { font-size: .875rem; line-height: 1.25rem; font-weight: 500; }
-.tela-s0 .fp-text-body-sm { font-size: .875rem; line-height: 1.25rem; font-weight: 400; }
-.tela-s3 .fp-text-body-sm { font-size: .875rem; line-height: 1.25rem; font-weight: 400; }
-.tela-s1 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s2 .fp-text-on-surface-variant { color: rgb(71,85,105); }
-.tela-s9 .fp-text-16px { font-size: 16px; }
-.tela-s3 .fp-text-data-mono { font-size: .875rem; line-height: 1.25rem; letter-spacing: -.01em; font-weight: 500; }
-.fp-text-display-mobile { font-size: 2.25rem; line-height: 2.75rem; letter-spacing: -.02em; font-weight: 800; }
-.tela-s6 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s2 .fp-text-primary { color: rgb(29,78,216); }
-.tela-s1 .fp-text-blue-100 { color: rgb(219,234,254); }
-.tela-s9 .fp-text-18px { font-size: 18px; }
-.tela-s0 .fp-text-headline-lg { font-size: 2.5rem; line-height: 3rem; letter-spacing: -.02em; font-weight: 700; }
-.tela-s3 .fp-text-display { font-size: 3.5rem; line-height: 4.25rem; letter-spacing: -.03em; font-weight: 800; }
-.tela-s9 .fp-text-20px { font-size: 20px; }
-.fp-text-blue-200 { color: rgb(191,219,254); }
-.tela-s2 .fp-text-secondary { color: rgb(2,132,199); }
-.tela-s0 .fp-text-headline-md { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s3 .fp-text-headline-lg { font-size: 2.5rem; line-height: 3rem; letter-spacing: -.02em; font-weight: 700; }
-.tela-s1 .fp-text-on-primary { color: rgb(255,255,255); }
-.tela-s0 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.01em; font-weight: 600; }
-.tela-s6 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s9 .fp-text-22px { font-size: 22px; }
-.fp-text-surface-tint { color: rgb(37,99,235); }
-.tela-s3 .fp-text-headline-md { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s3 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.01em; font-weight: 600; }
-.tela-s1 .fp-text-on-surface { color: rgb(19,27,46); }
-.tela-s0 .fp-text-label-md { font-size: .875rem; line-height: 1.25rem; font-weight: 500; }
-.tela-s2 .fp-text-white { color: rgb(255,255,255); }
-.tela-s6 .fp-text-blue-500 { color: rgb(59,130,246); }
-.fp-text-24px { font-size: 24px; }
-.fp-hover-text-blue-700:hover { color: rgb(29,78,216); }
-.tela-s3 .fp-text-label-md { font-size: .875rem; line-height: 1.25rem; font-weight: 500; }
-.tela-s1 .fp-text-on-surface-variant { color: rgb(68,70,83); }
-.tela-s9 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; letter-spacing: 0; font-weight: 400; }
-.tela-s7 .fp-leading-relaxed { line-height: 1.625; }
-.tela-s5 .fp-hover-text-on-surface:hover { color: rgb(11,28,48); }
-.tela-s6 .fp-text-blue-600 { color: rgb(37,99,235); }
-.tela-s7 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s9 .fp-text-body-sm { font-size: .875rem; line-height: 1.375rem; letter-spacing: 0; font-weight: 400; }
-.tela-s1 .fp-text-outline { color: rgb(117,118,132); }
-.fp-shadow-0_-1px_6px_rgba0-0-0-0_02 { box-shadow: 0 -1px 6px rgba(0,0,0,.02); }
-.tela-s6 .fp-text-blue-700 { color: rgb(29,78,216); }
-.fp-text-title-md { font-size: 1.125rem; line-height: 1.5rem; letter-spacing: -.005em; font-weight: 600; }
-.tela-s1 .fp-text-primary { color: rgb(30,64,175); }
-.tela-s7 .fp-tracking-wider { letter-spacing: .05em; }
-.fp-shadow-0_1px_8px_rgba0-40-142-0_04 { box-shadow: 0 1px 8px rgba(0,40,142,.04); }
-.tela-s9 .fp-text-data-mono { font-size: 1.125rem; line-height: 1.5rem; letter-spacing: -.01em; font-weight: 600; }
-.tela-s2 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s6 .fp-text-on-surface { color: rgb(15,23,42); }
-.tela-s1 .fp-text-slate-900 { color: rgb(15,23,42); }
-.fp-tracking-widest { letter-spacing: .1em; }
-.tela-s0 .fp-tracking-tight { letter-spacing: -.025em; }
-.fp-text-surface { color: rgb(250,248,255); }
-.tela-s9 .fp-text-headline-md { font-size: 1.875rem; line-height: 2.375rem; letter-spacing: -.02em; font-weight: 600; }
-.tela-s7 .fp-text-blue-600 { color: rgb(37,99,235); }
-.fp-text-slate-400 { color: rgb(148,163,184); }
-.tela-s9 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.015em; font-weight: 600; }
-.tela-s0 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s1 .fp-text-white { color: rgb(255,255,255); }
-.fp-placeholder-text-secondary::-moz-placeholder { color: rgb(86,94,116); }
-.tela-s7 .fp-text-blue-700 { color: rgb(29,78,216); }
-.fp-text-slate-500 { color: rgb(100,116,139); }
-.tela-s3 .fp-leading-relaxed { line-height: 1.625; }
-.tela-s9 .fp-text-label-lg { font-size: .875rem; line-height: 1.25rem; letter-spacing: .01em; font-weight: 600; }
-.fp-placeholder-text-secondary::placeholder { color: rgb(86,94,116); }
-.tela-s0 .fp-text-blue-600 { color: rgb(37,99,235); }
-.fp-text-slate-600 { color: rgb(71,85,105); }
-.tela-s9 .fp-text-label-md { font-size: .75rem; line-height: 1rem; letter-spacing: .02em; font-weight: 600; }
-.tela-s3 .fp-leading-snug { line-height: 1.375; }
-.fp-shadow-0_-2px_12px_rgba0-0-0-0_04 { box-shadow: 0 -2px 12px rgba(0,0,0,.04); }
-.fp-focus-within-bg-surface-container-lowest:focus-within { background-color: rgb(255,255,255); }
-.tela-s0 .fp-text-blue-700 { color: rgb(29,78,216); }
-.fp-text-slate-800 { color: rgb(30,41,59); }
-.tela-s7 .fp-text-inverse-on-surface { color: rgb(238,240,255); }
-.tela-s7 .fp-text-on-surface { color: rgb(19,27,46); }
-.tela-s3 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s1 .fp-shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s6 .fp-text-slate-900 { color: rgb(15,23,42); }
-.fp-hover-bg-blue-100:hover { background-color: rgb(219,234,254); }
-.fp-focus-within-shadow-sm:focus-within { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.fp-text-blue-800 { color: rgb(30,64,175); }
-.tela-s3 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s7 .fp-text-on-surface-variant { color: rgb(68,70,83); }
-.tela-s6 .fp-text-white { color: rgb(255,255,255); }
-.tela-s4 .fp-hover-bg-surface-container:hover { background-color: rgb(229,238,255); }
-.fp-hover-bg-primary-container:hover { background-color: rgb(30,64,175); }
-.tela-s0 .fp-text-blue-900 { color: rgb(30,58,138); }
-.tela-s1 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s0 .fp-text-on-surface { color: rgb(19,27,46); }
-.tela-s2 .fp-hover-bg-surface-container:hover { background-color: rgb(239,246,255); }
-.tela-s4 .fp-hover-text-on-surface:hover { color: rgb(11,28,48); }
-.fp-text-1E40AF { color: rgb(30,64,175); }
-.fp-text-outline-variant { color: rgb(196,197,213); }
-.tela-s0 .fp-text-on-surface-variant { color: rgb(68,70,83); }
-.tela-s4 .fp-hover-underline:hover { text-decoration-line: underline; }
-.tela-s2 .fp-hover-text-primary:hover { color: rgb(29,78,216); }
-.tela-s7 .fp-text-secondary { color: rgb(0,99,152); }
-.fp-shadow-0_-2px_12px_rgba30-64-175-0_04 { box-shadow: 0 -2px 12px rgba(30,64,175,.04); }
-.fp-text-FFFFFF { color: rgb(255,255,255); }
-.tela-s0 .fp-text-primary { color: rgb(0,40,142); }
-.tela-s7 .fp-text-white { color: rgb(255,255,255); }
-.tela-s3 .fp-text-blue-100 { color: rgb(219,234,254); }
-.fp-hover-text-primary-container:hover { color: rgb(30,64,175); }
-.tela-s4 .fp-hover-shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.fp-shadow-0_1px_8px_rgba30-64-175-0_04 { box-shadow: 0 1px 8px rgba(30,64,175,.04); }
-.tela-s6 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s2 .fp-group:hover .fp-group-hover-text-primary { color: rgb(29,78,216); }
-.fp-text-primary-container { color: rgb(30,64,175); }
-.tela-s3 .fp-text-inverse-on-surface { color: rgb(238,240,255); }
-.tela-s3 .fp-text-on-primary { color: rgb(255,255,255); }
-.tela-s9 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s0 .fp-text-secondary { color: rgb(0,99,152); }
-.tela-s3 .fp-text-on-surface { color: rgb(19,27,46); }
-.tela-s9 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s0 .fp-text-white { color: rgb(255,255,255); }
-.tela-s7 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s3 .fp-text-on-surface-variant { color: rgb(68,70,83); }
-.tela-s9 .fp-text-blue-500 { color: rgb(59,130,246); }
-.tela-s3 .fp-text-primary { color: rgb(30,64,175); }
-.tela-s9 .fp-text-blue-600 { color: rgb(37,99,235); }
-.tela-s9 .fp-text-on-primary { color: rgb(255,255,255); }
-.fp-hover-border-blue-200:hover { border-color: rgb(191,219,254); }
-.fp-shadow-0_-1px_6px_rgba0-0-0-0_03 { box-shadow: 0 -1px 6px rgba(0,0,0,.03); }
-.tela-s9 .fp-text-on-surface { color: rgb(19,27,46); }
-.tela-s1 .fp-hover-bg-blue-800:hover { background-color: rgb(30,64,175); }
-.tela-s3 .fp-text-secondary { color: rgb(0,99,152); }
-.tela-s0 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s9 .fp-text-on-surface-variant { color: rgb(68,70,83); }
-.tela-s8 .fp-font-body-md { font-family: Inter, sans-serif; }
-.tela-s8 .fp-font-body-sm { font-family: Inter, sans-serif; }
-.tela-s3 .fp-text-white { color: rgb(255,255,255); }
-.tela-s1 .fp-hover-text-primary:hover { color: rgb(30,64,175); }
-.fp-font-body-lg { font-family: Inter, sans-serif; }
-.tela-s8 .fp-font-headline-sm { font-family: Manrope, sans-serif; }
-.tela-s9 .fp-text-primary { color: rgb(30,64,175); }
-.tela-s1 .fp-hover-underline:hover { text-decoration-line: underline; }
-.tela-s8 .fp-font-headline-md { font-family: Manrope, sans-serif; }
-.tela-s8 .fp-font-headline-lg { font-family: Manrope, sans-serif; }
-.tela-s8 .fp-font-label-md { font-family: Inter, sans-serif; }
-.tela-s8 .fp-font-label-lg { font-family: Inter, sans-serif; }
-.tela-s9 .fp-text-secondary { color: rgb(0,99,152); }
-.fp-hover-text-slate-600:hover { color: rgb(71,85,105); }
-.fp-placeholder-text-on-surface-variant-60::-moz-placeholder { color: rgba(68,70,83,.6); }
-.tela-s9 .fp-text-white { color: rgb(255,255,255); }
-.tela-s8 .fp-text-11px { font-size: 11px; }
-.fp-active-bg-surface-container-low:active { background-color: rgb(242,243,255); }
-.fp-shadow { box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); }
-.fp-placeholder-text-on-surface-variant-60::placeholder { color: rgba(68,70,83,.6); }
-.tela-s8 .fp-text-12px { font-size: 12px; }
-.fp-hover-bg-1e3a8a:hover { background-color: rgb(30,58,138); }
-.tela-s7 .fp-hover-bg-blue-800:hover { background-color: rgb(30,64,175); }
-.tela-s8 .fp-text-13px { font-size: 13px; }
-.tela-s8 .fp-text-14px { font-size: 14px; }
-.tela-s7 .fp-hover-bg-surface-container-low:hover { background-color: rgb(242,243,255); }
-.tela-s3 .fp-shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s8 .fp-text-16px { font-size: 16px; }
-.tela-s7 .fp-hover-text-on-surface:hover { color: rgb(19,27,46); }
-.tela-s8 .fp-text-18px { font-size: 18px; }
-.tela-s7 .fp-hover-shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.fp-shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0,0,0,.05); }
-.tela-s3 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.tela-s8 .fp-text-20px { font-size: 20px; }
-.fp-focus-bg-surface-container:focus { background-color: rgb(234,237,255); }
-.tela-s9 .fp-shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s8 .fp-text-22px { font-size: 22px; }
-.tela-s9 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.fp-text-body-lg { font-size: 1.125rem; line-height: 1.75rem; font-weight: 400; }
-.tela-s8 .fp-text-body-md { font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
-.tela-s8 .fp-text-body-sm { font-size: .875rem; line-height: 1.25rem; font-weight: 400; }
-.tela-s8 .fp-text-headline-lg { font-size: 2.5rem; line-height: 3rem; letter-spacing: -.02em; font-weight: 700; }
-.fp-hover-bg-173bab:hover { background-color: rgb(23,59,171); }
-.tela-s8 .fp-text-headline-md { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -.015em; font-weight: 600; }
-.fp-hover-bg-1d4ed8:hover { background-color: rgb(29,78,216); }
-.fp-hover-bg-1D4ED8:hover { background-color: rgb(29,78,216); }
-.tela-s8 .fp-text-headline-sm { font-size: 1.25rem; line-height: 1.75rem; letter-spacing: -.01em; font-weight: 600; }
-.fp-hover-bg-primary:hover { background-color: rgb(30,64,175); }
-.tela-s8 .fp-text-label-lg { font-size: .875rem; line-height: 1.25rem; letter-spacing: .01em; font-weight: 600; }
-.tela-s3 .fp-hover-bg-surface-container-low:hover { background-color: rgb(242,243,255); }
-.fp-hover-bg-blue-50:hover { background-color: rgb(239,246,255); }
-.tela-s8 .fp-text-label-md { font-size: .875rem; line-height: 1.25rem; font-weight: 500; }
-.tela-s0 .fp-hover-bg-blue-700:hover { background-color: rgb(29,78,216); }
-.fp-hover-bg-surface-container-low-30:hover { background-color: rgba(242,243,255,.3); }
-.tela-s0 .fp-hover-bg-surface-container:hover { background-color: rgb(234,237,255); }
-.tela-s3 .fp-hover-text-on-surface:hover { color: rgb(19,27,46); }
-.tela-s9 .fp-hover-bg-blue-800:hover { background-color: rgb(30,64,175); }
-.fp-hover-bg-surface-container-high:hover { background-color: rgb(226,231,255); }
-.fp-group:hover .fp-group-hover-opacity-100 { opacity: 1; }
-.tela-s9 .fp-hover-text-on-surface:hover { color: rgb(19,27,46); }
-.tela-s0 .fp-hover-bg-surface-container-low:hover { background-color: rgb(242,243,255); }
-.tela-s9 .fp-hover-text-primary:hover { color: rgb(30,64,175); }
-.tela-s0 .fp-hover-text-on-surface:hover { color: rgb(19,27,46); }
-.tela-s8 .fp-leading-relaxed { line-height: 1.625; }
-.fp-focus-border-primary-30:focus { border-color: rgba(30,64,175,.3); }
-.tela-s8 .fp-leading-snug { line-height: 1.375; }
-.fp-focus-border-secondary-30:focus { border-color: rgba(0,99,152,.3); }
-.fp-focus-bg-surface-container-lowest:focus { background-color: rgb(255,255,255); }
-.tela-s8 .fp-tracking-tight { letter-spacing: -.025em; }
-.tela-s8 .fp-tracking-wider { letter-spacing: .05em; }
-.tela-s8 .fp-text-blue-100 { color: rgb(219,234,254); }
-.fp-text-error { color: rgb(186,26,26); }
-.tela-s8 .fp-text-on-primary { color: rgb(255,255,255); }
-.tela-s8 .fp-text-on-surface { color: rgb(19,27,46); }
-.tela-s8 .fp-text-on-surface-variant { color: rgb(68,70,83); }
-.tela-s8 .fp-text-outline { color: rgb(117,118,132); }
-.tela-s8 .fp-text-primary { color: rgb(30,64,175); }
-.fp-text-primary-fixed { color: rgb(221,225,255); }
-.tela-s8 .fp-text-white { color: rgb(255,255,255); }
-.tela-s8 .fp-shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s8 .fp-shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
-.fp-placeholder-text-outline::-moz-placeholder { color: rgb(117,118,132); }
-.fp-placeholder-text-outline::placeholder { color: rgb(117,118,132); }
-.tela-s8 .fp-hover-bg-blue-700:hover { background-color: rgb(29,78,216); }
-.tela-s8 .fp-hover-bg-surface-container:hover { background-color: rgb(234,237,255); }
-.tela-s8 .fp-hover-bg-surface-container-low:hover { background-color: rgb(242,243,255); }
-.tela-s8 .fp-hover-text-on-surface:hover { color: rgb(19,27,46); }
-.tela-s8 .fp-hover-text-primary:hover { color: rgb(30,64,175); }
-.tela-s8 .fp-hover-underline:hover { text-decoration-line: underline; }
-.tela-s8 .fp-hover-shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); }
-.tela-s8 .fp-group:hover .fp-group-hover-text-primary { color: rgb(30,64,175); }
-.fp-anel-2-rgba30641752 { border: 2px solid rgba(30,64,175,.2); }
-.tela-s1 .fp-limite-2-linhas { overflow: hidden; max-height: 3.0em; }
-.tela-s4 .fp-limite-2-linhas { overflow: hidden; max-height: 3.0em; }
-.tela-s8 .fp-limite-2-linhas { overflow: hidden; max-height: 3.0em; }
-.fp-anel-2-rgba0105722 { border: 2px solid rgba(0,105,72,.2); }
-.fp-limite-3-linhas { overflow: hidden; max-height: 4.5em; }
-.fp-anel-2-rgba30641753 { border: 2px solid rgba(30,64,175,.3); }
-.fp-anel-2-rgba379923525 { border: 2px solid rgba(37,99,235,.25); }
-.fp-anel-2-rgba306417525important { border: 2px solid rgba(30,64,175,.25) !important; }
-.fp-anel-2-rgba37992352 { border: 2px solid rgba(37,99,235,.2); }
-.fp-md-min-h-full { min-height: 100%; }
+.fp-h-14 {
+  height: 3.5rem;
+}
+.tela-s5 .fp-h-2 {
+  height: 0.5rem;
+}
+.tela-s5 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s4 .fp-h-1_5 {
+  height: 0.375rem;
+}
+.fp-w-14 {
+  width: 3.5rem;
+}
+.tela-s5 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s5 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s4 .fp-h-2 {
+  height: 0.5rem;
+}
+.fp-h-36 {
+  height: 9rem;
+}
+.fp-h-6 {
+  height: 1.5rem;
+}
+.tela-s4 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s5 .fp-min-w-0 {
+  min-width: 0;
+}
+.tela-s0 .fp-h-1_5 {
+  height: 0.375rem;
+}
+.tela-s0 .fp-h-10 {
+  height: 2.5rem;
+}
+.tela-s0 .fp-h-2_5 {
+  height: 0.625rem;
+}
+.fp-h-28 {
+  height: 7rem;
+}
+.tela-s4 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s0 .fp-h-4 {
+  height: 1rem;
+}
+.tela-s4 .fp-w-6 {
+  width: 1.5rem;
+}
+.fp-h-40 {
+  height: 10rem;
+}
+.tela-s4 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s0 .fp-h-8 {
+  height: 2rem;
+}
+.fp-h-100pct {
+  height: 100%;
+}
+.fp-h-20pct {
+  height: 20%;
+}
+.fp-h-24pct {
+  height: 24%;
+}
+.fp-h-12 {
+  height: 3rem;
+}
+.fp-h-28pct {
+  height: 28%;
+}
+.fp-h-16 {
+  height: 4rem;
+}
+.fp-h-35pct {
+  height: 35%;
+}
+.tela-s1 .fp-h-2 {
+  height: 0.5rem;
+}
+.fp-h-44pct {
+  height: 44%;
+}
+.tela-s1 .fp-h-44 {
+  height: 11rem;
+}
+.tela-s2 .fp-h-1_5 {
+  height: 0.375rem;
+}
+.fp-h-48pct {
+  height: 48%;
+}
+.tela-s1 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s2 .fp-h-2 {
+  height: 0.5rem;
+}
+.tela-s9 .fp-h-10 {
+  height: 2.5rem;
+}
+.fp-h-52pct {
+  height: 52%;
+}
+.tela-s2 .fp-h-2_5 {
+  height: 0.625rem;
+}
+.fp-h-60pct {
+  height: 60%;
+}
+.tela-s9 .fp-h-2 {
+  height: 0.5rem;
+}
+.fp-min-h-44px {
+  min-height: 44px;
+}
+.fp-h-20 {
+  height: 5rem;
+}
+.fp-h-62pct {
+  height: 62%;
+}
+.fp-h-11 {
+  height: 2.75rem;
+}
+.tela-s6 .fp-h-2 {
+  height: 0.5rem;
+}
+.tela-s3 .fp-h-2 {
+  height: 0.5rem;
+}
+.tela-s2 .fp-h-3 {
+  height: 0.75rem;
+}
+.tela-s9 .fp-h-3 {
+  height: 0.75rem;
+}
+.fp-h-75pct {
+  height: 75%;
+}
+.fp-w-12 {
+  width: 3rem;
+}
+.tela-s6 .fp-h-2_5 {
+  height: 0.625rem;
+}
+.fp-h-32 {
+  height: 8rem;
+}
+.fp-h-5 {
+  height: 1.25rem;
+}
+.fp-h-82pct {
+  height: 82%;
+}
+.tela-s9 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s1 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s2 .fp-h-44 {
+  height: 11rem;
+}
+.tela-s3 .fp-h-3 {
+  height: 0.75rem;
+}
+.tela-s1 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s5 .fp-rounded-full {
+  border-radius: 9999px;
+}
+.fp-h-7 {
+  height: 1.75rem;
+}
+.fp-h-9 {
+  height: 2.25rem;
+}
+.fp-h-56 {
+  height: 14rem;
+}
+.tela-s2 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s6 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s5 .fp-rounded-lg {
+  border-radius: 0.5rem;
+}
+.tela-s0 .fp-w-10 {
+  width: 2.5rem;
+}
+.fp-h-1 {
+  height: 0.25rem;
+}
+.tela-s3 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s5 .fp-rounded-xl {
+  border-radius: 0.75rem;
+}
+.tela-s1 .fp-min-w-0 {
+  min-width: 0;
+}
+.tela-s7 .fp-h-10 {
+  height: 2.5rem;
+}
+.tela-s5 .fp-border {
+  border-width: 1px;
+}
+.tela-s7 .fp-h-2 {
+  height: 0.5rem;
+}
+.fp-min-w-56px {
+  min-width: 56px;
+}
+.fp-min-h-calc100vh-5rem {
+  min-height: 100vh;
+}
+.tela-s0 .fp-w-2_5 {
+  width: 0.625rem;
+}
+.fp-h-px {
+  height: 1px;
+}
+.tela-s5 .fp-border-t {
+  border-top-width: 1px;
+}
+.tela-s7 .fp-h-2_5 {
+  height: 0.625rem;
+}
+.tela-s9 .fp-w-10 {
+  width: 2.5rem;
+}
+.fp-w-24 {
+  width: 6rem;
+}
+.tela-s9 .fp-w-2 {
+  width: 0.5rem;
+}
+.fp-w-1_5 {
+  width: 0.375rem;
+}
+.tela-s5 .fp-border-blue-100 {
+  border-color: rgb(219, 234, 254);
+}
+.tela-s0 .fp-w-3 {
+  width: 0.75rem;
+}
+.fp-w-11 {
+  width: 2.75rem;
+}
+.tela-s9 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s5 .fp-border-blue-200 {
+  border-color: rgb(191, 219, 254);
+}
+.tela-s2 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s6 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s3 .fp-w-2 {
+  width: 0.5rem;
+}
+.fp-space-y-1 > * + * {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+.tela-s7 .fp-h-4 {
+  height: 1rem;
+}
+.tela-s5 .fp-border-blue-50 {
+  border-color: rgb(239, 246, 255);
+}
+.tela-s1 .fp-cursor-pointer {
+  cursor: pointer;
+}
+.tela-s2 .fp-w-2_5 {
+  width: 0.625rem;
+}
+.tela-s6 .fp-w-2_5 {
+  width: 0.625rem;
+}
+.fp-space-y-2 > * + * {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.fp-w-9 {
+  width: 2.25rem;
+}
+.tela-s3 .fp-w-3 {
+  width: 0.75rem;
+}
+.tela-s0 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s7 .fp-h-8 {
+  height: 2rem;
+}
+.fp-w-5 {
+  width: 1.25rem;
+}
+.tela-s4 .fp-space-y-space-md > * + * {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.tela-s6 .fp-w-6 {
+  width: 1.5rem;
+}
+.fp-bg-eff6ff {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s3 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s5 .fp-bg-blue-100 {
+  background-color: rgb(219, 234, 254);
+}
+.fp-w-7 {
+  width: 1.75rem;
+}
+.fp-space-y-space-sm > * + * {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.tela-s2 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s6 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s5 .fp-bg-blue-400 {
+  background-color: rgb(96, 165, 250);
+}
+.fp-space-y-space-xs > * + * {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+.tela-s0 .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.tela-s5 .fp-bg-blue-50 {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s0 .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.fp-w-1 {
+  width: 0.25rem;
+}
+.tela-s2 .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.tela-s3 .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.tela-s7 .fp-w-10 {
+  width: 2.5rem;
+}
+.tela-s7 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s5 .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.tela-s0 .fp-cursor-pointer {
+  cursor: pointer;
+}
+.fp-max-w-90px {
+  max-width: 90px;
+}
+.tela-s9 .fp-cursor-pointer {
+  cursor: pointer;
+}
+.tela-s3 .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.tela-s7 .fp-w-2_5 {
+  width: 0.625rem;
+}
+.tela-s5 .fp-bg-blue-700 {
+  background-color: rgb(29, 78, 216);
+}
+.tela-s4 .fp-rounded-full {
+  border-radius: 9999px;
+}
+.tela-s5 .fp-bg-secondary-container {
+  background-color: rgb(218, 226, 253);
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+}
+.fp-max-w-28px {
+  max-width: 28px;
+}
+.tela-s4 .fp-rounded-lg {
+  border-radius: 0.5rem;
+}
+.tela-s5 .fp-bg-surface {
+  background-color: rgb(248, 249, 255);
+}
+.tela-s7 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s8 .fp-h-2 {
+  height: 0.5rem;
+}
+.tela-s4 .fp-rounded-xl {
+  border-radius: 0.75rem;
+}
+.tela-s5 .fp-bg-surface-container-high {
+  background-color: rgb(220, 233, 255);
+  background-color: #eff6ff !important;
+}
+.tela-s5 .fp-bg-surface-container-low {
+  background-color: rgb(239, 244, 255);
+  background-color: #f0f7ff !important;
+}
+.fp-rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.tela-s4 .fp-border {
+  border-width: 1px;
+}
+.tela-s5 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s7 .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.tela-s5 .fp-bg-surface-80 {
+  background-color: rgba(248, 249, 255, 0.8);
+}
+.tela-s4 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s7 .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.tela-s8 .fp-h-4 {
+  height: 1rem;
+}
+.tela-s8 .fp-h-44 {
+  height: 11rem;
+}
+.fp-max-w-xl {
+  max-width: 36rem;
+}
+.tela-s4 .fp-bg-primary {
+  background-color: rgb(0, 105, 72);
+}
+.tela-s5 .fp-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s8 .fp-h-8 {
+  height: 2rem;
+}
+.tela-s7 .fp-cursor-pointer {
+  cursor: pointer;
+}
+.tela-s1 .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.tela-s4 .fp-bg-primary-10 {
+  background-color: rgba(0, 105, 72, 0.1);
+}
+.fp-resize-none {
+  resize: none;
+}
+.tela-s1 .fp-rounded-full {
+  border-radius: 9999px;
+}
+.tela-s4 .fp-bg-surface {
+  background-color: rgb(248, 249, 255);
+}
+.tela-s1 .fp-rounded-lg {
+  border-radius: 0.5rem;
+}
+.tela-s4 .fp-bg-surface-container {
+  background-color: rgb(229, 238, 255);
+}
+.tela-s4 .fp-bg-surface-container-low {
+  background-color: rgb(239, 244, 255);
+}
+.tela-s1 .fp-rounded-xl {
+  border-radius: 0.75rem;
+}
+.fp-min-h-260px {
+  min-height: 260px;
+}
+.tela-s1 .fp-border {
+  border-width: 1px;
+}
+.tela-s4 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s4 .fp-bg-surface-80 {
+  background-color: rgba(248, 249, 255, 0.8);
+}
+.tela-s1 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s8 .fp-w-2 {
+  width: 0.5rem;
+}
+.tela-s1 .fp-border-t {
+  border-top-width: 1px;
+}
+.fp-bg-surface-85 {
+  background-color: rgba(248, 249, 255, 0.85);
+}
+.fp-w-36 {
+  width: 9rem;
+}
+.fp-border-blue-100-60 {
+  border-color: rgba(219, 234, 254, 0.6);
+}
+.tela-s4 .fp-bg-transparent {
+  background-color: transparent;
+}
+.fp-w-4 {
+  width: 1rem;
+}
+.tela-s1 .fp-border-blue-200 {
+  border-color: rgb(191, 219, 254);
+}
+.tela-s1 .fp-border-blue-50 {
+  border-color: rgb(239, 246, 255);
+}
+.tela-s0 .fp-rounded {
+  border-radius: 0.125rem;
+}
+.tela-s1 .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.tela-s8 .fp-w-8 {
+  width: 2rem;
+}
+.tela-s0 .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.tela-s0 .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.tela-s2 .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.fp-border-white-10 {
+  border-color: hsla(0, 0%, 100%, 0.1);
+}
+.fp-divide-slate-100 > * + * {
+  border-color: rgb(241, 245, 249);
+}
+.tela-s0 .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.tela-s2 .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.tela-s6 .fp-rounded-full {
+  border-radius: 9999px;
+}
+.fp-border-white-20 {
+  border-color: hsla(0, 0%, 100%, 0.2);
+}
+.tela-s2 .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.tela-s6 .fp-rounded-lg {
+  border-radius: 0.5rem;
+}
+.tela-s9 .fp-rounded-full {
+  border-radius: 9999px;
+}
+.tela-s1 .fp-bg-blue-100 {
+  background-color: rgb(219, 234, 254);
+}
+.tela-s0 .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.fp-w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.tela-s9 .fp-rounded-lg {
+  border-radius: 0.5rem;
+}
+.tela-s2 .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.tela-s6 .fp-rounded-xl {
+  border-radius: 0.75rem;
+}
+.tela-s1 .fp-bg-blue-400 {
+  background-color: rgb(96, 165, 250);
+}
+.tela-s0 .fp-rounded-t-sm {
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+}
+.tela-s1 .fp-bg-blue-50 {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s0 .fp-border {
+  border-width: 1px;
+}
+.tela-s9 .fp-rounded-xl {
+  border-radius: 0.75rem;
+}
+.fp-rounded-t {
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+}
+.fp-w-px {
+  width: 1px;
+}
+.tela-s3 .fp-rounded {
+  border-radius: 0.125rem;
+}
+.tela-s6 .fp-rounded-t-sm {
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+}
+.tela-s0 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s3 .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.tela-s2 .fp-border {
+  border-width: 1px;
+}
+.tela-s6 .fp-border {
+  border-width: 1px;
+}
+.fp-bg-blue-500 {
+  background-color: rgb(59, 130, 246);
+}
+.tela-s7 .fp-space-y-space-md > * + * {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.tela-s8 .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.fp-rounded-l-full {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+.tela-s2 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s6 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s3 .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.tela-s1 .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.tela-s0 .fp-border-t {
+  border-top-width: 1px;
+}
+.fp-max-w-3xl {
+  max-width: 48rem;
+}
+.fp-rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+.tela-s1 .fp-bg-primary {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s9 .fp-border {
+  border-width: 1px;
+}
+.tela-s3 .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.tela-s2 .fp-border-t {
+  border-top-width: 1px;
+}
+.tela-s6 .fp-border-t {
+  border-top-width: 1px;
+}
+.tela-s8 .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.tela-s0 .fp-border-blue-100 {
+  border-color: rgb(219, 234, 254);
+}
+.tela-s9 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s0 .fp-border-blue-200 {
+  border-color: rgb(191, 219, 254);
+}
+.tela-s1 .fp-bg-surface {
+  background-color: rgb(250, 248, 255);
+}
+.fp-border-blue-50-80 {
+  border-color: rgba(239, 246, 255, 0.8);
+}
+.tela-s7 .fp-rounded {
+  border-radius: 0.125rem;
+}
+.tela-s6 .fp-border-blue-100 {
+  border-color: rgb(219, 234, 254);
+}
+.fp-rounded-t-md {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+.tela-s2 .fp-border-surface-container {
+  border-color: rgb(239, 246, 255);
+}
+.tela-s0 .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.tela-s3 .fp-border {
+  border-width: 1px;
+}
+.tela-s7 .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.tela-s1 .fp-bg-surface-container-high {
+  background-color: rgb(226, 231, 255);
+}
+.tela-s9 .fp-border-t {
+  border-top-width: 1px;
+}
+.tela-s3 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s1 .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s5 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s5 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s2 .fp-bg-background {
+  background-color: rgb(248, 250, 252);
+}
+.tela-s9 .fp-border-blue-100 {
+  border-color: rgb(219, 234, 254);
+}
+.fp-border-surface-container-high {
+  border-color: rgb(226, 231, 255);
+}
+.fp-border-slate-100 {
+  border-color: rgb(241, 245, 249);
+}
+.fp-rounded-3xl {
+  border-radius: 1.5rem;
+}
+.tela-s2 .fp-bg-primary {
+  background-color: rgb(29, 78, 216);
+}
+.tela-s5 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s7 .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.tela-s9 .fp-border-blue-200 {
+  border-color: rgb(191, 219, 254);
+}
+.tela-s1 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s3 .fp-border-t {
+  border-top-width: 1px;
+}
+.tela-s0 .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.fp-border-slate-200-80 {
+  border-color: rgba(226, 232, 240, 0.8);
+}
+.tela-s5 .fp-font-display {
+  font-family: Manrope, sans-serif;
+}
+.tela-s1 .fp-bg-surface-80 {
+  background-color: rgba(250, 248, 255, 0.8);
+}
+.tela-s9 .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.tela-s7 .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.tela-s0 .fp-bg-blue-100 {
+  background-color: rgb(219, 234, 254);
+}
+.tela-s6 .fp-bg-blue-100 {
+  background-color: rgb(219, 234, 254);
+}
+.tela-s5 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s2 .fp-bg-primary-container {
+  background-color: rgb(30, 64, 175);
+}
+.fp-cursor-not-allowed {
+  cursor: not-allowed;
+}
+.fp-border-1D4ED8 {
+  border-color: rgb(29, 78, 216);
+}
+.tela-s3 .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.tela-s5 .fp-text-10px {
+  font-size: 10px;
+}
+.tela-s7 .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.tela-s8 .fp-cursor-pointer {
+  cursor: pointer;
+}
+.tela-s1 .fp-bg-surface-90 {
+  background-color: rgba(250, 248, 255, 0.9);
+}
+.tela-s2 .fp-bg-secondary {
+  background-color: rgb(2, 132, 199);
+}
+.fp-border-transparent {
+  border-color: transparent;
+}
+.fp-bg-blue-50-70 {
+  background-color: rgba(239, 246, 255, 0.7);
+}
+.tela-s9 .fp-bg-blue-100 {
+  background-color: rgb(219, 234, 254);
+}
+.tela-s7 .fp-border {
+  border-width: 1px;
+}
+.fp-bg-white-10 {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.tela-s5 .fp-text-16px {
+  font-size: 16px;
+}
+.fp-bg-slate-300 {
+  background-color: rgb(203, 213, 225);
+}
+.tela-s0 .fp-bg-blue-300 {
+  background-color: rgb(147, 197, 253);
+}
+.fp-bg-blue-50-80 {
+  background-color: rgba(239, 246, 255, 0.8);
+}
+.tela-s7 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s5 .fp-text-22px {
+  font-size: 22px;
+}
+.fp-bg-white-15 {
+  background-color: hsla(0, 0%, 100%, 0.15);
+}
+.tela-s6 .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.tela-s0 .fp-bg-blue-400 {
+  background-color: rgb(96, 165, 250);
+}
+.fp-bg-slate-400 {
+  background-color: rgb(148, 163, 184);
+}
+.fp-bg-blue-200 {
+  background-color: rgb(191, 219, 254);
+}
+.fp-border-surface-container-low {
+  border-color: rgb(242, 243, 255);
+}
+.tela-s7 .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.tela-s0 .fp-bg-blue-50 {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s5 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s2 .fp-bg-surface-container {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s9 .fp-bg-blue-300 {
+  background-color: rgb(147, 197, 253);
+}
+.tela-s6 .fp-bg-blue-700 {
+  background-color: rgb(29, 78, 216);
+}
+.fp-bg-1D4ED8 {
+  background-color: rgb(29, 78, 216);
+}
+.tela-s5 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s2 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s9 .fp-bg-blue-400 {
+  background-color: rgb(96, 165, 250);
+}
+.fp-bg-blue-800 {
+  background-color: rgb(30, 64, 175);
+}
+.fp-bg-1E40AF {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s9 .fp-bg-blue-50 {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s0 .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.tela-s7 .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.fp-bg-surface-tint {
+  background-color: rgb(37, 99, 235);
+}
+.fp-bg-slate-100 {
+  background-color: rgb(241, 245, 249);
+}
+.fp-bg-2563EB {
+  background-color: rgb(37, 99, 235);
+}
+.tela-s5 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s7 .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.fp-bg-white-95 {
+  background-color: hsla(0, 0%, 100%, 0.95);
+}
+.tela-s0 .fp-bg-primary-container {
+  background-color: rgb(30, 64, 175);
+}
+.fp-bg-slate-200 {
+  background-color: rgb(226, 232, 240);
+}
+.fp-bg-FFFFFF {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s9 .fp-bg-primary {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s5 .fp-text-label-md {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.tela-s3 .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.fp-bg-primary-fixed {
+  background-color: rgb(221, 225, 255);
+}
+.tela-s7 .fp-bg-blue-700 {
+  background-color: rgb(29, 78, 216);
+}
+.tela-s6 .fp-bg-surface {
+  background-color: rgb(248, 250, 252);
+}
+.tela-s0 .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.tela-s9 .fp-bg-secondary {
+  background-color: rgb(0, 99, 152);
+}
+.tela-s3 .fp-bg-inverse-surface {
+  background-color: rgb(40, 48, 68);
+}
+.fp-bg-blue-900 {
+  background-color: rgb(30, 58, 138);
+}
+.tela-s3 .fp-bg-primary {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s9 .fp-bg-surface {
+  background-color: rgb(250, 248, 255);
+}
+.tela-s6 .fp-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s7 .fp-bg-inverse-surface {
+  background-color: rgb(40, 48, 68);
+}
+.tela-s9 .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s0 .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s4 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s4 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.fp-bg-white-90 {
+  background-color: hsla(0, 0%, 100%, 0.9);
+}
+.tela-s3 .fp-bg-secondary-container {
+  background-color: rgb(224, 237, 255);
+}
+.fp-bg-outline-variant {
+  background-color: rgb(196, 197, 213);
+}
+.tela-s4 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s9 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s4 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s7 .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.fp-bg-surface-container-low-50 {
+  background-color: rgba(242, 243, 255, 0.5);
+}
+.fp-bg-secondary-fixed-dim {
+  background-color: rgb(147, 204, 255);
+}
+.tela-s4 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s7 .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s4 .fp-font-label-lg {
+  font-family: Inter, sans-serif;
+}
+.tela-s0 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s9 .fp-bg-surface-90 {
+  background-color: rgba(250, 248, 255, 0.9);
+}
+.tela-s3 .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.tela-s4 .fp-text-10px {
+  font-size: 10px;
+}
+.tela-s3 .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s7 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s0 .fp-bg-surface-90 {
+  background-color: rgba(250, 248, 255, 0.9);
+}
+.tela-s9 .fp-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s5 .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.tela-s3 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s4 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s7 .fp-bg-surface-90 {
+  background-color: rgba(250, 248, 255, 0.9);
+}
+.tela-s0 .fp-bg-transparent {
+  background-color: transparent;
+}
+.tela-s5 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s3 .fp-bg-surface-90 {
+  background-color: rgba(250, 248, 255, 0.9);
+}
+.tela-s4 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s4 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s5 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s4 .fp-text-22px {
+  font-size: 22px;
+}
+.fp-divide-y > * + * {
+  border-top-width: 1px;
+  border-bottom-width: 0;
+}
+.fp-text-1e40af {
+  color: rgb(30, 64, 175);
+}
+.fp-text-40px {
+  font-size: 40px;
+}
+.fp-divide-surface-container-60 > * + * {
+  border-color: rgba(234, 237, 255, 0.6);
+}
+.tela-s5 .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.tela-s4 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s5 .fp-text-blue-700 {
+  color: rgb(29, 78, 216);
+}
+.tela-s4 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s8 .fp-rounded {
+  border-radius: 0.125rem;
+}
+.tela-s5 .fp-text-blue-900 {
+  color: rgb(30, 58, 138);
+}
+.tela-s8 .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.fp-text-on-secondary-fixed {
+  color: rgb(19, 27, 46);
+  color: #1e40af !important;
+}
+.tela-s5 .fp-text-on-surface {
+  color: rgb(11, 28, 48);
+}
+.tela-s8 .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.tela-s4 .fp-text-headline-md {
+  font-size: 1.875rem;
+  line-height: 2.375rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.tela-s8 .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.tela-s4 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s5 .fp-text-on-surface-variant {
+  color: rgb(61, 74, 66);
+}
+.tela-s5 .fp-text-primary {
+  color: rgb(0, 105, 72);
+  color: #1e40af !important;
+}
+.tela-s1 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s8 .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.tela-s4 .fp-text-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.tela-s1 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s1 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s4 .fp-text-label-md {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.tela-s8 .fp-border {
+  border-width: 1px;
+}
+.fp-font-headline-lg-mobile {
+  font-family: Manrope, sans-serif;
+}
+.tela-s5 .fp-text-secondary {
+  color: rgb(86, 94, 116);
+}
+.tela-s8 .fp-border-b {
+  border-bottom-width: 1px;
+}
+.tela-s1 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s1 .fp-font-label-lg {
+  font-family: Inter, sans-serif;
+}
+.tela-s5 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s1 .fp-text-10px {
+  font-size: 10px;
+}
+.tela-s2 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s2 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s8 .fp-border-t {
+  border-top-width: 1px;
+}
+.tela-s1 .fp-text-11px {
+  font-size: 11px;
+}
+.tela-s2 .fp-font-data-mono {
+  font-family:
+    JetBrains Mono,
+    monospace;
+}
+.fp-border-surface-container-40 {
+  border-color: rgba(234, 237, 255, 0.4);
+}
+.tela-s2 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s1 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s2 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.fp-border-surface-container-60 {
+  border-color: rgba(234, 237, 255, 0.6);
+}
+.tela-s1 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s2 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s6 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s6 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s6 .fp-font-data-mono {
+  font-family: Inter, sans-serif;
+}
+.fp-border-surface-container-80 {
+  border-color: rgba(234, 237, 255, 0.8);
+}
+.tela-s6 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s1 .fp-text-22px {
+  font-size: 22px;
+}
+.tela-s8 .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.fp-text-1_875rem {
+  font-size: 1.875rem;
+}
+.tela-s4 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s6 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s7 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s1 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s6 .fp-font-label-lg {
+  font-family: Inter, sans-serif;
+}
+.tela-s5 .fp-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s7 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.fp-text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.tela-s2 .fp-text-11px {
+  font-size: 11px;
+}
+.tela-s6 .fp-text-10px {
+  font-size: 10px;
+}
+.tela-s1 .fp-text-body-sm {
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.tela-s7 .fp-font-data-mono {
+  font-family:
+    JetBrains Mono,
+    monospace;
+}
+.tela-s2 .fp-text-12px {
+  font-size: 12px;
+}
+.tela-s5 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s7 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s4 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s7 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s6 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s2 .fp-text-13px {
+  font-size: 13px;
+}
+.tela-s7 .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.fp-bg-outline-variant-40 {
+  background-color: rgba(196, 197, 213, 0.4);
+}
+.tela-s7 .fp-font-display {
+  font-family: Manrope, sans-serif;
+}
+.tela-s8 .fp-bg-primary {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s4 .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.tela-s6 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s7 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.fp-text-headline-lg-mobile {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.tela-s2 .fp-text-14px {
+  font-size: 14px;
+}
+.tela-s1 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s6 .fp-text-22px {
+  font-size: 22px;
+}
+.tela-s7 .fp-text-11px {
+  font-size: 11px;
+}
+.tela-s2 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s8 .fp-bg-primary-10 {
+  background-color: rgba(30, 64, 175, 0.1);
+}
+.tela-s4 .fp-text-on-surface {
+  color: rgb(11, 28, 48);
+}
+.tela-s0 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s3 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s6 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s1 .fp-text-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.tela-s0 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s3 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s2 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s7 .fp-text-12px {
+  font-size: 12px;
+}
+.tela-s2 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s1 .fp-text-label-md {
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.tela-s4 .fp-text-on-surface-variant {
+  color: rgb(61, 74, 66);
+}
+.tela-s6 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s8 .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.tela-s7 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s0 .fp-font-data-mono {
+  font-family:
+    JetBrains Mono,
+    monospace;
+}
+.tela-s3 .fp-font-data-mono {
+  font-family:
+    JetBrains Mono,
+    monospace;
+}
+.tela-s7 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s0 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s3 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s4 .fp-text-primary {
+  color: rgb(0, 105, 72);
+}
+.tela-s8 .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.fp-text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.tela-s0 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s3 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s0 .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.tela-s3 .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.tela-s6 .fp-text-data-mono {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.tela-s3 .fp-font-display {
+  font-family: Manrope, sans-serif;
+}
+.tela-s0 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s3 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s8 .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s7 .fp-text-22px {
+  font-size: 22px;
+}
+.tela-s4 .fp-text-secondary {
+  color: rgb(86, 94, 116);
+}
+.tela-s6 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s0 .fp-text-10px {
+  font-size: 10px;
+}
+.fp-bg-surface-container-lowest-95 {
+  background-color: hsla(0, 0%, 100%, 0.95);
+}
+.fp-font-title-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s7 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.tela-s6 .fp-text-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.tela-s0 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s3 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s8 .fp-bg-transparent {
+  background-color: transparent;
+}
+.fp-shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.tela-s6 .fp-text-label-md {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.tela-s7 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.tela-s0 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s3 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s8 .fp-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s0 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s3 .fp-text-20px {
+  font-size: 20px;
+}
+.tela-s2 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s7 .fp-text-display {
+  font-size: 3.5rem;
+  line-height: 4.25rem;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+.tela-s9 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s9 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s0 .fp-text-22px {
+  font-size: 22px;
+}
+.fp-tracking-wide {
+  letter-spacing: 0.025em;
+}
+.tela-s9 .fp-font-data-mono {
+  font-family: Inter, sans-serif;
+}
+.fp-shadow-0_1px_8px_rgba0-0-0-0_04 {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+.tela-s7 .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.tela-s9 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s2 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s1 .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.tela-s4 .fp-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s9 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s7 .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s2 .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.tela-s7 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.tela-s9 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s0 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.tela-s3 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.tela-s9 .fp-font-label-lg {
+  font-family: Inter, sans-serif;
+}
+.tela-s1 .fp-leading-snug {
+  line-height: 1.375;
+}
+.tela-s4 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s2 .fp-text-on-surface {
+  color: rgb(15, 23, 42);
+}
+.tela-s1 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s9 .fp-text-10px {
+  font-size: 10px;
+}
+.tela-s7 .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.tela-s0 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.tela-s3 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.tela-s1 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s2 .fp-text-on-surface-variant {
+  color: rgb(71, 85, 105);
+}
+.tela-s9 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s3 .fp-text-data-mono {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+.fp-text-display-mobile {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+.tela-s6 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s2 .fp-text-primary {
+  color: rgb(29, 78, 216);
+}
+.tela-s1 .fp-text-blue-100 {
+  color: rgb(219, 234, 254);
+}
+.tela-s9 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s0 .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.tela-s3 .fp-text-display {
+  font-size: 3.5rem;
+  line-height: 4.25rem;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+.tela-s9 .fp-text-20px {
+  font-size: 20px;
+}
+.fp-text-blue-200 {
+  color: rgb(191, 219, 254);
+}
+.tela-s2 .fp-text-secondary {
+  color: rgb(2, 132, 199);
+}
+.tela-s0 .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s3 .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.tela-s1 .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.tela-s0 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.tela-s6 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s9 .fp-text-22px {
+  font-size: 22px;
+}
+.fp-text-surface-tint {
+  color: rgb(37, 99, 235);
+}
+.tela-s3 .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s3 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.tela-s1 .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.tela-s0 .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.tela-s2 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s6 .fp-text-blue-500 {
+  color: rgb(59, 130, 246);
+}
+.fp-text-24px {
+  font-size: 24px;
+}
+.fp-hover-text-blue-700:hover {
+  color: rgb(29, 78, 216);
+}
+.tela-s3 .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.tela-s1 .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.tela-s9 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s7 .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.tela-s5 .fp-hover-text-on-surface:hover {
+  color: rgb(11, 28, 48);
+}
+.tela-s6 .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.tela-s7 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s9 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tela-s1 .fp-text-outline {
+  color: rgb(117, 118, 132);
+}
+.fp-shadow-0_-1px_6px_rgba0-0-0-0_02 {
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.02);
+}
+.tela-s6 .fp-text-blue-700 {
+  color: rgb(29, 78, 216);
+}
+.fp-text-title-md {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+.tela-s1 .fp-text-primary {
+  color: rgb(30, 64, 175);
+}
+.tela-s7 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.fp-shadow-0_1px_8px_rgba0-40-142-0_04 {
+  box-shadow: 0 1px 8px rgba(0, 40, 142, 0.04);
+}
+.tela-s9 .fp-text-data-mono {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.tela-s2 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s6 .fp-text-on-surface {
+  color: rgb(15, 23, 42);
+}
+.tela-s1 .fp-text-slate-900 {
+  color: rgb(15, 23, 42);
+}
+.fp-tracking-widest {
+  letter-spacing: 0.1em;
+}
+.tela-s0 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.fp-text-surface {
+  color: rgb(250, 248, 255);
+}
+.tela-s9 .fp-text-headline-md {
+  font-size: 1.875rem;
+  line-height: 2.375rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.tela-s7 .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.fp-text-slate-400 {
+  color: rgb(148, 163, 184);
+}
+.tela-s9 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.tela-s0 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s1 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.fp-placeholder-text-secondary::-moz-placeholder {
+  color: rgb(86, 94, 116);
+}
+.tela-s7 .fp-text-blue-700 {
+  color: rgb(29, 78, 216);
+}
+.fp-text-slate-500 {
+  color: rgb(100, 116, 139);
+}
+.tela-s3 .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.tela-s9 .fp-text-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.fp-placeholder-text-secondary::placeholder {
+  color: rgb(86, 94, 116);
+}
+.tela-s0 .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.fp-text-slate-600 {
+  color: rgb(71, 85, 105);
+}
+.tela-s9 .fp-text-label-md {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.tela-s3 .fp-leading-snug {
+  line-height: 1.375;
+}
+.fp-shadow-0_-2px_12px_rgba0-0-0-0_04 {
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.04);
+}
+.fp-focus-within-bg-surface-container-lowest:focus-within {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s0 .fp-text-blue-700 {
+  color: rgb(29, 78, 216);
+}
+.fp-text-slate-800 {
+  color: rgb(30, 41, 59);
+}
+.tela-s7 .fp-text-inverse-on-surface {
+  color: rgb(238, 240, 255);
+}
+.tela-s7 .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.tela-s3 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s1 .fp-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s6 .fp-text-slate-900 {
+  color: rgb(15, 23, 42);
+}
+.fp-hover-bg-blue-100:hover {
+  background-color: rgb(219, 234, 254);
+}
+.fp-focus-within-shadow-sm:focus-within {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.fp-text-blue-800 {
+  color: rgb(30, 64, 175);
+}
+.tela-s3 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s7 .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.tela-s6 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s4 .fp-hover-bg-surface-container:hover {
+  background-color: rgb(229, 238, 255);
+}
+.fp-hover-bg-primary-container:hover {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s0 .fp-text-blue-900 {
+  color: rgb(30, 58, 138);
+}
+.tela-s1 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s0 .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.tela-s2 .fp-hover-bg-surface-container:hover {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s4 .fp-hover-text-on-surface:hover {
+  color: rgb(11, 28, 48);
+}
+.fp-text-1E40AF {
+  color: rgb(30, 64, 175);
+}
+.fp-text-outline-variant {
+  color: rgb(196, 197, 213);
+}
+.tela-s0 .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.tela-s4 .fp-hover-underline:hover {
+  text-decoration-line: underline;
+}
+.tela-s2 .fp-hover-text-primary:hover {
+  color: rgb(29, 78, 216);
+}
+.tela-s7 .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.fp-shadow-0_-2px_12px_rgba30-64-175-0_04 {
+  box-shadow: 0 -2px 12px rgba(30, 64, 175, 0.04);
+}
+.fp-text-FFFFFF {
+  color: rgb(255, 255, 255);
+}
+.tela-s0 .fp-text-primary {
+  color: rgb(0, 40, 142);
+}
+.tela-s7 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s3 .fp-text-blue-100 {
+  color: rgb(219, 234, 254);
+}
+.fp-hover-text-primary-container:hover {
+  color: rgb(30, 64, 175);
+}
+.tela-s4 .fp-hover-shadow-md:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.fp-shadow-0_1px_8px_rgba30-64-175-0_04 {
+  box-shadow: 0 1px 8px rgba(30, 64, 175, 0.04);
+}
+.tela-s6 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s2 .fp-group:hover .fp-group-hover-text-primary {
+  color: rgb(29, 78, 216);
+}
+.fp-text-primary-container {
+  color: rgb(30, 64, 175);
+}
+.tela-s3 .fp-text-inverse-on-surface {
+  color: rgb(238, 240, 255);
+}
+.tela-s3 .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.tela-s9 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s0 .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.tela-s3 .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.tela-s9 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s0 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s7 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s3 .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.tela-s9 .fp-text-blue-500 {
+  color: rgb(59, 130, 246);
+}
+.tela-s3 .fp-text-primary {
+  color: rgb(30, 64, 175);
+}
+.tela-s9 .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.tela-s9 .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.fp-hover-border-blue-200:hover {
+  border-color: rgb(191, 219, 254);
+}
+.fp-shadow-0_-1px_6px_rgba0-0-0-0_03 {
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.03);
+}
+.tela-s9 .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.tela-s1 .fp-hover-bg-blue-800:hover {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s3 .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.tela-s0 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s9 .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.tela-s8 .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s8 .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.tela-s3 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s1 .fp-hover-text-primary:hover {
+  color: rgb(30, 64, 175);
+}
+.fp-font-body-lg {
+  font-family: Inter, sans-serif;
+}
+.tela-s8 .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.tela-s9 .fp-text-primary {
+  color: rgb(30, 64, 175);
+}
+.tela-s1 .fp-hover-underline:hover {
+  text-decoration-line: underline;
+}
+.tela-s8 .fp-font-headline-md {
+  font-family: Manrope, sans-serif;
+}
+.tela-s8 .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.tela-s8 .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.tela-s8 .fp-font-label-lg {
+  font-family: Inter, sans-serif;
+}
+.tela-s9 .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.fp-hover-text-slate-600:hover {
+  color: rgb(71, 85, 105);
+}
+.fp-placeholder-text-on-surface-variant-60::-moz-placeholder {
+  color: rgba(68, 70, 83, 0.6);
+}
+.tela-s9 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s8 .fp-text-11px {
+  font-size: 11px;
+}
+.fp-active-bg-surface-container-low:active {
+  background-color: rgb(242, 243, 255);
+}
+.fp-shadow {
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+.fp-placeholder-text-on-surface-variant-60::placeholder {
+  color: rgba(68, 70, 83, 0.6);
+}
+.tela-s8 .fp-text-12px {
+  font-size: 12px;
+}
+.fp-hover-bg-1e3a8a:hover {
+  background-color: rgb(30, 58, 138);
+}
+.tela-s7 .fp-hover-bg-blue-800:hover {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s8 .fp-text-13px {
+  font-size: 13px;
+}
+.tela-s8 .fp-text-14px {
+  font-size: 14px;
+}
+.tela-s7 .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s3 .fp-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s8 .fp-text-16px {
+  font-size: 16px;
+}
+.tela-s7 .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.tela-s8 .fp-text-18px {
+  font-size: 18px;
+}
+.tela-s7 .fp-hover-shadow-md:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.fp-shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s3 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.tela-s8 .fp-text-20px {
+  font-size: 20px;
+}
+.fp-focus-bg-surface-container:focus {
+  background-color: rgb(234, 237, 255);
+}
+.tela-s9 .fp-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s8 .fp-text-22px {
+  font-size: 22px;
+}
+.tela-s9 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.fp-text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+.tela-s8 .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.tela-s8 .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.tela-s8 .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.fp-hover-bg-173bab:hover {
+  background-color: rgb(23, 59, 171);
+}
+.tela-s8 .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.fp-hover-bg-1d4ed8:hover {
+  background-color: rgb(29, 78, 216);
+}
+.fp-hover-bg-1D4ED8:hover {
+  background-color: rgb(29, 78, 216);
+}
+.tela-s8 .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.fp-hover-bg-primary:hover {
+  background-color: rgb(30, 64, 175);
+}
+.tela-s8 .fp-text-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.tela-s3 .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.fp-hover-bg-blue-50:hover {
+  background-color: rgb(239, 246, 255);
+}
+.tela-s8 .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.tela-s0 .fp-hover-bg-blue-700:hover {
+  background-color: rgb(29, 78, 216);
+}
+.fp-hover-bg-surface-container-low-30:hover {
+  background-color: rgba(242, 243, 255, 0.3);
+}
+.tela-s0 .fp-hover-bg-surface-container:hover {
+  background-color: rgb(234, 237, 255);
+}
+.tela-s3 .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.tela-s9 .fp-hover-bg-blue-800:hover {
+  background-color: rgb(30, 64, 175);
+}
+.fp-hover-bg-surface-container-high:hover {
+  background-color: rgb(226, 231, 255);
+}
+.fp-group:hover .fp-group-hover-opacity-100 {
+  opacity: 1;
+}
+.tela-s9 .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.tela-s0 .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s9 .fp-hover-text-primary:hover {
+  color: rgb(30, 64, 175);
+}
+.tela-s0 .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.tela-s8 .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.fp-focus-border-primary-30:focus {
+  border-color: rgba(30, 64, 175, 0.3);
+}
+.tela-s8 .fp-leading-snug {
+  line-height: 1.375;
+}
+.fp-focus-border-secondary-30:focus {
+  border-color: rgba(0, 99, 152, 0.3);
+}
+.fp-focus-bg-surface-container-lowest:focus {
+  background-color: rgb(255, 255, 255);
+}
+.tela-s8 .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tela-s8 .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tela-s8 .fp-text-blue-100 {
+  color: rgb(219, 234, 254);
+}
+.fp-text-error {
+  color: rgb(186, 26, 26);
+}
+.tela-s8 .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.tela-s8 .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.tela-s8 .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.tela-s8 .fp-text-outline {
+  color: rgb(117, 118, 132);
+}
+.tela-s8 .fp-text-primary {
+  color: rgb(30, 64, 175);
+}
+.fp-text-primary-fixed {
+  color: rgb(221, 225, 255);
+}
+.tela-s8 .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.tela-s8 .fp-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s8 .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.fp-placeholder-text-outline::-moz-placeholder {
+  color: rgb(117, 118, 132);
+}
+.fp-placeholder-text-outline::placeholder {
+  color: rgb(117, 118, 132);
+}
+.tela-s8 .fp-hover-bg-blue-700:hover {
+  background-color: rgb(29, 78, 216);
+}
+.tela-s8 .fp-hover-bg-surface-container:hover {
+  background-color: rgb(234, 237, 255);
+}
+.tela-s8 .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.tela-s8 .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.tela-s8 .fp-hover-text-primary:hover {
+  color: rgb(30, 64, 175);
+}
+.tela-s8 .fp-hover-underline:hover {
+  text-decoration-line: underline;
+}
+.tela-s8 .fp-hover-shadow-md:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.tela-s8 .fp-group:hover .fp-group-hover-text-primary {
+  color: rgb(30, 64, 175);
+}
+.fp-anel-2-rgba30641752 {
+  border: 2px solid rgba(30, 64, 175, 0.2);
+}
+.tela-s1 .fp-limite-2-linhas {
+  overflow: hidden;
+  max-height: 3em;
+}
+.tela-s4 .fp-limite-2-linhas {
+  overflow: hidden;
+  max-height: 3em;
+}
+.tela-s8 .fp-limite-2-linhas {
+  overflow: hidden;
+  max-height: 3em;
+}
+.fp-anel-2-rgba0105722 {
+  border: 2px solid rgba(0, 105, 72, 0.2);
+}
+.fp-limite-3-linhas {
+  overflow: hidden;
+  max-height: 4.5em;
+}
+.fp-anel-2-rgba30641753 {
+  border: 2px solid rgba(30, 64, 175, 0.3);
+}
+.fp-anel-2-rgba379923525 {
+  border: 2px solid rgba(37, 99, 235, 0.25);
+}
+.fp-anel-2-rgba306417525important {
+  border: 2px solid rgba(30, 64, 175, 0.25) !important;
+}
+.fp-anel-2-rgba37992352 {
+  border: 2px solid rgba(37, 99, 235, 0.2);
+}
+.fp-md-min-h-full {
+  min-height: 100%;
+}
