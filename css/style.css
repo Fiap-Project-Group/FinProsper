@@ -319,6 +319,446 @@ table {
   font-size: 22px;
 }
 
+/* ---------- Página inicial: o problema, o cidadão, a solução e os ODS ---------- */
+.ini-pagina {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #faf8ff;
+  color: #131b2e;
+}
+.ini-hero {
+  padding: 2.5rem 0 3rem;
+  background-color: #f2f3ff;
+}
+.ini-secao {
+  padding: 3rem 0;
+}
+.ini-secao-destaque {
+  background-color: #f2f3ff;
+}
+.ini-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #dbe1ff;
+  color: #1e40af;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.ini-icone-16 {
+  font-size: 16px;
+}
+.ini-titulo {
+  margin-bottom: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #131b2e;
+}
+.ini-lead {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #444653;
+}
+.ini-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ini-figura {
+  margin: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.15);
+}
+.ini-imagem {
+  width: 100%;
+  height: auto;
+}
+.ini-legenda {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.9375rem;
+  color: #444653;
+}
+.ini-legenda-numero {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e40af;
+}
+
+/* Títulos das seções */
+.ini-cabecalho-secao {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+.ini-sobretitulo {
+  margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1e40af;
+}
+.ini-subtitulo {
+  margin-bottom: 0.75rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.625rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #131b2e;
+}
+.ini-texto {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #444653;
+}
+
+/* Persona e dificuldades do cidadão */
+.ini-persona {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #1e40af;
+  color: #ffffff;
+}
+.ini-persona-foto {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+.ini-persona-nome {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.ini-persona-papel {
+  font-size: 0.875rem;
+  color: #dbe1ff;
+}
+.ini-citacao {
+  margin: 1.5rem 0 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+.ini-dores {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.ini-dor {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.ini-dor-icone {
+  font-size: 28px;
+  color: #1e40af;
+}
+.ini-dor-titulo {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #131b2e;
+}
+.ini-dor-texto {
+  font-size: 0.9375rem;
+  color: #444653;
+}
+
+/* Dados do problema */
+.ini-grade-dados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.ini-dado {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.ini-dado-numero {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 800;
+  color: #1e40af;
+}
+.ini-dado-texto {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #131b2e;
+}
+.ini-fonte {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: #444653;
+}
+.ini-fonte a {
+  color: #1e40af;
+  text-decoration: underline;
+}
+.ini-alerta {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #b45309;
+  border-radius: 0.5rem;
+  background-color: #fff7ed;
+}
+.ini-alerta-icone {
+  font-size: 28px;
+  color: #b45309;
+}
+.ini-alerta-texto {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #131b2e;
+}
+
+/* Passos da solução */
+.ini-passo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.ini-passo:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.ini-passo-numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #1e40af;
+  color: #ffffff;
+  font-weight: 700;
+}
+.ini-passo-icone {
+  font-size: 32px;
+  color: #1e40af;
+}
+.ini-passo-titulo {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #131b2e;
+}
+.ini-passo-texto {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444653;
+}
+.ini-passo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+.ini-passo-link:hover {
+  text-decoration: underline;
+}
+
+/* ODS (cores oficiais da ONU) */
+.ini-grade-ods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.ini-ods {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e2e7ff;
+}
+.ini-ods-faixa {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: #ffffff;
+}
+.ini-ods-4 {
+  background-color: #c5192d;
+}
+.ini-ods-10 {
+  background-color: #dd1367;
+}
+.ini-ods-8 {
+  background-color: #a21942;
+}
+.ini-ods-3 {
+  background-color: #4c9f38;
+}
+.ini-ods-numero {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: 800;
+}
+.ini-ods-nome {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.ini-ods-texto {
+  padding: 1rem 1.25rem 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #444653;
+}
+
+/* Chamada final */
+.ini-chamada {
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: center;
+}
+.ini-chamada-titulo {
+  margin-bottom: 0.75rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+.ini-chamada-texto {
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.0625rem;
+  color: #dbe1ff;
+}
+
+/* Rodapé com as fontes */
+.ini-rodape {
+  padding: 2.5rem 0 6rem;
+  border-top: 1px solid #e2e7ff;
+  background-color: #ffffff;
+  color: #444653;
+}
+.ini-rodape-marca {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #131b2e;
+}
+.ini-rodape-texto {
+  font-size: 0.9375rem;
+}
+.ini-rodape-titulo {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #131b2e;
+}
+.ini-fontes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.ini-fontes a {
+  color: #1e40af;
+  text-decoration: underline;
+}
+.ini-rodape-copia {
+  margin-top: 2rem;
+  font-size: 0.8125rem;
+}
+
+/* Foco visível para quem navega pelo teclado */
+.ini-pagina a:focus-visible,
+.ini-rodape a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* ---------- Responsividade da página inicial (media queries) ---------- */
+@media (min-width: 576px) {
+  .ini-botoes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ini-grade-dados,
+  .ini-grade-ods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ini-dores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .ini-titulo {
+    font-size: 2.75rem;
+  }
+  .ini-subtitulo {
+    font-size: 2rem;
+  }
+  .ini-chamada {
+    padding: 3.5rem 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .ini-pagina {
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+  .ini-hero {
+    padding: 4rem 0;
+  }
+  .ini-secao {
+    padding: 4.5rem 0;
+  }
+  .ini-rodape {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ini-titulo {
+    font-size: 3.25rem;
+  }
+  .ini-grade-dados,
+  .ini-grade-ods {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* ---------- Telas (conteúdo de cada página) ---------- */
 .fp-h-14 {
   height: 3.5rem;
