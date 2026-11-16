@@ -7,7 +7,7 @@ apresentado no 1º ano de Engenharia de Software (FIAP).
 ## Tecnologias
 
 - **HTML5**: páginas separadas, uma para cada seção do site
-- **CSS3**: folha de estilos própria (`css/style.css`)
+- **CSS3**: `css/style.css` (compartilhado) e um arquivo por página, com media queries
 - **SASS**: Bootstrap 5 customizado com a paleta do FinProsper (`scss/bootstrap-finprosper.scss`)
 - **Bootstrap 5.3**: grid, utilitários, formulários, modal, acordeão (collapse) e chave liga/desliga
 - **JavaScript**: funções, laços, eventos, `getElementById` e `getElementsByClassName`
@@ -19,14 +19,15 @@ apresentado no 1º ano de Engenharia de Software (FIAP).
 
 | Arquivo               | Conteúdo                                      |
 | --------------------- | --------------------------------------------- |
-| `index.html`          | Início / Dashboard                            |
-| `pages/noticias.html` | Notícias e glossário financeiro               |
+| `index.html`          | Início: o problema, o cidadão, a solução e os ODS |
+| `pages/noticias.html` | Glossário financeiro                          |
 | `pages/solucao.html`  | Simulador de juros compostos e regra 50/30/20 |
 | `pages/impacto.html`  | Painel de impacto e métricas                  |
 | `pages/equipe.html`   | Equipe, cultura e formulário de parcerias     |
 
-Cada página tem uma versão para celular/tablet (até 991 px) e outra para desktop (a partir de 992 px),
-alternadas com as classes `d-lg-none` e `d-none d-lg-block` do Bootstrap.
+Todas as páginas têm um layout único e responsivo: grid e flexbox (do Bootstrap e próprios) e
+media queries nos arquivos CSS de cada página. Só o cabeçalho muda de formato: no celular e no
+tablet (até 991 px) o menu fica numa barra fixa na parte de baixo da tela.
 
 ## Estrutura
 
@@ -37,12 +38,16 @@ FinProsper/
 ├── css/
 │   ├── bootstrap.css     Bootstrap compilado a partir do SASS
 │   ├── fontawesome.css   ícones usados no site
-│   └── style.css         estilos próprios
+│   ├── style.css         estilos compartilhados (base, cabeçalho, menu e rodapé)
+│   ├── index.css         estilos da página inicial
+│   ├── noticias.css      estilos do glossário
+│   ├── solucao.css       estilos do simulador
+│   ├── impacto.css       estilos do painel de impacto
+│   └── equipe.css        estilos da página da equipe
 ├── js/
 │   ├── funcoes.js        funções de apoio (formatar moeda, normalizar texto...)
 │   ├── noticias.js
 │   ├── solucao.js
-│   ├── impacto.js
 │   └── equipe.js
 ├── images/
 └── scss/

@@ -1,0 +1,231 @@
+/* ==========================================================
+   FinProsper — Solução e simulador (pages/solucao.html)
+   ========================================================== */
+
+.pagina-solucao .fp-h-1_5 {
+  height: 0.375rem;
+}
+.pagina-solucao .fp-h-10 {
+  height: 2.5rem;
+}
+.pagina-solucao .fp-h-2_5 {
+  height: 0.625rem;
+}
+.pagina-solucao .fp-h-4 {
+  height: 1rem;
+}
+.pagina-solucao .fp-h-8 {
+  height: 2rem;
+}
+.pagina-solucao .fp-w-10 {
+  width: 2.5rem;
+}
+.pagina-solucao .fp-w-2_5 {
+  width: 0.625rem;
+}
+.pagina-solucao .fp-w-3 {
+  width: 0.75rem;
+}
+.pagina-solucao .fp-w-8 {
+  width: 2rem;
+}
+.pagina-solucao .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.pagina-solucao .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.pagina-solucao .fp-cursor-pointer {
+  cursor: pointer;
+}
+.pagina-solucao .fp-rounded {
+  border-radius: 0.125rem;
+}
+.pagina-solucao .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.pagina-solucao .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.pagina-solucao .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.pagina-solucao .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.pagina-solucao .fp-rounded-t-sm {
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+}
+.pagina-solucao .fp-border {
+  border-width: 1px;
+}
+.pagina-solucao .fp-border-b {
+  border-bottom-width: 1px;
+}
+.pagina-solucao .fp-border-t {
+  border-top-width: 1px;
+}
+.pagina-solucao .fp-border-blue-100 {
+  border-color: rgb(219, 234, 254);
+}
+.pagina-solucao .fp-border-blue-200 {
+  border-color: rgb(191, 219, 254);
+}
+.pagina-solucao .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.pagina-solucao .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.pagina-solucao .fp-bg-blue-100 {
+  background-color: rgb(219, 234, 254);
+}
+.pagina-solucao .fp-bg-blue-300 {
+  background-color: rgb(147, 197, 253);
+}
+.pagina-solucao .fp-bg-blue-400 {
+  background-color: rgb(96, 165, 250);
+}
+.pagina-solucao .fp-bg-blue-50 {
+  background-color: rgb(239, 246, 255);
+}
+.pagina-solucao .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.pagina-solucao .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.pagina-solucao .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-solucao .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.pagina-solucao .fp-bg-transparent {
+  background-color: transparent;
+}
+.pagina-solucao .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-solucao .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.pagina-solucao .fp-font-data-mono {
+  font-family: JetBrains Mono, monospace;
+}
+.pagina-solucao .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.pagina-solucao .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.pagina-solucao .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-solucao .fp-text-10px {
+  font-size: 10px;
+}
+.pagina-solucao .fp-text-16px {
+  font-size: 16px;
+}
+.pagina-solucao .fp-text-18px {
+  font-size: 18px;
+}
+.pagina-solucao .fp-text-20px {
+  font-size: 20px;
+}
+.pagina-solucao .fp-text-22px {
+  font-size: 22px;
+}
+.pagina-solucao .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.pagina-solucao .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.pagina-solucao .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.pagina-solucao .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.pagina-solucao .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.pagina-solucao .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.pagina-solucao .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.pagina-solucao .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.pagina-solucao .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.pagina-solucao .fp-text-blue-700 {
+  color: rgb(29, 78, 216);
+}
+.pagina-solucao .fp-text-blue-900 {
+  color: rgb(30, 58, 138);
+}
+.pagina-solucao .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.pagina-solucao .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.pagina-solucao .fp-text-primary {
+  color: rgb(0, 40, 142);
+}
+.pagina-solucao .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.pagina-solucao .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.pagina-solucao .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.pagina-solucao .fp-hover-bg-blue-700:hover {
+  background-color: rgb(29, 78, 216);
+}
+.pagina-solucao .fp-hover-bg-surface-container:hover {
+  background-color: rgb(234, 237, 255);
+}
+.pagina-solucao .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-solucao .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+
+/* ---------- Responsividade (media queries) ---------- */
+/* Celular: títulos menores para caber na tela */
+@media (max-width: 767.98px) {
+  .pagina-solucao .fp-text-headline-lg {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .pagina-solucao .fp-text-display {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}

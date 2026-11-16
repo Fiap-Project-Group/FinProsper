@@ -1,0 +1,238 @@
+/* ==========================================================
+   FinProsper — Glossário (pages/noticias.html)
+   ========================================================== */
+
+.pagina-noticias .fp-h-2 {
+  height: 0.5rem;
+}
+.pagina-noticias .fp-h-4 {
+  height: 1rem;
+}
+.pagina-noticias .fp-h-8 {
+  height: 2rem;
+}
+.pagina-noticias .fp-w-2 {
+  width: 0.5rem;
+}
+.pagina-noticias .fp-w-8 {
+  width: 2rem;
+}
+.pagina-noticias .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.pagina-noticias .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.pagina-noticias .fp-cursor-pointer {
+  cursor: pointer;
+}
+.pagina-noticias .fp-rounded {
+  border-radius: 0.125rem;
+}
+.pagina-noticias .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.pagina-noticias .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.pagina-noticias .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.pagina-noticias .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.pagina-noticias .fp-border {
+  border-width: 1px;
+}
+.pagina-noticias .fp-border-b {
+  border-bottom-width: 1px;
+}
+.pagina-noticias .fp-border-t {
+  border-top-width: 1px;
+}
+.pagina-noticias .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.pagina-noticias .fp-bg-primary {
+  background-color: rgb(30, 64, 175);
+}
+.pagina-noticias .fp-bg-primary-10 {
+  background-color: rgba(30, 64, 175, 0.1);
+}
+.pagina-noticias .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.pagina-noticias .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-noticias .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.pagina-noticias .fp-bg-transparent {
+  background-color: transparent;
+}
+.pagina-noticias .fp-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.pagina-noticias .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-noticias .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.pagina-noticias .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.pagina-noticias .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.pagina-noticias .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-noticias .fp-font-label-lg {
+  font-family: Inter, sans-serif;
+}
+.pagina-noticias .fp-text-11px {
+  font-size: 11px;
+}
+.pagina-noticias .fp-text-12px {
+  font-size: 12px;
+}
+.pagina-noticias .fp-text-13px {
+  font-size: 13px;
+}
+.pagina-noticias .fp-text-14px {
+  font-size: 14px;
+}
+.pagina-noticias .fp-text-16px {
+  font-size: 16px;
+}
+.pagina-noticias .fp-text-18px {
+  font-size: 18px;
+}
+.pagina-noticias .fp-text-20px {
+  font-size: 20px;
+}
+.pagina-noticias .fp-text-22px {
+  font-size: 22px;
+}
+.pagina-noticias .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.pagina-noticias .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.pagina-noticias .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.pagina-noticias .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.pagina-noticias .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.pagina-noticias .fp-text-label-lg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.pagina-noticias .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.pagina-noticias .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.pagina-noticias .fp-leading-snug {
+  line-height: 1.375;
+}
+.pagina-noticias .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.pagina-noticias .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.pagina-noticias .fp-text-blue-100 {
+  color: rgb(219, 234, 254);
+}
+.pagina-noticias .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.pagina-noticias .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.pagina-noticias .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.pagina-noticias .fp-text-outline {
+  color: rgb(117, 118, 132);
+}
+.pagina-noticias .fp-text-primary {
+  color: rgb(30, 64, 175);
+}
+.pagina-noticias .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.pagina-noticias .fp-shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.pagina-noticias .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.pagina-noticias .fp-hover-bg-blue-700:hover {
+  background-color: rgb(29, 78, 216);
+}
+.pagina-noticias .fp-hover-bg-surface-container:hover {
+  background-color: rgb(234, 237, 255);
+}
+.pagina-noticias .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-noticias .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.pagina-noticias .fp-hover-text-primary:hover {
+  color: rgb(30, 64, 175);
+}
+.pagina-noticias .fp-hover-underline:hover {
+  text-decoration-line: underline;
+}
+.pagina-noticias .fp-hover-shadow-md:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.pagina-noticias .fp-group:hover .fp-group-hover-text-primary {
+  color: rgb(30, 64, 175);
+}
+
+/* Acordeão do glossário: a seta vira para cima quando o termo está aberto */
+.pagina-noticias .glossary-item button[aria-expanded="true"] .fa-chevron-down::before {
+  content: "\f077";
+}
+
+/* ---------- Responsividade (media queries) ---------- */
+/* Celular: títulos menores para caber na tela */
+@media (max-width: 767.98px) {
+  .pagina-noticias .fp-text-headline-lg {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .pagina-noticias .fp-text-display {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}

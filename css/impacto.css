@@ -1,0 +1,217 @@
+/* ==========================================================
+   FinProsper — Impacto e métricas (pages/impacto.html)
+   ========================================================== */
+
+.pagina-impacto .fp-h-2 {
+  height: 0.5rem;
+}
+.pagina-impacto .fp-h-3 {
+  height: 0.75rem;
+}
+.pagina-impacto .fp-h-8 {
+  height: 2rem;
+}
+.pagina-impacto .fp-w-2 {
+  width: 0.5rem;
+}
+.pagina-impacto .fp-w-3 {
+  width: 0.75rem;
+}
+.pagina-impacto .fp-w-8 {
+  width: 2rem;
+}
+.pagina-impacto .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.pagina-impacto .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.pagina-impacto .fp-rounded {
+  border-radius: 0.125rem;
+}
+.pagina-impacto .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.pagina-impacto .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.pagina-impacto .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.pagina-impacto .fp-border {
+  border-width: 1px;
+}
+.pagina-impacto .fp-border-b {
+  border-bottom-width: 1px;
+}
+.pagina-impacto .fp-border-t {
+  border-top-width: 1px;
+}
+.pagina-impacto .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.pagina-impacto .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.pagina-impacto .fp-bg-inverse-surface {
+  background-color: rgb(40, 48, 68);
+}
+.pagina-impacto .fp-bg-primary {
+  background-color: rgb(30, 64, 175);
+}
+.pagina-impacto .fp-bg-secondary-container {
+  background-color: rgb(224, 237, 255);
+}
+.pagina-impacto .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.pagina-impacto .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-impacto .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.pagina-impacto .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-impacto .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.pagina-impacto .fp-font-data-mono {
+  font-family: JetBrains Mono, monospace;
+}
+.pagina-impacto .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.pagina-impacto .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.pagina-impacto .fp-font-display {
+  font-family: Manrope, sans-serif;
+}
+.pagina-impacto .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-impacto .fp-text-16px {
+  font-size: 16px;
+}
+.pagina-impacto .fp-text-18px {
+  font-size: 18px;
+}
+.pagina-impacto .fp-text-20px {
+  font-size: 20px;
+}
+.pagina-impacto .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.pagina-impacto .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.pagina-impacto .fp-text-data-mono {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+.pagina-impacto .fp-text-display {
+  font-size: 3.5rem;
+  line-height: 4.25rem;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+.pagina-impacto .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.pagina-impacto .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.pagina-impacto .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.pagina-impacto .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.pagina-impacto .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.pagina-impacto .fp-leading-snug {
+  line-height: 1.375;
+}
+.pagina-impacto .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.pagina-impacto .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.pagina-impacto .fp-text-blue-100 {
+  color: rgb(219, 234, 254);
+}
+.pagina-impacto .fp-text-inverse-on-surface {
+  color: rgb(238, 240, 255);
+}
+.pagina-impacto .fp-text-on-primary {
+  color: rgb(255, 255, 255);
+}
+.pagina-impacto .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.pagina-impacto .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.pagina-impacto .fp-text-primary {
+  color: rgb(30, 64, 175);
+}
+.pagina-impacto .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.pagina-impacto .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.pagina-impacto .fp-shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.pagina-impacto .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.pagina-impacto .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-impacto .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+
+/* ---------- Responsividade (media queries) ---------- */
+/* Celular: títulos menores para caber na tela */
+@media (max-width: 767.98px) {
+  .pagina-impacto .fp-text-headline-lg {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .pagina-impacto .fp-text-display {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+/* Celular: a tabela da matriz rola para o lado em vez de espremer as colunas */
+@media (max-width: 767.98px) {
+  .pagina-impacto table {
+    min-width: 560px;
+  }
+}
+

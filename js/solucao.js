@@ -1,80 +1,9 @@
 // =============================================================
 // FinProsper — Solução & Simulador
-// Mobile (tela-s9): abas, fluxo de caixa e simulador simples
-// Desktop (tela-s0): simulador de juros compostos completo
+// Simulador de juros compostos (página única e responsiva)
 // =============================================================
 
-// ---------- MOBILE: abas ----------
-function abrirAba(aba) {
-  $(".tela-s9 .tab-btn").removeClass(
-    "fp-bg-primary fp-text-on-primary fp-shadow-sm",
-  );
-  $(".tela-s9 .tab-btn").addClass("fp-text-on-surface-variant");
-  $("[data-tab='" + aba + "']").removeClass("fp-text-on-surface-variant");
-  $("[data-tab='" + aba + "']").addClass(
-    "fp-bg-primary fp-text-on-primary fp-shadow-sm",
-  );
-
-  $(".tela-s9 .tab-pane").addClass("d-none");
-  $("#" + aba).removeClass("d-none");
-}
-
-function ligarAba(aba) {
-  $("[data-tab='" + aba + "']").click(function () {
-    abrirAba(aba);
-  });
-}
-
-// ---------- MOBILE: fluxo de caixa ----------
-function atualizarFluxo() {
-  var renda = lerMoeda($("#input-renda").val());
-  var fixos = lerMoeda($("#input-fixos").val());
-  var variaveis = lerMoeda($("#input-variaveis").val());
-  var aporte = renda - fixos - variaveis;
-  if (aporte < 0) {
-    aporte = 0;
-  }
-  $("#display-aporte").text(formatarMoeda(aporte, 2));
-}
-
-// ---------- MOBILE: simulador simples (11,5% a.a.) ----------
-function simularMobile() {
-  var inicial = parseFloat($("#slider-inicial").val());
-  var mensal = parseFloat($("#slider-mensal").val());
-  var meses = parseFloat($("#slider-prazo").val());
-  var taxaMensal = 1.115 ** (1 / 12) - 1;
-
-  $("#val-inicial-txt").text(formatarMoeda(inicial, 2));
-  $("#val-mensal-txt").text(formatarMoeda(mensal, 2));
-
-  var anos;
-  if (meses % 12 == 0) {
-    anos = "" + meses / 12;
-  } else {
-    anos = formatarNumero(meses / 12, 1);
-  }
-  var palavra = "anos";
-  if (anos == "1") {
-    palavra = "ano";
-  }
-  $("#val-prazo-txt").text(`${meses} meses (${anos} ${palavra})`);
-
-  var totalAportado = inicial + mensal * meses;
-  var saldo = inicial;
-  for (var i = 0; i < meses; i++) {
-    saldo = (saldo + mensal) * (1 + taxaMensal);
-  }
-  var juros = saldo - totalAportado;
-  if (juros < 0) {
-    juros = 0;
-  }
-
-  $("#total-acumulado").text(formatarMoeda(saldo, 2));
-  $("#total-aportado").text(formatarMoeda(totalAportado, 2));
-  $("#total-juros").text("+" + formatarMoeda(juros, 2));
-}
-
-// ---------- DESKTOP: simulador de juros compostos ----------
+// ---------- Simulador de juros compostos ----------
 var taxaAtual = 12.0;
 var textoBotaoSalvar = "";
 var simulacaoSalva = false;
@@ -145,16 +74,16 @@ function escolherTaxa(taxa) {
   var seletor = "[data-rate='" + taxa + "']";
 
   // desmarca todos os cartões
-  $(".tela-s0 .rate-card").removeClass(
+  $(".pagina-solucao .rate-card").removeClass(
     "fp-bg-blue-50 fp-border fp-border-blue-200",
   );
-  $(".tela-s0 .rate-card").addClass("fp-bg-surface-container-low");
-  $(".tela-s0 .rate-card span:first-child").removeClass("fp-text-blue-700");
-  $(".tela-s0 .rate-card span:first-child").addClass(
+  $(".pagina-solucao .rate-card").addClass("fp-bg-surface-container-low");
+  $(".pagina-solucao .rate-card span:first-child").removeClass("fp-text-blue-700");
+  $(".pagina-solucao .rate-card span:first-child").addClass(
     "fp-text-on-surface-variant",
   );
-  $(".tela-s0 .rate-card span:nth-child(2)").removeClass("fp-text-blue-700");
-  $(".tela-s0 .rate-card span:nth-child(2)").addClass("fp-text-on-surface");
+  $(".pagina-solucao .rate-card span:nth-child(2)").removeClass("fp-text-blue-700");
+  $(".pagina-solucao .rate-card span:nth-child(2)").addClass("fp-text-on-surface");
 
   // marca o escolhido
   $(seletor).removeClass("fp-bg-surface-container-low");
@@ -175,10 +104,10 @@ function ligarTaxa(taxa) {
 }
 
 function escolherObjetivo(objetivo) {
-  $(".tela-s0 .objective-btn").removeClass(
+  $(".pagina-solucao .objective-btn").removeClass(
     "fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold",
   );
-  $(".tela-s0 .objective-btn").addClass(
+  $(".pagina-solucao .objective-btn").addClass(
     "fp-bg-transparent fp-text-on-surface-variant",
   );
   $("[data-target='" + objetivo + "']").removeClass(
@@ -222,38 +151,6 @@ function ligarObjetivo(objetivo) {
 }
 
 $(document).ready(function () {
-  // Mobile
-  ligarAba("tab-inputs");
-  ligarAba("tab-regra");
-  ligarAba("tab-simulador");
-  ligarAba("tab-metas");
-
-  document
-    .getElementById("input-renda")
-    .addEventListener("keyup", atualizarFluxo);
-  document
-    .getElementById("input-fixos")
-    .addEventListener("keyup", atualizarFluxo);
-  document
-    .getElementById("input-variaveis")
-    .addEventListener("keyup", atualizarFluxo);
-
-  $("#btn-atualizar-modelo").click(function () {
-    atualizarFluxo();
-    abrirAba("tab-regra");
-  });
-
-  document
-    .getElementById("slider-inicial")
-    .addEventListener("change", simularMobile);
-  document
-    .getElementById("slider-mensal")
-    .addEventListener("change", simularMobile);
-  document
-    .getElementById("slider-prazo")
-    .addEventListener("change", simularMobile);
-
-  // Desktop
   ligarCampoESlider("initial-val", "slider-initial");
   ligarCampoESlider("monthly-val", "slider-monthly");
   ligarCampoESlider("years-val", "slider-years");

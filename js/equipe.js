@@ -1,6 +1,6 @@
 // =============================================================
 // FinProsper — Equipe & Sobre
-// Formulário de proposta de parceria (versão desktop)
+// Formulário de proposta de parceria
 // =============================================================
 var naturezaInicial = "";
 

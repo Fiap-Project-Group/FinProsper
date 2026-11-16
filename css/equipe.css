@@ -1,0 +1,230 @@
+/* ==========================================================
+   FinProsper — Equipe e sobre (pages/equipe.html)
+   ========================================================== */
+
+.pagina-equipe .fp-h-10 {
+  height: 2.5rem;
+}
+.pagina-equipe .fp-h-2 {
+  height: 0.5rem;
+}
+.pagina-equipe .fp-h-2_5 {
+  height: 0.625rem;
+}
+.pagina-equipe .fp-h-4 {
+  height: 1rem;
+}
+.pagina-equipe .fp-h-8 {
+  height: 2rem;
+}
+.pagina-equipe .fp-w-10 {
+  width: 2.5rem;
+}
+.pagina-equipe .fp-w-2 {
+  width: 0.5rem;
+}
+.pagina-equipe .fp-w-2_5 {
+  width: 0.625rem;
+}
+.pagina-equipe .fp-w-8 {
+  width: 2rem;
+}
+.pagina-equipe .fp-max-w-2xl {
+  max-width: 42rem;
+}
+.pagina-equipe .fp-max-w-1280px {
+  max-width: 1280px;
+}
+.pagina-equipe .fp-cursor-pointer {
+  cursor: pointer;
+}
+.pagina-equipe .fp-space-y-space-md > * + * {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.pagina-equipe .fp-rounded {
+  border-radius: 0.125rem;
+}
+.pagina-equipe .fp-rounded-2xl {
+  border-radius: 1rem;
+}
+.pagina-equipe .fp-rounded-full {
+  border-radius: 0.75rem;
+}
+.pagina-equipe .fp-rounded-lg {
+  border-radius: 0.25rem;
+}
+.pagina-equipe .fp-rounded-xl {
+  border-radius: 0.5rem;
+}
+.pagina-equipe .fp-border {
+  border-width: 1px;
+}
+.pagina-equipe .fp-border-b {
+  border-bottom-width: 1px;
+}
+.pagina-equipe .fp-border-surface-container {
+  border-color: rgb(234, 237, 255);
+}
+.pagina-equipe .fp-bg-background {
+  background-color: rgb(250, 248, 255);
+}
+.pagina-equipe .fp-bg-blue-600 {
+  background-color: rgb(37, 99, 235);
+}
+.pagina-equipe .fp-bg-blue-700 {
+  background-color: rgb(29, 78, 216);
+}
+.pagina-equipe .fp-bg-inverse-surface {
+  background-color: rgb(40, 48, 68);
+}
+.pagina-equipe .fp-bg-surface-container {
+  background-color: rgb(234, 237, 255);
+}
+.pagina-equipe .fp-bg-surface-container-low {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-equipe .fp-bg-surface-container-lowest {
+  background-color: rgb(255, 255, 255);
+}
+.pagina-equipe .fp-font-body-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-equipe .fp-font-body-sm {
+  font-family: Inter, sans-serif;
+}
+.pagina-equipe .fp-font-data-mono {
+  font-family: JetBrains Mono, monospace;
+}
+.pagina-equipe .fp-font-headline-sm {
+  font-family: Manrope, sans-serif;
+}
+.pagina-equipe .fp-font-headline-lg {
+  font-family: Manrope, sans-serif;
+}
+.pagina-equipe .fp-font-display {
+  font-family: Manrope, sans-serif;
+}
+.pagina-equipe .fp-font-label-md {
+  font-family: Inter, sans-serif;
+}
+.pagina-equipe .fp-text-11px {
+  font-size: 11px;
+}
+.pagina-equipe .fp-text-12px {
+  font-size: 12px;
+}
+.pagina-equipe .fp-text-18px {
+  font-size: 18px;
+}
+.pagina-equipe .fp-text-20px {
+  font-size: 20px;
+}
+.pagina-equipe .fp-text-22px {
+  font-size: 22px;
+}
+.pagina-equipe .fp-text-body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.pagina-equipe .fp-text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.pagina-equipe .fp-text-display {
+  font-size: 3.5rem;
+  line-height: 4.25rem;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+.pagina-equipe .fp-text-headline-lg {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.pagina-equipe .fp-text-headline-md {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+.pagina-equipe .fp-text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.pagina-equipe .fp-text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.pagina-equipe .fp-leading-relaxed {
+  line-height: 1.625;
+}
+.pagina-equipe .fp-tracking-tight {
+  letter-spacing: -0.025em;
+}
+.pagina-equipe .fp-tracking-wider {
+  letter-spacing: 0.05em;
+}
+.pagina-equipe .fp-text-blue-600 {
+  color: rgb(37, 99, 235);
+}
+.pagina-equipe .fp-text-blue-700 {
+  color: rgb(29, 78, 216);
+}
+.pagina-equipe .fp-text-inverse-on-surface {
+  color: rgb(238, 240, 255);
+}
+.pagina-equipe .fp-text-on-surface {
+  color: rgb(19, 27, 46);
+}
+.pagina-equipe .fp-text-on-surface-variant {
+  color: rgb(68, 70, 83);
+}
+.pagina-equipe .fp-text-secondary {
+  color: rgb(0, 99, 152);
+}
+.pagina-equipe .fp-text-white {
+  color: rgb(255, 255, 255);
+}
+.pagina-equipe .fp-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.pagina-equipe .fp-hover-bg-surface-container-low:hover {
+  background-color: rgb(242, 243, 255);
+}
+.pagina-equipe .fp-hover-text-on-surface:hover {
+  color: rgb(19, 27, 46);
+}
+.pagina-equipe .fp-hover-shadow-md:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Responsividade (media queries) ---------- */
+/* Celular: títulos menores para caber na tela */
+@media (max-width: 767.98px) {
+  .pagina-equipe .fp-text-headline-lg {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .pagina-equipe .fp-text-display {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+/* Até 991px: as duas colunas de parcerias viram uma só (o grid de 12 colunas
+   com espaçamento grande não cabe na largura do celular) */
+@media (max-width: 991.98px) {
+  .pagina-equipe .equipe-grade-parcerias {
+    grid-template-columns: 1fr;
+  }
+  .pagina-equipe .equipe-grade-parcerias > * {
+    grid-column: auto;
+  }
+}

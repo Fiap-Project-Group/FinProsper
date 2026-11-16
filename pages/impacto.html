@@ -11,1484 +11,1083 @@
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/fontawesome.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/impacto.css" />
   </head>
   <body>
-    <!-- Versão mobile e tablet (telas menores que 992px) -->
-    <div class="d-lg-none tela-s6">
-      <div
-        class="fp-bg-surface fp-font-body-md fp-text-body-md fp-text-on-surface d-flex flex-column min-vh-100"
-      >
-        <header class="fixed-top cab-mobile">
-          <div
-            class="cab-mobile-conteudo px-3 d-flex align-items-center justify-content-between"
+    <!-- Cabeçalho desktop (telas a partir de 992px) -->
+    <div class="d-none d-lg-block">
+      <header class="fixed-top cab">
+        <div
+          class="cab-conteudo mx-auto px-4 d-flex align-items-center justify-content-between gap-3"
+        >
+          <a class="d-flex align-items-center gap-1" href="../index.html">
+            <span class="cab-marca">FinProsper</span>
+            <span class="cab-selo">EDU</span>
+          </a>
+          <nav
+            class="d-flex align-items-center gap-1"
+            aria-label="Menu principal"
           >
-            <a class="d-flex align-items-center gap-2" href="../index.html">
-              <img
-                alt="FinProsper"
-                class="cab-logo"
-                src="../images/logo-finprosper.png"
-              />
-              <span class="d-flex flex-column">
-                <span class="d-flex align-items-center gap-1">
-                  <span class="cab-mobile-marca">FinProsper</span>
-                  <span class="cab-mobile-selo">Edu</span>
-                </span>
-                <span class="cab-mobile-pagina">Impacto</span>
-              </span>
+            <a class="cab-link" href="../index.html"
+              >Início</a
+            >
+            <a class="cab-link" href="noticias.html"
+              >Glossário</a
+            >
+            <a class="cab-link" href="solucao.html"
+              >Simulador Avançado</a
+            >
+            <a
+              class="cab-link cab-link-ativo"
+              aria-current="page"
+              href="impacto.html"
+              >Impacto &amp; Métricas</a
+            >
+            <a class="cab-link" href="equipe.html"
+              >Equipe &amp; Sobre</a
+            >
+          </nav>
+          <div class="d-flex align-items-center gap-3">
+            <a
+              class="cab-botao d-none d-xl-inline-flex align-items-center gap-1"
+              href="solucao.html"
+            >
+              <i
+                aria-hidden="true"
+                class="fa-solid fa-circle-plus fp-icon cab-icone-20"
+              ></i>
+              <span>Novo Aporte / Simulação</span>
             </a>
-            <div class="d-flex align-items-center gap-2">
-              <div class="cab-mobile-status d-flex align-items-center gap-1">
-                <span class="cab-ponto cab-ponto-claro"></span>
-                <span>Online</span>
-              </div>
-              <img
-                alt="Perfil"
-                class="cab-mobile-avatar"
-                src="../images/avatar-camila-aluna.png"
-              />
+            <div class="cab-status d-none d-xl-flex align-items-center gap-1">
+              <span class="cab-ponto"></span>
+              <span>Online</span>
+            </div>
+            <div
+              class="cab-avatar d-flex align-items-center justify-content-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fa-solid fa-user fp-icon cab-icone-18"
+              ></i>
             </div>
           </div>
-        </header>
-        <main
-          class="flex-fill d-flex flex-column position-relative w-100 pt-8 pb-9 fp-bg-surface"
+        </div>
+      </header>
+    </div>
+
+    <!-- Cabeçalho e menu inferior mobile e tablet (telas menores que 992px) -->
+    <div class="d-lg-none">
+      <header class="fixed-top cab-mobile">
+        <div
+          class="cab-mobile-conteudo px-3 d-flex align-items-center justify-content-between"
         >
-          <div class="d-flex flex-column w-100">
-            <div class="px-3 py-3 d-flex flex-column gap-3">
-              <!-- Header da Seção -->
-              <div class="d-flex flex-column gap-1">
-                <div class="d-flex align-items-center gap-2">
+          <a class="d-flex align-items-center gap-2" href="../index.html">
+            <img
+              alt="FinProsper"
+              class="cab-logo"
+              src="../images/logo-finprosper.png"
+            />
+            <span class="d-flex flex-column">
+              <span class="d-flex align-items-center gap-1">
+                <span class="cab-mobile-marca">FinProsper</span>
+                <span class="cab-mobile-selo">Edu</span>
+              </span>
+              <span class="cab-mobile-pagina">Impacto</span>
+            </span>
+          </a>
+          <div class="d-flex align-items-center gap-2">
+            <div class="cab-mobile-status d-flex align-items-center gap-1">
+              <span class="cab-ponto cab-ponto-claro"></span>
+              <span>Online</span>
+            </div>
+            <img
+              alt="Perfil"
+              class="cab-mobile-avatar"
+              src="../images/avatar-camila-aluna.png"
+            />
+          </div>
+        </div>
+      </header>
+      <nav class="fixed-bottom nav-inf" aria-label="Menu principal">
+        <div
+          class="nav-inf-conteudo d-flex justify-content-around align-items-center px-1"
+        >
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="../index.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-house fp-icon nav-inf-icone"
+            ></i>
+            <span>Início</span>
+          </a>
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="noticias.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-book-open fp-icon nav-inf-icone"
+            ></i>
+            <span>Glossário</span>
+          </a>
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="solucao.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-graduation-cap fp-icon nav-inf-icone"
+            ></i>
+            <span>Solução</span>
+          </a>
+          <a
+            class="nav-inf-link nav-inf-ativo d-flex flex-column align-items-center justify-content-center"
+            aria-current="page"
+            href="impacto.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-arrow-trend-up fp-icon nav-inf-icone"
+            ></i>
+            <span>Impacto</span>
+          </a>
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="equipe.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-user-group fp-icon nav-inf-icone"
+            ></i>
+            <span>Equipe</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="pagina-impacto fp-bg-background fp-font-body-md fp-text-on-surface min-vh-100"
+    >
+      <main id="conteudo" class="w-100 pt-9 fp-bg-background">
+        <div class="d-flex flex-column w-100">
+          <div
+            class="w-100 fp-max-w-1280px mx-auto px-4 py-6 d-flex flex-column gap-6"
+          >
+            <!-- Top Hero Section: Analytic Heading -->
+            <div
+              class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-4"
+            >
+              <div class="d-flex flex-column gap-1 fp-max-w-3xl">
+                <div
+                  class="d-inline-flex align-items-center gap-1 px-2 py-1 fp-rounded-full fp-bg-secondary-container fp-text-primary fp-w-fit"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-chart-line fp-icon fp-text-16px fp-text-primary"
+                  ></i>
                   <span
-                    class="d-inline-flex align-items-center justify-content-center fp-w-7 fp-h-7 fp-rounded-full fp-bg-blue-100 fp-text-blue-700"
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-chart-line fp-icon fp-text-18px"
-                    ></i></span
-                  ><span
-                    class="fp-font-label-md fp-text-label-md fp-text-blue-700 fw-semibold fp-tracking-wide text-uppercase"
-                    >Métricas de Sucesso</span
+                    class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fw-semibold"
+                    >Relatório Institucional ESG &amp; Inclusão</span
                   >
                 </div>
                 <h1
-                  class="fp-font-headline-lg-mobile fp-text-headline-lg-mobile fp-text-slate-900"
+                  class="fp-font-headline-lg fp-text-headline-lg fp-text-on-surface fw-bold fp-tracking-tight"
                 >
-                  Dashboard de Impacto Financeiro
+                  Painel de Impacto Socioeconômico &amp; Métricas de
+                  Transformação
                 </h1>
-                <p class="fp-font-body-md fp-text-body-md fp-text-slate-600">
-                  Acompanhe a transformação real da sua disciplina e educação
-                  financeira ao longo do tempo.
+                <p
+                  class="fp-font-body-lg fp-text-body-lg fp-text-on-surface-variant fp-leading-relaxed"
+                >
+                  Evidências tangíveis de como a disciplina orçamentária
+                  50/30/20, mentoria acessível e autonomia analítica desarmam
+                  o ciclo de endividamento crônico e restabelecem a dignidade
+                  das famílias brasileiras.
                 </p>
               </div>
-              <!-- Banner Motivacional Dinâmico -->
               <div
-                class="d-flex align-items-center gap-2 p-3 fp-rounded-xl fp-bg-blue-50-70 fp-border fp-border-blue-100 fp-text-slate-800"
-              >
-                <i
-                  aria-hidden="true"
-                  class="fa-solid fa-certificate fp-icon fp-text-20px fp-text-blue-600 flex-shrink-0"
-                ></i>
-                <p class="fp-font-body-sm fp-text-body-sm fp-text-slate-600">
-                  Consistência: metodologia guiada para independência e
-                  estabilidade no longo prazo.
-                </p>
-              </div>
-              <!-- Grid de Métricas Principais (Bento-style 2x2) -->
-              <div class="grid gap-2">
-                <div
-                  class="d-flex flex-column justify-content-between p-3 fp-bg-white fp-rounded-xl fp-shadow-sm fp-border fp-border-slate-200-80 g-col-6"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 fw-medium"
-                      >Total Poupado</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-wallet fp-icon fp-text-18px fp-text-blue-600"
-                    ></i>
-                  </div>
-                  <div class="d-flex flex-column mt-2">
-                    <span
-                      class="fp-font-data-mono fp-text-data-mono fp-text-blue-700 fw-bold"
-                      >R$ 34.620</span
-                    ><span
-                      class="fp-font-label-md fp-text-label-md fp-text-blue-600 fw-medium mt-0"
-                      >+18.4% este ano</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="d-flex flex-column justify-content-between p-3 fp-bg-white fp-rounded-xl fp-shadow-sm fp-border fp-border-slate-200-80 g-col-6"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 fw-medium"
-                      >Reserva Coberta</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-shield fp-icon fp-text-18px fp-text-blue-500"
-                    ></i>
-                  </div>
-                  <div class="d-flex flex-column mt-2">
-                    <span
-                      class="fp-font-data-mono fp-text-data-mono fp-text-slate-900 fw-bold"
-                      >6,5 meses</span
-                    ><span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 mt-0"
-                      >108% da meta</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="d-flex flex-column justify-content-between p-3 fp-bg-white fp-rounded-xl fp-shadow-sm fp-border fp-border-slate-200-80 g-col-6"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 fw-medium"
-                      >Projeção (5 Anos)</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-arrow-trend-up fp-icon fp-text-18px fp-text-blue-500"
-                    ></i>
-                  </div>
-                  <div class="d-flex flex-column mt-2">
-                    <span
-                      class="fp-font-data-mono fp-text-data-mono fp-text-slate-900 fw-bold"
-                      >R$ 112.400</span
-                    ><span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 mt-0"
-                      >Ritmo atual</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="d-flex flex-column justify-content-between p-3 fp-bg-white fp-rounded-xl fp-shadow-sm fp-border fp-border-slate-200-80 g-col-6"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 fw-medium"
-                      >Juros Evitados</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-piggy-bank fp-icon fp-text-18px fp-text-blue-600"
-                    ></i>
-                  </div>
-                  <div class="d-flex flex-column mt-2">
-                    <span
-                      class="fp-font-data-mono fp-text-data-mono fp-text-blue-700 fw-bold"
-                      >R$ 4.850</span
-                    ><span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500 mt-0"
-                      >Rotativo zerado</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Gráfico Comparativo CSS Puro (Patrimônio 1, 3 e 5 anos) -->
-              <div
-                class="d-flex flex-column fp-bg-white p-3 fp-rounded-xl fp-shadow-sm fp-border fp-border-slate-200-80 gap-3"
+                class="d-flex align-items-center gap-2 align-self-start align-self-md-end"
               >
                 <div
-                  class="d-flex align-items-center justify-content-between pb-1"
+                  class="px-3 py-2 fp-rounded-xl fp-bg-surface-container d-flex align-items-center gap-1 fp-shadow-sm"
                 >
-                  <div class="d-flex flex-column">
-                    <span
-                      class="fp-font-headline-sm fp-text-headline-sm fp-text-slate-900"
-                      >Evolução de Patrimônio</span
-                    ><span
-                      class="fp-font-label-md fp-text-label-md fp-text-slate-500"
-                      >Projeção acumulada em anos</span
-                    >
-                  </div>
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="d-flex align-items-center gap-1">
-                      <span
-                        class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-slate-300"
-                      ></span
-                      ><span
-                        class="fp-font-label-md fp-text-label-md fp-text-slate-500"
-                        >Tradicional</span
-                      >
-                    </div>
-                    <div class="d-flex align-items-center gap-1">
-                      <span
-                        class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-700"
-                      ></span
-                      ><span
-                        class="fp-font-label-md fp-text-label-md fp-text-blue-700 fw-semibold"
-                        >FinProsper</span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex flex-column gap-2 pt-2">
-                  <div
-                    class="fp-h-40 w-100 d-flex align-items-end justify-content-around px-3 pb-1 position-relative"
-                  >
-                    <div
-                      class="position-absolute start-0 end-0 top-0 fp-h-px fp-bg-slate-100"
-                    ></div>
-                    <div
-                      class="position-absolute start-0 end-0 top-50 fp-h-px fp-bg-slate-100"
-                    ></div>
-                    <div
-                      class="position-absolute start-0 end-0 bottom-0 fp-h-px fp-bg-slate-200"
-                    ></div>
-                    <!-- 1 Ano -->
-                    <div
-                      class="d-flex flex-column align-items-center gap-2 h-100 justify-content-end z-1"
-                    >
-                      <div class="d-flex align-items-end gap-2 h-100">
-                        <div
-                          class="fp-w-6 fp-bg-slate-300 fp-rounded-t-sm position-relative d-flex justify-content-center"
-                          style="height: 14%"
-                        >
-                          <span
-                            class="top-0 mt-n3 position-absolute fp-font-label-md fp-text-10px fp-text-slate-500"
-                            >1.5k</span
-                          >
-                        </div>
-                        <div
-                          class="fp-w-6 fp-bg-blue-600 fp-rounded-t-sm position-relative d-flex justify-content-center"
-                          style="height: 30%"
-                        >
-                          <span
-                            class="top-0 mt-n3 position-absolute fp-font-label-md fp-text-10px fp-text-blue-700 fw-semibold"
-                            >7.2k</span
-                          >
-                        </div>
-                      </div>
-                      <span
-                        class="fp-font-label-md fp-text-label-md fp-text-slate-600"
-                        >1 Ano</span
-                      >
-                    </div>
-                    <!-- 3 Anos -->
-                    <div
-                      class="d-flex flex-column align-items-center gap-2 h-100 justify-content-end z-1"
-                    >
-                      <div class="d-flex align-items-end gap-2 h-100">
-                        <div
-                          class="fp-w-6 fp-bg-slate-300 fp-rounded-t-sm position-relative d-flex justify-content-center"
-                          style="height: 22%"
-                        >
-                          <span
-                            class="top-0 mt-n3 position-absolute fp-font-label-md fp-text-10px fp-text-slate-500"
-                            >4.5k</span
-                          >
-                        </div>
-                        <div
-                          class="fp-w-6 fp-bg-blue-700 fp-rounded-t-sm position-relative d-flex justify-content-center"
-                          style="height: 55%"
-                        >
-                          <span
-                            class="top-0 mt-n3 position-absolute fp-font-label-md fp-text-10px fp-text-blue-700 fw-semibold"
-                            >24.8k</span
-                          >
-                        </div>
-                      </div>
-                      <span
-                        class="fp-font-label-md fp-text-label-md fp-text-slate-600"
-                        >3 Anos</span
-                      >
-                    </div>
-                    <!-- 5 Anos -->
-                    <div
-                      class="d-flex flex-column align-items-center gap-2 h-100 justify-content-end z-1"
-                    >
-                      <div class="d-flex align-items-end gap-2 h-100">
-                        <div
-                          class="fp-w-6 fp-bg-slate-300 fp-rounded-t-sm position-relative d-flex justify-content-center"
-                          style="height: 32%"
-                        >
-                          <span
-                            class="top-0 mt-n3 position-absolute fp-font-label-md fp-text-10px fp-text-slate-500"
-                            >9.8k</span
-                          >
-                        </div>
-                        <div
-                          class="fp-w-6 fp-bg-blue-800 fp-rounded-t-sm position-relative d-flex justify-content-center"
-                          style="height: 90%"
-                        >
-                          <span
-                            class="top-0 mt-n3 position-absolute fp-font-label-md fp-text-10px fp-text-blue-800 fw-bold"
-                            >112k</span
-                          >
-                        </div>
-                      </div>
-                      <span
-                        class="fp-font-label-md fp-text-label-md fp-text-slate-600"
-                        >5 Anos</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Comparativo Detalhado de Cenários -->
-              <div class="d-flex flex-column gap-2">
-                <div class="d-flex flex-column">
-                  <h2
-                    class="fp-font-headline-sm fp-text-headline-sm fp-text-slate-900"
-                  >
-                    Cenário Tradicional vs. FinProsper
-                  </h2>
-                  <p class="fp-font-body-sm fp-text-body-sm fp-text-slate-500">
-                    O poder da metodologia aplicada à rotina.
-                  </p>
-                </div>
-                <div class="grid gap-2">
-                  <div
-                    class="d-flex flex-column fp-bg-white fp-rounded-xl p-3 fp-border fp-border-slate-200-80 fp-shadow-sm g-col-12"
-                  >
-                    <div
-                      class="grid pb-2 fp-border-b fp-border-slate-100 fp-text-body-sm fw-medium gap-0"
-                    >
-                      <span class="fp-text-slate-500 g-col-4">Métrica</span
-                      ><span class="fp-text-slate-600 text-end g-col-4"
-                        >Sem Gestão</span
-                      ><span
-                        class="fp-text-blue-700 fw-semibold text-end g-col-4"
-                        >FinProsper</span
-                      >
-                    </div>
-                    <div
-                      class="d-flex flex-column fp-divide-y fp-divide-slate-100"
-                    >
-                      <div
-                        class="grid py-2 align-items-center fp-text-body-sm gap-0"
-                      >
-                        <span class="fp-text-slate-600 g-col-4"
-                          >Gastos por impulso</span
-                        ><span class="fp-text-slate-500 text-end g-col-4"
-                          >42% da renda</span
-                        ><span
-                          class="fp-text-blue-700 fw-semibold text-end g-col-4"
-                          >&lt; 10%</span
-                        >
-                      </div>
-                      <div
-                        class="grid py-2 align-items-center fp-text-body-sm gap-0"
-                      >
-                        <span class="fp-text-slate-600 g-col-4"
-                          >Juros anuais</span
-                        ><span class="fp-text-slate-500 text-end g-col-4"
-                          >R$ 3.200</span
-                        ><span
-                          class="fp-text-blue-700 fw-semibold text-end g-col-4"
-                          >R$ 0,00</span
-                        >
-                      </div>
-                      <div
-                        class="grid py-2 align-items-center fp-text-body-sm gap-0"
-                      >
-                        <span class="fp-text-slate-600 g-col-4"
-                          >Acúmulo (3 anos)</span
-                        ><span class="fp-text-slate-500 text-end g-col-4"
-                          >R$ 4.500</span
-                        ><span
-                          class="fp-font-data-mono fp-text-blue-700 fw-bold text-end g-col-4"
-                          >R$ 24.800</span
-                        >
-                      </div>
-                      <div
-                        class="grid py-2 align-items-center fp-text-body-sm gap-0"
-                      >
-                        <span class="fp-text-slate-600 g-col-4"
-                          >Estresse percebido</span
-                        ><span class="fp-text-slate-500 text-end g-col-4"
-                          >Alto (8/10)</span
-                        ><span
-                          class="fp-text-blue-700 fw-semibold text-end g-col-4"
-                          >Baixo (1/10)</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Barra de Conquista Interativa / Gamificação -->
-              <div
-                class="d-flex flex-column gap-1 p-3 fp-bg-white fp-rounded-xl fp-border fp-border-slate-200-80 fp-shadow-sm"
-              >
-                <div class="d-flex align-items-center justify-content-between">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-calendar-day fp-icon fp-text-primary fp-text-20px"
+                  ></i>
                   <span
-                    class="fp-font-label-md fp-text-label-md fp-text-slate-900 fw-semibold"
-                    >Compromisso ESG &amp; ODS ONU</span
-                  ><span
-                    class="d-inline-flex align-items-center px-2 py-0 fp-rounded-full fp-text-10px fw-semibold fp-bg-blue-700 fp-text-white text-uppercase fp-tracking-wider"
-                    >ODS 4 &amp; 8</span
+                    class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-medium"
+                    >Ciclo Bienal Auditado 2023–2024</span
                   >
                 </div>
-                <p class="fp-font-body-sm fp-text-body-sm fp-text-slate-600">
-                  Educação de qualidade e crescimento econômico inclusivo
-                  através da democratização do conhecimento financeiro.
+              </div>
+            </div>
+            <!-- 4 High Impact Indicators -->
+            <div class="grid gap-3">
+              <!-- Clean Metric 1 -->
+              <div
+                class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
+              >
+                <div
+                  class="d-flex align-items-center gap-1 fp-text-primary mb-1"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-shield-heart fp-icon fp-text-20px"
+                  ></i>
+                  <span
+                    class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
+                    >Dívidas Evitadas</span
+                  >
+                </div>
+                <div
+                  class="fp-font-display fp-text-display fp-text-primary fw-bold fp-tracking-tight"
+                >
+                  R$ 14,8M
+                </div>
+                <p
+                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                >
+                  Economia direta em juros abusivos de cartão e cheque
+                  especial.
+                </p>
+              </div>
+              <!-- Clean Metric 2 -->
+              <div
+                class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
+              >
+                <div
+                  class="d-flex align-items-center gap-1 fp-text-primary mb-1"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-piggy-bank fp-icon fp-text-20px"
+                  ></i>
+                  <span
+                    class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
+                    >Reserva Plena</span
+                  >
+                </div>
+                <div
+                  class="fp-font-display fp-text-display fp-text-on-surface fw-bold fp-tracking-tight"
+                >
+                  18.420
+                </div>
+                <p
+                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                >
+                  Famílias blindadas com 6+ meses de custo fixo garantido.
+                </p>
+              </div>
+              <!-- Clean Metric 3 -->
+              <div
+                class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
+              >
+                <div
+                  class="d-flex align-items-center gap-1 fp-text-primary mb-1"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-brain fp-icon fp-text-20px"
+                  ></i>
+                  <span
+                    class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
+                    >Alívio Emocional</span
+                  >
+                </div>
+                <div
+                  class="fp-font-display fp-text-display fp-text-primary fw-bold fp-tracking-tight"
+                >
+                  94%
+                </div>
+                <p
+                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                >
+                  Redução expressiva de estresse e cobranças diárias.
+                </p>
+              </div>
+              <!-- Clean Metric 4 -->
+              <div
+                class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
+              >
+                <div
+                  class="d-flex align-items-center gap-1 fp-text-primary mb-1"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-moon fp-icon fp-text-20px"
+                  ></i>
+                  <span
+                    class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
+                    >Qualidade de Sono</span
+                  >
+                </div>
+                <div
+                  class="fp-font-display fp-text-display fp-text-on-surface fw-bold fp-tracking-tight"
+                >
+                  +4,8 pts
+                </div>
+                <p
+                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                >
+                  Evolução na avaliação do descanso e tranquilidade no lar.
+                </p>
+              </div>
+            </div>
+            <!-- Main Analytics Section (2-Column Asymmetric Layout) -->
+            <div class="grid gap-4 align-items-start">
+              <!-- Left Column: Comparative Table + Native CSS Multiplier Chart (7 Cols) -->
+              <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-7">
+                <!-- Comparative Matrix Card -->
+                <div
+                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
+                >
+                  <div
+                    class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-1"
+                  >
+                    <div>
+                      <span
+                        class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-secondary fw-semibold"
+                        >Análise de Trajetória</span
+                      >
+                      <h2
+                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
+                      >
+                        Matriz de Emancipação Financeira
+                      </h2>
+                    </div>
+                    <span
+                      class="fp-text-on-surface-variant fp-font-label-md fp-text-label-md"
+                      >Amostra: 10.000 perfis acompanhados</span
+                    >
+                  </div>
+                  <!-- Structured Comparison Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-100 text-start">
+                      <thead>
+                        <tr
+                          class="fp-border-b fp-border-surface-container-high fp-text-on-surface-variant fp-font-label-md fp-text-label-md"
+                        >
+                          <th class="py-2 px-3 fw-semibold">Dimensão</th>
+                          <th class="py-2 px-3 fw-semibold fp-text-secondary">
+                            Sem Metodologia
+                          </th>
+                          <th class="py-2 px-3 fw-semibold fp-text-primary">
+                            Com FinProsper (50/30/20)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="fp-text-on-surface">
+                        <tr
+                          class="fp-hover-bg-surface-container-low-30 fp-border-b fp-border-surface-container-low"
+                        >
+                          <td class="py-3 px-3">
+                            <div
+                              class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                            >
+                              Gastos por Impulso
+                            </div>
+                            <div
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Consumo supérfluo
+                            </div>
+                          </td>
+                          <td class="py-3 px-3">
+                            <span class="fw-semibold fp-text-on-surface"
+                              >~38% da renda</span
+                            >
+                            <p
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Sem limite planejado
+                            </p>
+                          </td>
+                          <td class="py-3 px-3">
+                            <span class="fw-semibold fp-text-primary"
+                              >Teto de 30%</span
+                            >
+                            <p
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Consumo consciente
+                            </p>
+                          </td>
+                        </tr>
+                        <tr
+                          class="fp-hover-bg-surface-container-low-30 fp-border-b fp-border-surface-container-low"
+                        >
+                          <td class="py-3 px-3">
+                            <div
+                              class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                            >
+                              Juros do Rotativo
+                            </div>
+                            <div
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Custo financeiro anual
+                            </div>
+                          </td>
+                          <td class="py-3 px-3">
+                            <span
+                              class="fp-font-data-mono fp-text-data-mono fp-text-secondary fw-medium"
+                              >R$ 5.480/ano</span
+                            >
+                            <p
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Drenagem contínua
+                            </p>
+                          </td>
+                          <td class="py-3 px-3">
+                            <span
+                              class="fp-font-data-mono fp-text-data-mono fp-text-primary fw-bold"
+                              >R$ 0,00</span
+                            >
+                            <p
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Fatura integral programada
+                            </p>
+                          </td>
+                        </tr>
+                        <tr
+                          class="fp-hover-bg-surface-container-low-30 fp-border-b fp-border-surface-container-low"
+                        >
+                          <td class="py-3 px-3">
+                            <div
+                              class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                            >
+                              Reserva em 3 Anos
+                            </div>
+                            <div
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Patrimônio acumulado
+                            </div>
+                          </td>
+                          <td class="py-3 px-3">
+                            <span
+                              class="fp-font-data-mono fp-text-data-mono fp-text-on-surface-variant fw-medium"
+                              >R$ 1.200,00</span
+                            >
+                            <p
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Insegurança em emergências
+                            </p>
+                          </td>
+                          <td class="py-3 px-3">
+                            <span
+                              class="fp-font-data-mono fp-text-data-mono fp-text-primary fw-bold"
+                              >R$ 38.650,00</span
+                            >
+                            <p
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Juros compostos a favor
+                            </p>
+                          </td>
+                        </tr>
+                        <tr class="fp-hover-bg-surface-container-low-30">
+                          <td class="py-3 px-3">
+                            <div
+                              class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                            >
+                              Clima Familiar
+                            </div>
+                            <div
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                            >
+                              Socioafetivo no lar
+                            </div>
+                          </td>
+                          <td class="py-3 px-3 fp-text-on-surface-variant">
+                            <span>Tensão frequente</span>
+                          </td>
+                          <td class="py-3 px-3 fp-text-primary fw-medium">
+                            <span>Harmonia e metas alinhadas</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- CSS Native Bar Graph: Juros Compostos vs Inércia -->
+                <div
+                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
+                >
+                  <div
+                    class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-1"
+                  >
+                    <div>
+                      <span
+                        class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-primary fw-semibold"
+                        >Multiplicação de Riqueza</span
+                      >
+                      <h3
+                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
+                      >
+                        Efeito Multiplicador do Aporte Reinvestido
+                      </h3>
+                    </div>
+                    <div
+                      class="d-flex align-items-center gap-2 fp-font-label-md fp-text-label-md"
+                    >
+                      <span
+                        class="d-inline-flex align-items-center gap-1 fw-semibold fp-text-primary"
+                        ><span
+                          class="fp-w-3 fp-h-3 fp-rounded-full fp-bg-primary"
+                        ></span>
+                        FinProsper (20% aporte + 10% a.a.)</span
+                      >
+                      <span
+                        class="d-inline-flex align-items-center gap-1 fp-text-on-surface-variant"
+                        ><span
+                          class="fp-w-3 fp-h-3 fp-rounded-full fp-bg-secondary-fixed-dim"
+                        ></span>
+                        Sem Gestão</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Pure CSS Columns Chart -->
+                  <div
+                    class="w-100 fp-bg-surface-container-low fp-rounded-xl p-3 d-flex flex-column gap-3"
+                  >
+                    <div
+                      class="fp-h-56 d-flex align-items-end justify-content-between gap-2 pt-3 px-2"
+                    >
+                      <!-- Ano 1 -->
+                      <div
+                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
+                      >
+                        <div
+                          class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
+                        >
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
+                            style="height: 12%"
+                          ></div>
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-2563EB fp-hover-bg-1D4ED8 fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
+                            style="height: 24%"
+                          >
+                            <span
+                              class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
+                              >R$ 14,4k</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
+                          >Ano 1</span
+                        >
+                      </div>
+                      <!-- Ano 2 -->
+                      <div
+                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
+                      >
+                        <div
+                          class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
+                        >
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
+                            style="height: 14%"
+                          ></div>
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-2563EB fp-hover-bg-1D4ED8 fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
+                            style="height: 38%"
+                          >
+                            <span
+                              class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
+                              >R$ 31,2k</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
+                          >Ano 2</span
+                        >
+                      </div>
+                      <!-- Ano 3 -->
+                      <div
+                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
+                      >
+                        <div
+                          class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
+                        >
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
+                            style="height: 15%"
+                          ></div>
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-1D4ED8 fp-hover-bg-primary fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
+                            style="height: 54%"
+                          >
+                            <span
+                              class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
+                              >R$ 51,8k</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
+                          >Ano 3</span
+                        >
+                      </div>
+                      <!-- Ano 4 -->
+                      <div
+                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
+                      >
+                        <div
+                          class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
+                        >
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
+                            style="height: 16%"
+                          ></div>
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-1D4ED8 fp-hover-bg-primary fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
+                            style="height: 72%"
+                          >
+                            <span
+                              class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
+                              >R$ 77,5k</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
+                          >Ano 4</span
+                        >
+                      </div>
+                      <!-- Ano 5 -->
+                      <div
+                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
+                      >
+                        <div
+                          class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
+                        >
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
+                            style="height: 17%"
+                          ></div>
+                          <div
+                            class="w-100 fp-max-w-28px fp-bg-primary fp-hover-bg-173bab fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
+                            style="height: 98%"
+                          >
+                            <span
+                              class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
+                              >R$ 110,2k</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
+                          >Ano 5</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex flex-column flex-sm-row align-items-center justify-content-between fp-text-on-surface-variant fp-font-body-sm fp-text-body-sm pt-1"
+                    >
+                      <span class="d-flex align-items-center gap-1">
+                        <i
+                          aria-hidden="true"
+                          class="fa-solid fa-arrow-trend-up fp-icon fp-text-16px fp-text-primary"
+                        ></i>
+                        Simulação baseada em renda média de R$ 5.000 com regra
+                        50/30/20.
+                      </span>
+                      <span
+                        class="fp-text-primary fp-font-label-md fp-text-label-md fw-bold"
+                        >Excedente acumulado: +843%</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right Column: ODS Alignment + Real Success Stories (5 Cols) -->
+              <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-5">
+                <!-- UN SDGs (ODS ONU) Section -->
+                <div
+                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-between pb-1"
+                  >
+                    <div>
+                      <span
+                        class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-secondary fw-semibold"
+                        >Compromisso Global</span
+                      >
+                      <h2
+                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
+                      >
+                        Alinhamento com ODS
+                      </h2>
+                    </div>
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-certificate fp-icon fp-text-primary fp-text-20px"
+                    ></i>
+                  </div>
+                  <div class="grid gap-2 pt-1">
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
+                    >
+                      <div
+                        class="d-flex align-items-center gap-1 fp-text-primary"
+                      >
+                        <span
+                          class="fp-font-headline-sm fp-text-headline-sm fw-bold"
+                          >01</span
+                        >
+                        <span
+                          class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
+                          >ODS</span
+                        >
+                      </div>
+                      <span
+                        class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                        >Fim da Pobreza</span
+                      >
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
+                      >
+                        Blindagem contra juros abusivos e dívidas cíclicas.
+                      </p>
+                    </div>
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
+                    >
+                      <div
+                        class="d-flex align-items-center gap-1 fp-text-primary"
+                      >
+                        <span
+                          class="fp-font-headline-sm fp-text-headline-sm fw-bold"
+                          >03</span
+                        >
+                        <span
+                          class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
+                          >ODS</span
+                        >
+                      </div>
+                      <span
+                        class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                        >Saúde &amp; Bem-Estar</span
+                      >
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
+                      >
+                        Redução de ansiedade e recuperação do sono.
+                      </p>
+                    </div>
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
+                    >
+                      <div
+                        class="d-flex align-items-center gap-1 fp-text-primary"
+                      >
+                        <span
+                          class="fp-font-headline-sm fp-text-headline-sm fw-bold"
+                          >04</span
+                        >
+                        <span
+                          class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
+                          >ODS</span
+                        >
+                      </div>
+                      <span
+                        class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                        >Educação de Qualidade</span
+                      >
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
+                      >
+                        Alfabetização financeira aberta, prática e gratuita.
+                      </p>
+                    </div>
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
+                    >
+                      <div
+                        class="d-flex align-items-center gap-1 fp-text-primary"
+                      >
+                        <span
+                          class="fp-font-headline-sm fp-text-headline-sm fw-bold"
+                          >08</span
+                        >
+                        <span
+                          class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
+                          >ODS</span
+                        >
+                      </div>
+                      <span
+                        class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
+                        >Trabalho Decente</span
+                      >
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
+                      >
+                        Segurança para autônomos e famílias assalariadas.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Real Human Stories (Testimonials + Metrics) -->
+                <div
+                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <span
+                        class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-secondary fw-semibold"
+                        >Vozes da Comunidade</span
+                      >
+                      <h2
+                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
+                      >
+                        Relatos de Superação
+                      </h2>
+                    </div>
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-quote-right fp-icon fp-text-primary fp-text-24px"
+                    ></i>
+                  </div>
+                  <div class="d-flex flex-column gap-3">
+                    <!-- Story 1 -->
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            alt="Camila Vasconcelos"
+                            class="fp-w-11 fp-h-11 fp-rounded-full object-fit-cover fp-shadow-sm"
+                            src="../images/avatar-camila-vasconcelos.png"
+                          />
+                          <div class="d-flex flex-column">
+                            <span
+                              class="fp-font-title-md fp-text-title-md fw-bold fp-text-on-surface"
+                              >Camila Vasconcelos</span
+                            >
+                            <span
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                              >Analista de Logística • Belo Horizonte</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
+                          >Quitou R$ 18,4k</span
+                        >
+                      </div>
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-1 fp-leading-relaxed"
+                      >
+                        "Reorganizei minhas contas com a regra 50/30/20 e saí
+                        totalmente do cheque especial em 14 meses."
+                      </p>
+                    </div>
+                    <!-- Story 2 -->
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            alt="Roberto &amp; Marlene Dias"
+                            class="fp-w-11 fp-h-11 fp-rounded-full object-fit-cover fp-shadow-sm"
+                            src="../images/avatar-roberto-marlene-dias.png"
+                          />
+                          <div class="d-flex flex-column">
+                            <span
+                              class="fp-font-title-md fp-text-title-md fw-bold fp-text-on-surface"
+                              >Roberto &amp; Marlene Dias</span
+                            >
+                            <span
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                              >Comércio Familiar • Curitiba</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
+                          >R$ 12k de reserva</span
+                        >
+                      </div>
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-1 fp-leading-relaxed"
+                      >
+                        "Criamos pela primeira vez uma reserva de emergência
+                        que salvou nosso negócio sem precisar de empréstimo
+                        bancário."
+                      </p>
+                    </div>
+                    <!-- Story 3 -->
+                    <div
+                      class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            alt="Lucas Nogueira"
+                            class="fp-w-11 fp-h-11 fp-rounded-full object-fit-cover fp-shadow-sm"
+                            src="../images/avatar-lucas-nogueira.png"
+                          />
+                          <div class="d-flex flex-column">
+                            <span
+                              class="fp-font-title-md fp-text-title-md fw-bold fp-text-on-surface"
+                              >Lucas Nogueira</span
+                            >
+                            <span
+                              class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
+                              >Desenvolvedor Jr. • Recife</span
+                            >
+                          </div>
+                        </div>
+                        <span
+                          class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
+                          >25% aporte/mês</span
+                        >
+                      </div>
+                      <p
+                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-1 fp-leading-relaxed"
+                      >
+                        "Comecei do zero após a faculdade. Hoje mantenho
+                        aportes constantes em renda fixa com visão de longo
+                        prazo."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Callout Banner: Compromisso com a Cidadania Financeira -->
+            <div
+              class="fp-rounded-xl fp-bg-1E40AF fp-text-FFFFFF p-6 d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 fp-shadow-md fp-border fp-border-1D4ED8"
+            >
+              <div class="d-flex flex-column gap-1 fp-max-w-2xl">
+                <span
+                  class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-primary-fixed fw-semibold"
+                  >Acesso Democrático &amp; Aberto</span
+                >
+                <h3
+                  class="fp-font-headline-lg fp-text-headline-lg fw-bold fp-tracking-tight fp-text-white"
+                >
+                  Faça Parte Desta Transformação Coletiva
+                </h3>
+                <p class="fp-font-body-md fp-text-body-md fp-text-blue-100">
+                  Nossa metodologia é construída para democratizar o domínio
+                  contábil básico. Todas as calculadoras, simuladores de juros
+                  e cursos são 100% gratuitos e livres de viés de venda de
+                  produtos bancários.
                 </p>
               </div>
               <div
-                class="d-flex align-items-center justify-content-between p-3 fp-bg-blue-50-70 fp-rounded-xl fp-border fp-border-blue-100"
+                class="d-flex flex-wrap align-items-center gap-3 flex-lg-shrink-0"
               >
-                <div class="d-flex flex-column">
-                  <span
-                    class="fp-font-label-lg fp-text-label-lg fp-text-slate-900 fw-semibold"
-                    >Próximo Marco: Liberdade Nível 2</span
-                  ><span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-slate-600 mt-0"
-                    >Faltam R$ 5.380 para completar 12 meses</span
-                  >
-                </div>
-                <button
-                  class="px-3 py-1 fp-rounded-lg fp-bg-blue-700 fp-text-white fp-font-label-md fp-text-label-md fw-medium fp-shadow-sm"
-                  id="btn-acelerar"
+                <a
+                  class="px-4 py-3 fp-rounded-lg fp-bg-FFFFFF fp-text-1E40AF fp-hover-bg-surface-container-low fp-font-label-md fp-text-label-md fw-bold fp-shadow-sm text-center"
+                  href="../pages/solucao.html"
                 >
-                  Acelerar
-                </button>
+                  Explorar Simulador de Dívidas
+                </a>
+                <a
+                  class="px-4 py-3 fp-rounded-lg fp-bg-2563EB fp-hover-bg-1D4ED8 fp-text-FFFFFF fp-font-label-md fp-text-label-md fw-semibold text-center fp-shadow-sm"
+                  href="#"
+                >
+                  Baixar Relatório Completo (PDF)
+                </a>
               </div>
             </div>
           </div>
-        </main>
-        <nav class="fixed-bottom nav-inf" aria-label="Menu principal">
-          <div
-            class="nav-inf-conteudo d-flex justify-content-around align-items-center px-1"
-          >
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../index.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-house fp-icon nav-inf-icone"
-              ></i>
-              <span>Início</span>
-            </a>
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../pages/noticias.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-newspaper fp-icon nav-inf-icone"
-              ></i>
-              <span>Notícias</span>
-            </a>
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../pages/solucao.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-graduation-cap fp-icon nav-inf-icone"
-              ></i>
-              <span>Solução</span>
-            </a>
-            <a
-              class="nav-inf-link nav-inf-ativo d-flex flex-column align-items-center justify-content-center"
-              aria-current="page"
-              href="../pages/impacto.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-arrow-trend-up fp-icon nav-inf-icone"
-              ></i>
-              <span>Impacto</span>
-            </a>
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../pages/equipe.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-user-group fp-icon nav-inf-icone"
-              ></i>
-              <span>Equipe</span>
-            </a>
-          </div>
-        </nav>
-      </div>
+        </div>
+      </main>
     </div>
 
-    <!-- Versão desktop (telas a partir de 992px) -->
-    <div class="d-none d-lg-block tela-s3">
-      <div
-        class="fp-bg-background fp-font-body-md fp-text-on-surface min-vh-100"
-      >
-        <header class="fixed-top cab">
-          <div
-            class="cab-conteudo mx-auto px-4 d-flex align-items-center justify-content-between gap-3"
-          >
-            <a class="d-flex align-items-center gap-1" href="../index.html">
-              <span class="cab-marca">FinProsper</span>
-              <span class="cab-selo">EDU</span>
-            </a>
-            <nav
-              class="d-flex align-items-center gap-1"
-              aria-label="Menu principal"
-            >
-              <a class="cab-link" href="../index.html">Início</a>
-              <a class="cab-link" href="../pages/noticias.html">Glossário</a>
-              <a class="cab-link" href="../pages/solucao.html"
-                >Simulador Avançado</a
-              >
-              <a
-                class="cab-link cab-link-ativo"
-                aria-current="page"
-                href="../pages/impacto.html"
-                >Impacto &amp; Métricas</a
-              >
-              <a class="cab-link" href="../pages/equipe.html"
-                >Equipe &amp; Sobre</a
-              >
-            </nav>
-            <div class="d-flex align-items-center gap-3">
-              <a
-                class="cab-botao d-none d-xl-inline-flex align-items-center gap-1"
-                href="../pages/solucao.html"
-              >
-                <i
-                  aria-hidden="true"
-                  class="fa-solid fa-circle-plus fp-icon cab-icone-20"
-                ></i>
-                <span>Novo Aporte / Simulação</span>
-              </a>
-              <div class="cab-status d-none d-xl-flex align-items-center gap-1">
-                <span class="cab-ponto"></span>
-                <span>Online</span>
-              </div>
-              <div
-                class="cab-avatar d-flex align-items-center justify-content-center"
-              >
-                <i
-                  aria-hidden="true"
-                  class="fa-solid fa-user fp-icon cab-icone-18"
-                ></i>
-              </div>
-            </div>
+    <footer class="rodape">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <p class="rodape-marca">FinProsper</p>
+            <p class="rodape-texto">
+              Educação financeira simples para quem quer começar a investir.
+              Projeto acadêmico da Global Solution FIAP 2026.
+            </p>
           </div>
-        </header>
-        <main class="w-100 pt-9 fp-bg-background">
-          <div class="d-flex flex-column w-100">
-            <div
-              class="w-100 fp-max-w-1280px mx-auto px-4 py-6 d-flex flex-column gap-6"
-            >
-              <!-- Top Hero Section: Analytic Heading -->
-              <div
-                class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-4"
-              >
-                <div class="d-flex flex-column gap-1 fp-max-w-3xl">
-                  <div
-                    class="d-inline-flex align-items-center gap-1 px-2 py-1 fp-rounded-full fp-bg-secondary-container fp-text-primary fp-w-fit"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-chart-line fp-icon fp-text-16px fp-text-primary"
-                    ></i>
-                    <span
-                      class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fw-semibold"
-                      >Relatório Institucional ESG &amp; Inclusão</span
-                    >
-                  </div>
-                  <h1
-                    class="fp-font-headline-lg fp-text-headline-lg fp-text-on-surface fw-bold fp-tracking-tight"
-                  >
-                    Painel de Impacto Socioeconômico &amp; Métricas de
-                    Transformação
-                  </h1>
-                  <p
-                    class="fp-font-body-lg fp-text-body-lg fp-text-on-surface-variant fp-leading-relaxed"
-                  >
-                    Evidências tangíveis de como a disciplina orçamentária
-                    50/30/20, mentoria acessível e autonomia analítica desarmam
-                    o ciclo de endividamento crônico e restabelecem a dignidade
-                    das famílias brasileiras.
-                  </p>
-                </div>
-                <div
-                  class="d-flex align-items-center gap-2 align-self-start align-self-md-end"
-                >
-                  <div
-                    class="px-3 py-2 fp-rounded-xl fp-bg-surface-container d-flex align-items-center gap-1 fp-shadow-sm"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-calendar-day fp-icon fp-text-primary fp-text-20px"
-                    ></i>
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-medium"
-                      >Ciclo Bienal Auditado 2023–2024</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- 4 High Impact Indicators -->
-              <div class="grid gap-3">
-                <!-- Clean Metric 1 -->
-                <div
-                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
-                >
-                  <div
-                    class="d-flex align-items-center gap-1 fp-text-primary mb-1"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-shield-heart fp-icon fp-text-20px"
-                    ></i>
-                    <span
-                      class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
-                      >Dívidas Evitadas</span
-                    >
-                  </div>
-                  <div
-                    class="fp-font-display fp-text-display fp-text-primary fw-bold fp-tracking-tight"
-                  >
-                    R$ 14,8M
-                  </div>
-                  <p
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                  >
-                    Economia direta em juros abusivos de cartão e cheque
-                    especial.
-                  </p>
-                </div>
-                <!-- Clean Metric 2 -->
-                <div
-                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
-                >
-                  <div
-                    class="d-flex align-items-center gap-1 fp-text-primary mb-1"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-piggy-bank fp-icon fp-text-20px"
-                    ></i>
-                    <span
-                      class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
-                      >Reserva Plena</span
-                    >
-                  </div>
-                  <div
-                    class="fp-font-display fp-text-display fp-text-on-surface fw-bold fp-tracking-tight"
-                  >
-                    18.420
-                  </div>
-                  <p
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                  >
-                    Famílias blindadas com 6+ meses de custo fixo garantido.
-                  </p>
-                </div>
-                <!-- Clean Metric 3 -->
-                <div
-                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
-                >
-                  <div
-                    class="d-flex align-items-center gap-1 fp-text-primary mb-1"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-brain fp-icon fp-text-20px"
-                    ></i>
-                    <span
-                      class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
-                      >Alívio Emocional</span
-                    >
-                  </div>
-                  <div
-                    class="fp-font-display fp-text-display fp-text-primary fw-bold fp-tracking-tight"
-                  >
-                    94%
-                  </div>
-                  <p
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                  >
-                    Redução expressiva de estresse e cobranças diárias.
-                  </p>
-                </div>
-                <!-- Clean Metric 4 -->
-                <div
-                  class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-1 g-col-12 g-col-sm-6 g-col-xl-3"
-                >
-                  <div
-                    class="d-flex align-items-center gap-1 fp-text-primary mb-1"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-moon fp-icon fp-text-20px"
-                    ></i>
-                    <span
-                      class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary fp-tracking-wider"
-                      >Qualidade de Sono</span
-                    >
-                  </div>
-                  <div
-                    class="fp-font-display fp-text-display fp-text-on-surface fw-bold fp-tracking-tight"
-                  >
-                    +4,8 pts
-                  </div>
-                  <p
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                  >
-                    Evolução na avaliação do descanso e tranquilidade no lar.
-                  </p>
-                </div>
-              </div>
-              <!-- Main Analytics Section (2-Column Asymmetric Layout) -->
-              <div class="grid gap-4 align-items-start">
-                <!-- Left Column: Comparative Table + Native CSS Multiplier Chart (7 Cols) -->
-                <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-7">
-                  <!-- Comparative Matrix Card -->
-                  <div
-                    class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
-                  >
-                    <div
-                      class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-1"
-                    >
-                      <div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-secondary fw-semibold"
-                          >Análise de Trajetória</span
-                        >
-                        <h2
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
-                        >
-                          Matriz de Emancipação Financeira
-                        </h2>
-                      </div>
-                      <span
-                        class="fp-text-on-surface-variant fp-font-label-md fp-text-label-md"
-                        >Amostra: 10.000 perfis acompanhados</span
-                      >
-                    </div>
-                    <!-- Structured Comparison Table -->
-                    <div class="overflow-x-auto">
-                      <table class="w-100 text-start">
-                        <thead>
-                          <tr
-                            class="fp-border-b fp-border-surface-container-high fp-text-on-surface-variant fp-font-label-md fp-text-label-md"
-                          >
-                            <th class="py-2 px-3 fw-semibold">Dimensão</th>
-                            <th class="py-2 px-3 fw-semibold fp-text-secondary">
-                              Sem Metodologia
-                            </th>
-                            <th class="py-2 px-3 fw-semibold fp-text-primary">
-                              Com FinProsper (50/30/20)
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody class="fp-text-on-surface">
-                          <tr
-                            class="fp-hover-bg-surface-container-low-30 fp-border-b fp-border-surface-container-low"
-                          >
-                            <td class="py-3 px-3">
-                              <div
-                                class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                              >
-                                Gastos por Impulso
-                              </div>
-                              <div
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Consumo supérfluo
-                              </div>
-                            </td>
-                            <td class="py-3 px-3">
-                              <span class="fw-semibold fp-text-on-surface"
-                                >~38% da renda</span
-                              >
-                              <p
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Sem limite planejado
-                              </p>
-                            </td>
-                            <td class="py-3 px-3">
-                              <span class="fw-semibold fp-text-primary"
-                                >Teto de 30%</span
-                              >
-                              <p
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Consumo consciente
-                              </p>
-                            </td>
-                          </tr>
-                          <tr
-                            class="fp-hover-bg-surface-container-low-30 fp-border-b fp-border-surface-container-low"
-                          >
-                            <td class="py-3 px-3">
-                              <div
-                                class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                              >
-                                Juros do Rotativo
-                              </div>
-                              <div
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Custo financeiro anual
-                              </div>
-                            </td>
-                            <td class="py-3 px-3">
-                              <span
-                                class="fp-font-data-mono fp-text-data-mono fp-text-secondary fw-medium"
-                                >R$ 5.480/ano</span
-                              >
-                              <p
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Drenagem contínua
-                              </p>
-                            </td>
-                            <td class="py-3 px-3">
-                              <span
-                                class="fp-font-data-mono fp-text-data-mono fp-text-primary fw-bold"
-                                >R$ 0,00</span
-                              >
-                              <p
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Fatura integral programada
-                              </p>
-                            </td>
-                          </tr>
-                          <tr
-                            class="fp-hover-bg-surface-container-low-30 fp-border-b fp-border-surface-container-low"
-                          >
-                            <td class="py-3 px-3">
-                              <div
-                                class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                              >
-                                Reserva em 3 Anos
-                              </div>
-                              <div
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Patrimônio acumulado
-                              </div>
-                            </td>
-                            <td class="py-3 px-3">
-                              <span
-                                class="fp-font-data-mono fp-text-data-mono fp-text-on-surface-variant fw-medium"
-                                >R$ 1.200,00</span
-                              >
-                              <p
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Insegurança em emergências
-                              </p>
-                            </td>
-                            <td class="py-3 px-3">
-                              <span
-                                class="fp-font-data-mono fp-text-data-mono fp-text-primary fw-bold"
-                                >R$ 38.650,00</span
-                              >
-                              <p
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Juros compostos a favor
-                              </p>
-                            </td>
-                          </tr>
-                          <tr class="fp-hover-bg-surface-container-low-30">
-                            <td class="py-3 px-3">
-                              <div
-                                class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                              >
-                                Clima Familiar
-                              </div>
-                              <div
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                              >
-                                Socioafetivo no lar
-                              </div>
-                            </td>
-                            <td class="py-3 px-3 fp-text-on-surface-variant">
-                              <span>Tensão frequente</span>
-                            </td>
-                            <td class="py-3 px-3 fp-text-primary fw-medium">
-                              <span>Harmonia e metas alinhadas</span>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <!-- CSS Native Bar Graph: Juros Compostos vs Inércia -->
-                  <div
-                    class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
-                  >
-                    <div
-                      class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-1"
-                    >
-                      <div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-primary fw-semibold"
-                          >Multiplicação de Riqueza</span
-                        >
-                        <h3
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
-                        >
-                          Efeito Multiplicador do Aporte Reinvestido
-                        </h3>
-                      </div>
-                      <div
-                        class="d-flex align-items-center gap-2 fp-font-label-md fp-text-label-md"
-                      >
-                        <span
-                          class="d-inline-flex align-items-center gap-1 fw-semibold fp-text-primary"
-                          ><span
-                            class="fp-w-3 fp-h-3 fp-rounded-full fp-bg-primary"
-                          ></span>
-                          FinProsper (20% aporte + 10% a.a.)</span
-                        >
-                        <span
-                          class="d-inline-flex align-items-center gap-1 fp-text-on-surface-variant"
-                          ><span
-                            class="fp-w-3 fp-h-3 fp-rounded-full fp-bg-secondary-fixed-dim"
-                          ></span>
-                          Sem Gestão</span
-                        >
-                      </div>
-                    </div>
-                    <!-- Pure CSS Columns Chart -->
-                    <div
-                      class="w-100 fp-bg-surface-container-low fp-rounded-xl p-3 d-flex flex-column gap-3"
-                    >
-                      <div
-                        class="fp-h-56 d-flex align-items-end justify-content-between gap-2 pt-3 px-2"
-                      >
-                        <!-- Ano 1 -->
-                        <div
-                          class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                        >
-                          <div
-                            class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
-                          >
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
-                              style="height: 12%"
-                            ></div>
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-2563EB fp-hover-bg-1D4ED8 fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
-                              style="height: 24%"
-                            >
-                              <span
-                                class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
-                                >R$ 14,4k</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Ano 1</span
-                          >
-                        </div>
-                        <!-- Ano 2 -->
-                        <div
-                          class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                        >
-                          <div
-                            class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
-                          >
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
-                              style="height: 14%"
-                            ></div>
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-2563EB fp-hover-bg-1D4ED8 fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
-                              style="height: 38%"
-                            >
-                              <span
-                                class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
-                                >R$ 31,2k</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Ano 2</span
-                          >
-                        </div>
-                        <!-- Ano 3 -->
-                        <div
-                          class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                        >
-                          <div
-                            class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
-                          >
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
-                              style="height: 15%"
-                            ></div>
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-1D4ED8 fp-hover-bg-primary fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
-                              style="height: 54%"
-                            >
-                              <span
-                                class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
-                                >R$ 51,8k</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Ano 3</span
-                          >
-                        </div>
-                        <!-- Ano 4 -->
-                        <div
-                          class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                        >
-                          <div
-                            class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
-                          >
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
-                              style="height: 16%"
-                            ></div>
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-1D4ED8 fp-hover-bg-primary fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
-                              style="height: 72%"
-                            >
-                              <span
-                                class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
-                                >R$ 77,5k</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Ano 4</span
-                          >
-                        </div>
-                        <!-- Ano 5 -->
-                        <div
-                          class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                        >
-                          <div
-                            class="w-100 d-flex align-items-end justify-content-center gap-1 h-100"
-                          >
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-secondary-fixed-dim fp-rounded-t-md"
-                              style="height: 17%"
-                            ></div>
-                            <div
-                              class="w-100 fp-max-w-28px fp-bg-primary fp-hover-bg-173bab fp-rounded-t-md position-relative d-flex justify-content-center fp-group"
-                              style="height: 98%"
-                            >
-                              <span
-                                class="top-0 mt-n4 opacity-0 fp-group-hover-opacity-100 position-absolute fp-bg-inverse-surface fp-text-inverse-on-surface fp-font-label-md fp-text-label-md px-1 py-0 fp-rounded fp-shadow"
-                                >R$ 110,2k</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
-                            >Ano 5</span
-                          >
-                        </div>
-                      </div>
-                      <div
-                        class="d-flex flex-column flex-sm-row align-items-center justify-content-between fp-text-on-surface-variant fp-font-body-sm fp-text-body-sm pt-1"
-                      >
-                        <span class="d-flex align-items-center gap-1">
-                          <i
-                            aria-hidden="true"
-                            class="fa-solid fa-arrow-trend-up fp-icon fp-text-16px fp-text-primary"
-                          ></i>
-                          Simulação baseada em renda média de R$ 5.000 com regra
-                          50/30/20.
-                        </span>
-                        <span
-                          class="fp-text-primary fp-font-label-md fp-text-label-md fw-bold"
-                          >Excedente acumulado: +843%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Right Column: ODS Alignment + Real Success Stories (5 Cols) -->
-                <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-5">
-                  <!-- UN SDGs (ODS ONU) Section -->
-                  <div
-                    class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
-                  >
-                    <div
-                      class="d-flex align-items-center justify-content-between pb-1"
-                    >
-                      <div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-secondary fw-semibold"
-                          >Compromisso Global</span
-                        >
-                        <h2
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
-                        >
-                          Alinhamento com ODS
-                        </h2>
-                      </div>
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-certificate fp-icon fp-text-primary fp-text-20px"
-                      ></i>
-                    </div>
-                    <div class="grid gap-2 pt-1">
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
-                      >
-                        <div
-                          class="d-flex align-items-center gap-1 fp-text-primary"
-                        >
-                          <span
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold"
-                            >01</span
-                          >
-                          <span
-                            class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
-                            >ODS</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                          >Fim da Pobreza</span
-                        >
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
-                        >
-                          Blindagem contra juros abusivos e dívidas cíclicas.
-                        </p>
-                      </div>
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
-                      >
-                        <div
-                          class="d-flex align-items-center gap-1 fp-text-primary"
-                        >
-                          <span
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold"
-                            >03</span
-                          >
-                          <span
-                            class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
-                            >ODS</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                          >Saúde &amp; Bem-Estar</span
-                        >
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
-                        >
-                          Redução de ansiedade e recuperação do sono.
-                        </p>
-                      </div>
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
-                      >
-                        <div
-                          class="d-flex align-items-center gap-1 fp-text-primary"
-                        >
-                          <span
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold"
-                            >04</span
-                          >
-                          <span
-                            class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
-                            >ODS</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                          >Educação de Qualidade</span
-                        >
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
-                        >
-                          Alfabetização financeira aberta, prática e gratuita.
-                        </p>
-                      </div>
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1 g-col-6"
-                      >
-                        <div
-                          class="d-flex align-items-center gap-1 fp-text-primary"
-                        >
-                          <span
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold"
-                            >08</span
-                          >
-                          <span
-                            class="fp-font-label-md fp-text-label-md text-uppercase fw-semibold fp-text-secondary"
-                            >ODS</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-title-md fp-text-title-md fw-semibold fp-text-on-surface"
-                          >Trabalho Decente</span
-                        >
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-snug"
-                        >
-                          Segurança para autônomos e famílias assalariadas.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Real Human Stories (Testimonials + Metrics) -->
-                  <div
-                    class="fp-rounded-xl fp-bg-surface-container-lowest p-4 fp-shadow-sm fp-border fp-border-surface-container d-flex flex-column gap-3"
-                  >
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-secondary fw-semibold"
-                          >Vozes da Comunidade</span
-                        >
-                        <h2
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
-                        >
-                          Relatos de Superação
-                        </h2>
-                      </div>
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-quote-right fp-icon fp-text-primary fp-text-24px"
-                      ></i>
-                    </div>
-                    <div class="d-flex flex-column gap-3">
-                      <!-- Story 1 -->
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1"
-                      >
-                        <div
-                          class="d-flex align-items-center justify-content-between"
-                        >
-                          <div class="d-flex align-items-center gap-2">
-                            <img
-                              alt="Camila Vasconcelos"
-                              class="fp-w-11 fp-h-11 fp-rounded-full object-fit-cover fp-shadow-sm"
-                              src="../images/avatar-camila-vasconcelos.png"
-                            />
-                            <div class="d-flex flex-column">
-                              <span
-                                class="fp-font-title-md fp-text-title-md fw-bold fp-text-on-surface"
-                                >Camila Vasconcelos</span
-                              >
-                              <span
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                                >Analista de Logística • Belo Horizonte</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
-                            >Quitou R$ 18,4k</span
-                          >
-                        </div>
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-1 fp-leading-relaxed"
-                        >
-                          "Reorganizei minhas contas com a regra 50/30/20 e saí
-                          totalmente do cheque especial em 14 meses."
-                        </p>
-                      </div>
-                      <!-- Story 2 -->
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1"
-                      >
-                        <div
-                          class="d-flex align-items-center justify-content-between"
-                        >
-                          <div class="d-flex align-items-center gap-2">
-                            <img
-                              alt="Roberto &amp; Marlene Dias"
-                              class="fp-w-11 fp-h-11 fp-rounded-full object-fit-cover fp-shadow-sm"
-                              src="../images/avatar-roberto-marlene-dias.png"
-                            />
-                            <div class="d-flex flex-column">
-                              <span
-                                class="fp-font-title-md fp-text-title-md fw-bold fp-text-on-surface"
-                                >Roberto &amp; Marlene Dias</span
-                              >
-                              <span
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                                >Comércio Familiar • Curitiba</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
-                            >R$ 12k de reserva</span
-                          >
-                        </div>
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-1 fp-leading-relaxed"
-                        >
-                          "Criamos pela primeira vez uma reserva de emergência
-                          que salvou nosso negócio sem precisar de empréstimo
-                          bancário."
-                        </p>
-                      </div>
-                      <!-- Story 3 -->
-                      <div
-                        class="p-3 fp-rounded-xl fp-bg-surface-container-low d-flex flex-column gap-1"
-                      >
-                        <div
-                          class="d-flex align-items-center justify-content-between"
-                        >
-                          <div class="d-flex align-items-center gap-2">
-                            <img
-                              alt="Lucas Nogueira"
-                              class="fp-w-11 fp-h-11 fp-rounded-full object-fit-cover fp-shadow-sm"
-                              src="../images/avatar-lucas-nogueira.png"
-                            />
-                            <div class="d-flex flex-column">
-                              <span
-                                class="fp-font-title-md fp-text-title-md fw-bold fp-text-on-surface"
-                                >Lucas Nogueira</span
-                              >
-                              <span
-                                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                                >Desenvolvedor Jr. • Recife</span
-                              >
-                            </div>
-                          </div>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-bold"
-                            >25% aporte/mês</span
-                          >
-                        </div>
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-1 fp-leading-relaxed"
-                        >
-                          "Comecei do zero após a faculdade. Hoje mantenho
-                          aportes constantes em renda fixa com visão de longo
-                          prazo."
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Callout Banner: Compromisso com a Cidadania Financeira -->
-              <div
-                class="fp-rounded-xl fp-bg-1E40AF fp-text-FFFFFF p-6 d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 fp-shadow-md fp-border fp-border-1D4ED8"
-              >
-                <div class="d-flex flex-column gap-1 fp-max-w-2xl">
-                  <span
-                    class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-primary-fixed fw-semibold"
-                    >Acesso Democrático &amp; Aberto</span
-                  >
-                  <h3
-                    class="fp-font-headline-lg fp-text-headline-lg fw-bold fp-tracking-tight fp-text-white"
-                  >
-                    Faça Parte Desta Transformação Coletiva
-                  </h3>
-                  <p class="fp-font-body-md fp-text-body-md fp-text-blue-100">
-                    Nossa metodologia é construída para democratizar o domínio
-                    contábil básico. Todas as calculadoras, simuladores de juros
-                    e cursos são 100% gratuitos e livres de viés de venda de
-                    produtos bancários.
-                  </p>
-                </div>
-                <div
-                  class="d-flex flex-wrap align-items-center gap-3 flex-shrink-0"
-                >
-                  <a
-                    class="px-4 py-3 fp-rounded-lg fp-bg-FFFFFF fp-text-1E40AF fp-hover-bg-surface-container-low fp-font-label-md fp-text-label-md fw-bold fp-shadow-sm text-center"
-                    href="../pages/solucao.html"
-                  >
-                    Explorar Simulador de Dívidas
-                  </a>
-                  <a
-                    class="px-4 py-3 fp-rounded-lg fp-bg-2563EB fp-hover-bg-1D4ED8 fp-text-FFFFFF fp-font-label-md fp-text-label-md fw-semibold text-center fp-shadow-sm"
-                    href="#"
-                  >
-                    Baixar Relatório Completo (PDF)
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="col-lg-8">
+            <h2 class="rodape-titulo">Fontes dos dados</h2>
+            <ul class="rodape-fontes">
+              <li>
+                NICOLAU, Analice. 91% dos brasileiros sem educação
+                financeira na infância.
+                <a
+                  href="https://jornaldebrasilia.com.br/blogs-e-colunas/analice-nicolau/91-dos-brasileiros-sem-educacao-financeira-na-infancia/"
+                  target="_blank"
+                  rel="noopener"
+                  >Jornal de Brasília<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >, 5 jan. 2026.
+              </li>
+              <li>
+                RUAS, Danielle. 55% dos brasileiros compreendem pouco ou
+                nada de educação financeira.
+                <a
+                  href="https://consumidormoderno.com.br/educacao-financeira-brasil/"
+                  target="_blank"
+                  rel="noopener"
+                  >Consumidor Moderno<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >, 24 jul. 2025.
+              </li>
+              <li>
+                TVT NEWS. Brasileiros não sabem quanto gastaram em jogos de
+                aposta.
+                <a
+                  href="https://tvtnews.com.br/brasileiros-nao-sabem-quanto-gastaram-em-jogos-de-aposta/"
+                  target="_blank"
+                  rel="noopener"
+                  >TVT News<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >, 25 set. 2024.
+              </li>
+              <li>
+                ONU BRASIL. Objetivos de Desenvolvimento Sustentável.
+                <a
+                  href="https://brasil.un.org/pt-br/sdgs"
+                  target="_blank"
+                  rel="noopener"
+                  >brasil.un.org<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >.
+              </li>
+            </ul>
           </div>
-        </main>
-        <footer class="ini-rodape">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <p class="ini-rodape-marca">FinProsper</p>
-                <p class="ini-rodape-texto">
-                  Educação financeira simples para quem quer começar a investir.
-                  Projeto acadêmico da Global Solution FIAP 2026.
-                </p>
-              </div>
-              <div class="col-lg-8">
-                <h2 class="ini-rodape-titulo">Fontes dos dados</h2>
-                <ul class="ini-fontes">
-                  <li>
-                    NICOLAU, Analice. 91% dos brasileiros sem educação
-                    financeira na infância.
-                    <a
-                      href="https://jornaldebrasilia.com.br/blogs-e-colunas/analice-nicolau/91-dos-brasileiros-sem-educacao-financeira-na-infancia/"
-                      target="_blank"
-                      rel="noopener"
-                      >Jornal de Brasília<span class="visually-hidden">
-                        (abre em nova aba)</span
-                      ></a
-                    >, 5 jan. 2026.
-                  </li>
-                  <li>
-                    RUAS, Danielle. 55% dos brasileiros compreendem pouco ou
-                    nada de educação financeira.
-                    <a
-                      href="https://consumidormoderno.com.br/educacao-financeira-brasil/"
-                      target="_blank"
-                      rel="noopener"
-                      >Consumidor Moderno<span class="visually-hidden">
-                        (abre em nova aba)</span
-                      ></a
-                    >, 24 jul. 2025.
-                  </li>
-                  <li>
-                    TVT NEWS. Brasileiros não sabem quanto gastaram em jogos de
-                    aposta.
-                    <a
-                      href="https://tvtnews.com.br/brasileiros-nao-sabem-quanto-gastaram-em-jogos-de-aposta/"
-                      target="_blank"
-                      rel="noopener"
-                      >TVT News<span class="visually-hidden">
-                        (abre em nova aba)</span
-                      ></a
-                    >, 25 set. 2024.
-                  </li>
-                  <li>
-                    ONU BRASIL. Objetivos de Desenvolvimento Sustentável.
-                    <a
-                      href="https://brasil.un.org/pt-br/sdgs"
-                      target="_blank"
-                      rel="noopener"
-                      >brasil.un.org<span class="visually-hidden">
-                        (abre em nova aba)</span
-                      ></a
-                    >.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <p class="ini-rodape-copia">© 2026 FinProsper</p>
-          </div>
-        </footer>
+        </div>
+        <p class="rodape-copia">© 2026 FinProsper</p>
       </div>
-    </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/funcoes.js"></script>
-    <script src="../js/impacto.js"></script>
   </body>
 </html>
