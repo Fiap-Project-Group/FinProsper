@@ -13,737 +13,6 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <!-- Versão mobile e tablet (telas menores que 992px) -->
-    <div class="d-lg-none tela-s4">
-      <div
-        class="fp-bg-surface fp-font-body-md fp-text-body-md fp-text-on-surface d-flex flex-column min-vh-100"
-      >
-        <header class="fixed-top cab-mobile">
-          <div
-            class="cab-mobile-conteudo px-3 d-flex align-items-center justify-content-between"
-          >
-            <a class="d-flex align-items-center gap-2" href="../index.html">
-              <img
-                alt="FinProsper"
-                class="cab-logo"
-                src="../images/logo-finprosper.png"
-              />
-              <span class="d-flex flex-column">
-                <span class="d-flex align-items-center gap-1">
-                  <span class="cab-mobile-marca">FinProsper</span>
-                  <span class="cab-mobile-selo">Edu</span>
-                </span>
-                <span class="cab-mobile-pagina">Notícias</span>
-              </span>
-            </a>
-            <div class="d-flex align-items-center gap-2">
-              <div class="cab-mobile-status d-flex align-items-center gap-1">
-                <span class="cab-ponto cab-ponto-claro"></span>
-                <span>Online</span>
-              </div>
-              <img
-                alt="Perfil"
-                class="cab-mobile-avatar"
-                src="../images/avatar-camila-aluna.png"
-              />
-            </div>
-          </div>
-        </header>
-        <main
-          class="flex-fill d-flex flex-column position-relative w-100 pt-8 pb-9 fp-bg-surface"
-        >
-          <div class="d-flex flex-column w-100 px-3 fp-space-y-space-md pb-7">
-            <!-- Cabeçalho e Boas-vindas -->
-            <section class="d-flex flex-column fp-space-y-space-xs pt-1">
-              <div class="d-flex align-items-center justify-content-between">
-                <div
-                  class="d-inline-flex align-items-center gap-1 px-2 py-1 fp-rounded-full fp-font-label-md fp-text-label-md"
-                  style="
-                    background-color: rgb(239, 246, 255);
-                    color: rgb(29, 78, 216);
-                  "
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa-solid fa-newspaper fp-icon fp-text-16px"
-                  ></i>
-                  Atualizações Diárias
-                </div>
-                <span
-                  class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant d-flex align-items-center gap-1"
-                  ><span
-                    class="fp-w-1_5 fp-h-1_5 fp-rounded-full"
-                    style="background-color: #2563eb"
-                  ></span>
-                  Tempo real
-                </span>
-              </div>
-              <h2
-                class="fp-font-headline-lg-mobile fp-text-headline-lg-mobile fp-text-on-surface fp-tracking-tight"
-              >
-                Central de Notícias &amp; Educação
-              </h2>
-              <p
-                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-              >
-                Informações claras e mastigadas para proteger sua renda e
-                multiplicar seu patrimônio.
-              </p>
-            </section>
-            <!-- Barra de Busca Mobile -->
-            <section class="position-relative w-100">
-              <div
-                class="position-relative d-flex align-items-center fp-bg-surface-container-low fp-rounded-full px-3 py-2 fp-focus-within-bg-surface-container-lowest fp-focus-within-shadow-sm"
-              >
-                <i
-                  aria-hidden="true"
-                  class="fa-solid fa-magnifying-glass fp-icon fp-text-secondary fp-text-20px pe-none me-2"
-                ></i
-                ><input
-                  class="w-100 fp-bg-transparent fp-text-on-surface fp-font-body-md fp-text-body-md fp-placeholder-text-secondary"
-                  id="search-input"
-                  placeholder="Buscar artigos ou termos..."
-                  type="search"
-                /><button
-                  aria-label="Limpar busca"
-                  class="d-none fp-text-secondary fp-hover-text-on-surface"
-                  id="clear-search-btn"
-                  type="button"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa-solid fa-xmark fp-icon fp-text-18px"
-                  ></i>
-                </button>
-              </div>
-            </section>
-            <!-- Filtros Horizontais Deslizantes -->
-            <section
-              class="w-100 mx-3 px-3 overflow-x-auto d-flex align-items-center gap-2 py-1"
-              id="filter-container"
-            >
-              <button
-                class="filter-pill active text-nowrap px-3 py-1 fp-rounded-full fp-font-label-md fp-text-label-md fp-bg-primary fp-text-on-primary"
-                data-filter="all"
-                type="button"
-              >
-                Todos</button
-              ><button
-                class="filter-pill text-nowrap px-3 py-1 fp-rounded-full fp-font-label-md fp-text-label-md fp-bg-surface-container-low fp-text-on-surface-variant fp-hover-bg-surface-container"
-                data-filter="selic"
-                type="button"
-              >
-                Selic &amp; Juros</button
-              ><button
-                class="filter-pill text-nowrap px-3 py-1 fp-rounded-full fp-font-label-md fp-text-label-md fp-bg-surface-container-low fp-text-on-surface-variant fp-hover-bg-surface-container"
-                data-filter="inflacao"
-                type="button"
-              >
-                Inflação</button
-              ><button
-                class="filter-pill text-nowrap px-3 py-1 fp-rounded-full fp-font-label-md fp-text-label-md fp-bg-surface-container-low fp-text-on-surface-variant fp-hover-bg-surface-container"
-                data-filter="dividas"
-                type="button"
-              >
-                Dívidas</button
-              ><button
-                class="filter-pill text-nowrap px-3 py-1 fp-rounded-full fp-font-label-md fp-text-label-md fp-bg-surface-container-low fp-text-on-surface-variant fp-hover-bg-surface-container"
-                data-filter="investimentos"
-                type="button"
-              >
-                Investimentos</button
-              ><button
-                class="filter-pill text-nowrap px-3 py-1 fp-rounded-full fp-font-label-md fp-text-label-md fp-bg-surface-container-low fp-text-on-surface-variant fp-hover-bg-surface-container"
-                data-filter="orcamento"
-                type="button"
-              >
-                Orçamento
-              </button>
-            </section>
-            <!-- Card Destaque / Modal de Leitura com Glossário Integrado -->
-            <section
-              class="w-100 fp-bg-surface-container-lowest fp-rounded-xl p-3 fp-shadow-md d-flex flex-column fp-space-y-space-sm position-relative overflow-hidden"
-            >
-              <div class="d-flex align-items-center justify-content-between">
-                <span
-                  class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-tracking-wide text-uppercase"
-                  style="color: rgb(29, 78, 216)"
-                  >Destaque da Semana</span
-                ><span
-                  class="fp-font-label-md fp-text-label-md fp-text-secondary"
-                  >4 min</span
-                >
-              </div>
-              <div class="fp-space-y-1">
-                <h3
-                  class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold"
-                >
-                  Desmistificando o CDI e a Selic: Onde Seu Dinheiro Rende Mais?
-                </h3>
-                <p
-                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  Guia prático para saber onde alocar sua reserva e
-                  investimentos sem complicações.
-                </p>
-              </div>
-              <div
-                class="position-relative w-100 fp-h-36 fp-rounded-lg overflow-hidden"
-              >
-                <img
-                  alt="Espaço de trabalho financeiro limpo e moderno"
-                  class="w-100 h-100 object-fit-cover"
-                  src="../images/foto-espaco-de-trabalho-financeiro.png"
-                />
-              </div>
-              <div class="d-flex flex-wrap align-items-center gap-1 pt-1">
-                <span
-                  class="fp-font-label-md fp-text-label-md fp-text-secondary me-1"
-                  >Glossário rápido:</span
-                ><button
-                  class="px-2 py-0 fp-rounded-full fp-font-label-md fp-text-label-md fw-medium fp-border"
-                  onclick="mostrarTermo('selic')"
-                  style="
-                    background-color: rgb(239, 246, 255);
-                    border-color: rgb(191, 219, 254);
-                    color: rgb(29, 78, 216);
-                  "
-                  type="button"
-                >
-                  Taxa Selic</button
-                ><button
-                  class="px-2 py-0 fp-rounded-full fp-font-label-md fp-text-label-md fw-medium fp-border"
-                  onclick="mostrarTermo('cdi')"
-                  style="
-                    background-color: rgb(239, 246, 255);
-                    border-color: rgb(191, 219, 254);
-                    color: rgb(29, 78, 216);
-                  "
-                  type="button"
-                >
-                  CDI</button
-                ><button
-                  class="px-2 py-0 fp-rounded-full fp-font-label-md fp-text-label-md fw-medium fp-border"
-                  onclick="mostrarTermo('real')"
-                  style="
-                    background-color: rgb(239, 246, 255);
-                    border-color: rgb(191, 219, 254);
-                    color: rgb(29, 78, 216);
-                  "
-                  type="button"
-                >
-                  Rentabilidade Real
-                </button>
-              </div>
-              <div
-                class="fp-bg-surface-container-low fp-rounded-lg p-2 fp-space-y-1"
-                id="glossary-box"
-                style="
-                  background-color: rgb(239, 246, 255);
-                  border: 1px solid rgb(191, 219, 254);
-                "
-              >
-                <div class="d-flex align-items-center justify-content-between">
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold"
-                    id="glossary-title"
-                    style="color: rgb(29, 78, 216)"
-                    >Dica de Leitura</span
-                  ><span
-                    class="fp-font-label-md fp-text-label-md fp-text-secondary"
-                    id="glossary-tag"
-                    >Conceito</span
-                  >
-                </div>
-                <p
-                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                  id="glossary-desc"
-                >
-                  Toque em qualquer termo acima para ver a definição
-                  simplificada.
-                </p>
-              </div>
-              <button
-                class="w-100 d-flex align-items-center justify-content-center gap-1 py-2 fp-rounded-lg fp-bg-primary fp-text-on-primary fp-font-label-md fp-text-label-md fw-semibold"
-                data-bs-target="#reading-modal"
-                data-bs-toggle="modal"
-                onclick="
-                  abrirLeitura(
-                    'Desmistificando o CDI e a Selic',
-                    'Entenda como os juros e os indexadores afetam sua vida diária e seus investimentos.',
-                  )
-                "
-                style="
-                  background-color: rgb(30, 64, 175);
-                  color: rgb(255, 255, 255);
-                "
-                type="button"
-              >
-                <span class="">Ler Artigo Completo</span
-                ><i
-                  aria-hidden="true"
-                  class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                ></i>
-              </button>
-            </section>
-            <!-- Título da Seção de Artigos Recentes -->
-            <div class="d-flex align-items-center justify-content-between pt-1">
-              <h3
-                class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface"
-              >
-                Artigos &amp; Análises
-              </h3>
-              <span
-                class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                id="articles-count"
-                >5 artigos</span
-              >
-            </div>
-            <!-- Grade de Artigos (Cards Informativos) -->
-            <div
-              class="d-flex flex-column fp-space-y-space-md"
-              id="articles-list"
-            >
-              <article
-                class="article-card fp-bg-surface-container-lowest fp-rounded-xl p-3 fp-shadow-sm fp-hover-shadow-md d-flex flex-column fp-space-y-2"
-                data-category="selic"
-              >
-                <div
-                  class="d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-secondary"
-                >
-                  <span class="fw-medium" style="color: #1d4ed8"
-                    >Selic &amp; Juros</span
-                  ><span class="">14 Out • 3 min</span>
-                </div>
-                <h4
-                  class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                >
-                  Copom e a Selic: O que muda na sua poupança e no CDB?
-                </h4>
-                <p
-                  class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  Com a nova decisão do Banco Central, veja como calibrar sua
-                  reserva de emergência sem perder poder de compra.
-                </p>
-                <div class="pt-1 d-flex align-items-center justify-content-end">
-                  <button
-                    class="d-inline-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fw-semibold fp-hover-underline"
-                    data-bs-target="#reading-modal"
-                    data-bs-toggle="modal"
-                    onclick="
-                      abrirLeitura(
-                        'Copom e a Selic: Poupança vs CDB',
-                        'Aprenda o impacto prático da taxa base do Banco Central nos seus rendimentos.',
-                      )
-                    "
-                    style="color: #1d4ed8"
-                    type="button"
-                  >
-                    <span class="">Ler artigo</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                    ></i>
-                  </button>
-                </div>
-              </article>
-              <article
-                class="article-card fp-bg-surface-container-lowest fp-rounded-xl p-3 fp-shadow-sm fp-hover-shadow-md d-flex flex-column fp-space-y-2"
-                data-category="dividas"
-              >
-                <div
-                  class="d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-secondary"
-                >
-                  <span class="fw-medium" style="color: #1d4ed8"
-                    >Dívidas &amp; Crédito</span
-                  ><span class="">13 Out • 5 min</span>
-                </div>
-                <h4
-                  class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                >
-                  Como quitar dívidas do cartão com o método bola de neve
-                </h4>
-                <p
-                  class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  O rotativo do cartão pode virar uma avalanche. Saiba como
-                  priorizar credores menores para obter fôlego financeiro.
-                </p>
-                <div class="pt-1 d-flex align-items-center justify-content-end">
-                  <button
-                    class="d-inline-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fw-semibold fp-hover-underline"
-                    data-bs-target="#reading-modal"
-                    data-bs-toggle="modal"
-                    onclick="
-                      abrirLeitura(
-                        'Método Bola de Neve para Dívidas',
-                        'Como listar saldos devedores em ordem crescente e aplicar aportes focados.',
-                      )
-                    "
-                    style="color: #1d4ed8"
-                    type="button"
-                  >
-                    <span class="">Ler artigo</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                    ></i>
-                  </button>
-                </div>
-              </article>
-              <article
-                class="article-card fp-bg-surface-container-lowest fp-rounded-xl p-3 fp-shadow-sm fp-hover-shadow-md d-flex flex-column fp-space-y-2"
-                data-category="investimentos"
-              >
-                <div
-                  class="d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-secondary"
-                >
-                  <span class="fw-medium" style="color: #1d4ed8"
-                    >Investimentos</span
-                  ><span class="">12 Out • 4 min</span>
-                </div>
-                <h4
-                  class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                >
-                  Fundos Imobiliários vs Aluguel tradicional para iniciantes
-                </h4>
-                <p
-                  class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  Receber proventos mensais sem dor de cabeça com inquilinos.
-                  Entenda a dinâmica dos FIIs.
-                </p>
-                <div class="pt-1 d-flex align-items-center justify-content-end">
-                  <button
-                    class="d-inline-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fw-semibold fp-hover-underline"
-                    data-bs-target="#reading-modal"
-                    data-bs-toggle="modal"
-                    onclick="
-                      abrirLeitura(
-                        'Fundos Imobiliários vs Aluguel Tradicional',
-                        'Comparativo minucioso de custos de aquisição, liquidez e dividendos.',
-                      )
-                    "
-                    style="color: #1d4ed8"
-                    type="button"
-                  >
-                    <span class="">Ler artigo</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                    ></i>
-                  </button>
-                </div>
-              </article>
-              <article
-                class="article-card fp-bg-surface-container-lowest fp-rounded-xl p-3 fp-shadow-sm fp-hover-shadow-md d-flex flex-column fp-space-y-2"
-                data-category="inflacao"
-              >
-                <div
-                  class="d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-secondary"
-                >
-                  <span class="fw-medium" style="color: #1d4ed8">Inflação</span
-                  ><span class="">10 Out • 3 min</span>
-                </div>
-                <h4
-                  class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                >
-                  Inflação pessoal: como blindar o carrinho do mercado
-                </h4>
-                <p
-                  class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  Descubra táticas práticas de substituição inteligente e
-                  compras sazonais no supermercado.
-                </p>
-                <div class="pt-1 d-flex align-items-center justify-content-end">
-                  <button
-                    class="d-inline-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fw-semibold fp-hover-underline"
-                    data-bs-target="#reading-modal"
-                    data-bs-toggle="modal"
-                    onclick="
-                      abrirLeitura(
-                        'Inflação Pessoal no Supermercado',
-                        'Como montar uma cesta personalizada e fugir de oscilações com novos hábitos.',
-                      )
-                    "
-                    style="color: #1d4ed8"
-                    type="button"
-                  >
-                    <span class="">Ler artigo</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                    ></i>
-                  </button>
-                </div>
-              </article>
-              <article
-                class="article-card fp-bg-surface-container-lowest fp-rounded-xl p-3 fp-shadow-sm fp-hover-shadow-md d-flex flex-column fp-space-y-2"
-                data-category="orcamento"
-              >
-                <div
-                  class="d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-secondary"
-                >
-                  <span class="fw-medium" style="color: #1d4ed8">Orçamento</span
-                  ><span class="">08 Out • 4 min</span>
-                </div>
-                <h4
-                  class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                >
-                  A regra 50-30-20 na prática para quem ganha até R$ 4.000
-                </h4>
-                <p
-                  class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  Adequando a divisão orçamentária à realidade brasileira:
-                  essenciais, lazer e reserva.
-                </p>
-                <div class="pt-1 d-flex align-items-center justify-content-end">
-                  <button
-                    class="d-inline-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fw-semibold fp-hover-underline"
-                    data-bs-target="#reading-modal"
-                    data-bs-toggle="modal"
-                    onclick="
-                      abrirLeitura(
-                        'A Regra 50-30-20 na Realidade Brasileira',
-                        'Guia para distribuir sua renda líquida mensal construindo segurança.',
-                      )
-                    "
-                    style="color: #1d4ed8"
-                    type="button"
-                  >
-                    <span class="">Ler artigo</span
-                    ><i
-                      aria-hidden="true"
-                      class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                    ></i>
-                  </button>
-                </div>
-              </article>
-            </div>
-            <!-- Estado Vazio para Busca/Filtros sem resultado -->
-            <div
-              class="d-none d-flex flex-column align-items-center justify-content-center p-4 text-center fp-space-y-2 fp-bg-surface-container-lowest fp-rounded-xl"
-              id="no-results-state"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-file-lines fp-icon fp-text-secondary fp-text-40px"
-              ></i>
-              <h4
-                class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface"
-              >
-                Nenhum artigo encontrado
-              </h4>
-              <p
-                class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-              >
-                Tente buscar por outros termos como "juros", "cartão" ou
-                selecione outro filtro.
-              </p>
-              <button
-                class="mt-2 px-3 py-2 fp-rounded-lg fp-bg-primary fp-text-on-primary fp-font-label-md fp-text-label-md fw-semibold"
-                onclick="limparFiltros()"
-                type="button"
-              >
-                Ver todos os artigos
-              </button>
-            </div>
-            <!-- Modal / Gaveta de Leitura Expandida (Overlay Interativo) -->
-            <div
-              aria-hidden="true"
-              class="modal fade"
-              id="reading-modal"
-              tabindex="-1"
-            >
-              <div
-                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-              >
-                <div
-                  class="fp-bg-surface-container-lowest fp-rounded-t-2xl p-3 d-flex flex-column fp-space-y-space-md fp-shadow-2xl"
-                  data-modal-content="1"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between fp-border-b pb-2"
-                  >
-                    <div
-                      class="d-flex align-items-center gap-2 fp-text-primary"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-book-open fp-icon"
-                      ></i>
-                      <span
-                        class="fp-font-label-md fp-text-label-md fw-bold text-uppercase fp-tracking-wider"
-                        >Modo Leitura Dinâmica</span
-                      >
-                    </div>
-                    <button
-                      aria-label="Fechar"
-                      class="fp-w-8 fp-h-8 fp-rounded-full fp-bg-surface-container d-flex align-items-center justify-content-center fp-text-on-surface-variant fp-hover-text-on-surface"
-                      data-bs-dismiss="modal"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-xmark fp-icon fp-text-20px"
-                      ></i>
-                    </button>
-                  </div>
-                  <div class="fp-space-y-1">
-                    <h3
-                      class="fp-font-headline-md fp-text-headline-md fp-text-on-surface"
-                      id="modal-article-title"
-                    >
-                      Título do Artigo
-                    </h3>
-                    <p
-                      class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                      id="modal-article-summary"
-                    >
-                      Resumo explicativo do tópico abordado.
-                    </p>
-                  </div>
-                  <div
-                    class="fp-bg-surface-container-low p-2 fp-rounded-xl fp-space-y-2"
-                  >
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold d-flex align-items-center gap-1"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-lightbulb fp-icon fp-text-16px"
-                      ></i>
-                      Dica de Ouro FinProsper
-                    </span>
-                    <p
-                      class="fp-font-body-sm fp-text-body-sm fp-text-on-surface"
-                    >
-                      Ao tomar qualquer decisão financeira, certifique-se de que
-                      a taxa de rendimento prometida esteja líquida de impostos
-                      e supere a inflação do período.
-                    </p>
-                  </div>
-                  <div class="fp-space-y-2">
-                    <h4
-                      class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface"
-                    >
-                      Passos Recomendados
-                    </h4>
-                    <div class="d-flex align-items-start gap-2">
-                      <span
-                        class="fp-w-6 fp-h-6 fp-rounded-full fp-bg-primary fp-text-on-primary fp-font-label-md fp-text-label-md d-flex align-items-center justify-content-center flex-shrink-0"
-                        >1</span
-                      >
-                      <p
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface"
-                      >
-                        Mapeie suas despesas fixas e compare com sua renda
-                        mensal real.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-start gap-2">
-                      <span
-                        class="fp-w-6 fp-h-6 fp-rounded-full fp-bg-primary fp-text-on-primary fp-font-label-md fp-text-label-md d-flex align-items-center justify-content-center flex-shrink-0"
-                        >2</span
-                      >
-                      <p
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface"
-                      >
-                        Crie uma reserva de emergência antes de buscar produtos
-                        de maior volatilidade.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-start gap-2">
-                      <span
-                        class="fp-w-6 fp-h-6 fp-rounded-full fp-bg-primary fp-text-on-primary fp-font-label-md fp-text-label-md d-flex align-items-center justify-content-center flex-shrink-0"
-                        >3</span
-                      >
-                      <p
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface"
-                      >
-                        Automatize investimentos logo após o recebimento do
-                        salário.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="pt-2">
-                    <button
-                      aria-label="Fechar"
-                      class="w-100 py-2 fp-rounded-lg fp-bg-primary fp-text-on-primary fp-font-label-lg fp-text-label-lg fw-semibold fp-shadow-sm"
-                      data-bs-dismiss="modal"
-                      type="button"
-                    >
-                      Entendido, voltar para Notícias
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-        <nav class="fixed-bottom nav-inf" aria-label="Menu principal">
-          <div
-            class="nav-inf-conteudo d-flex justify-content-around align-items-center px-1"
-          >
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../index.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-house fp-icon nav-inf-icone"
-              ></i>
-              <span>Início</span>
-            </a>
-            <a
-              class="nav-inf-link nav-inf-ativo d-flex flex-column align-items-center justify-content-center"
-              aria-current="page"
-              href="../pages/noticias.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-newspaper fp-icon nav-inf-icone"
-              ></i>
-              <span>Notícias</span>
-            </a>
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../pages/solucao.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-graduation-cap fp-icon nav-inf-icone"
-              ></i>
-              <span>Solução</span>
-            </a>
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../pages/impacto.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-arrow-trend-up fp-icon nav-inf-icone"
-              ></i>
-              <span>Impacto</span>
-            </a>
-            <a
-              class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
-              href="../pages/equipe.html"
-            >
-              <i
-                aria-hidden="true"
-                class="fa-solid fa-user-group fp-icon nav-inf-icone"
-              ></i>
-              <span>Equipe</span>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-
     <!-- Versão desktop (telas a partir de 992px) -->
     <div class="d-none d-lg-block tela-s8">
       <div
@@ -766,7 +35,7 @@
                 class="cab-link cab-link-ativo"
                 aria-current="page"
                 href="../pages/noticias.html"
-                >Notícias &amp; Glossário</a
+                >Glossário</a
               >
               <a class="cab-link" href="../pages/solucao.html"
                 >Simulador Avançado</a
@@ -822,7 +91,7 @@
                     class="fa-solid fa-chevron-right fp-icon fp-text-14px"
                   ></i>
                   <span class="fp-text-primary fw-semibold"
-                    >Notícias &amp; Glossário Interativo</span
+                    >Glossário Interativo</span
                   >
                 </div>
                 <div class="d-flex align-items-center gap-2">
@@ -1002,12 +271,12 @@
             </section>
             <!-- 2-Column Main Layout (8 cols + 4 cols) -->
             <section class="fp-max-w-1280px w-100 mx-auto px-4 pb-6">
-              <div class="grid gap-4 align-items-start">
+              <div class="">
                 <!-- PRIMARY CONTENT COLUMN (8 COLS) -->
-                <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-8">
+                <div class="d-flex gap-4 g-col-12 g-col-lg-8 pb-6">
                   <!-- LEAD STORY / ARTIGO DESTAQUE -->
                   <article
-                    class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm overflow-hidden d-flex flex-column fp-border fp-border-surface-container-60"
+                    class="fp-bg-surface-container-lowes fp-rounded-2xl fp-shadow-sm overflow-hidden d-flex flex-column fp-border fp-border-surface-container-60"
                   >
                     <div class="grid gap-0">
                       <div
@@ -1073,386 +342,10 @@
                       </div>
                     </div>
                   </article>
-                  <!-- SEÇÃO: ARTIGOS RECENTES & ANÁLISES (GRID COM 6 ARTIGOS) -->
-                  <div class="d-flex flex-column gap-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <div>
-                        <h2
-                          class="fp-font-headline-md fp-text-headline-md fw-bold fp-text-on-surface"
-                        >
-                          Artigos Recentes &amp; Análises
-                        </h2>
-                        <p
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                        >
-                          Guias acionáveis para cada estágio da sua jornada
-                          financeira
-                        </p>
-                      </div>
-                      <span
-                        class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-semibold"
-                        >Exibindo 6 publicações</span
-                      >
-                    </div>
-                    <div class="grid gap-3">
-                      <article
-                        class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm fp-border fp-border-surface-container-60 overflow-hidden d-flex flex-column justify-content-between fp-hover-shadow-md p-3 fp-group g-col-12 g-col-md-6"
-                      >
-                        <div class="d-flex flex-column gap-2">
-                          <div
-                            class="position-relative w-100 fp-h-44 fp-rounded-xl overflow-hidden fp-bg-surface-container"
-                          >
-                            <img
-                              alt="Financial educator analyzing debt amortization charts"
-                              class="w-100 h-100 object-fit-cover"
-                              src="../images/foto-financial-educator-analyzing-debt.png"
-                            />
-                          </div>
-                          <div
-                            class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-on-surface-variant pt-1"
-                          >
-                            <span class="fp-text-primary fw-semibold"
-                              >Dívidas &amp; Renegociação</span
-                            ><span class="">•</span
-                            ><span class="">4 min leitura</span>
-                          </div>
-                          <h3
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface fp-group-hover-text-primary fp-leading-snug"
-                          >
-                            Método Bola de Neve vs. Avalanche: Qual Elimina
-                            Juros Mais Rápido?
-                          </h3>
-                          <p
-                            class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-relaxed"
-                          >
-                            Compare as duas estratégias consagradas para quitar
-                            dívidas sem comprometer as despesas essenciais do
-                            mês.
-                          </p>
-                        </div>
-                        <div
-                          class="pt-2 d-flex align-items-center justify-content-between fp-border-t fp-border-surface-container-40"
-                        >
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Por Ana Beatriz Valente</span
-                          ><a
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
-                            href="#"
-                            >Ler Artigo
-                            <i
-                              aria-hidden="true"
-                              class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                            ></i
-                          ></a>
-                        </div>
-                      </article>
-                      <article
-                        class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm fp-border fp-border-surface-container-60 overflow-hidden d-flex flex-column justify-content-between fp-hover-shadow-md p-3 fp-group g-col-12 g-col-md-6"
-                      >
-                        <div class="d-flex flex-column gap-2">
-                          <div
-                            class="position-relative w-100 fp-h-44 fp-rounded-xl overflow-hidden fp-bg-surface-container"
-                          >
-                            <img
-                              alt="Modern real estate skyscrapers"
-                              class="w-100 h-100 object-fit-cover"
-                              src="../images/foto-modern-real-estate-skyscrapers.png"
-                            />
-                          </div>
-                          <div
-                            class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-on-surface-variant pt-1"
-                          >
-                            <span class="fp-text-primary fw-semibold"
-                              >Renda Fixa &amp; FIIs</span
-                            ><span class="">•</span
-                            ><span class="">6 min leitura</span>
-                          </div>
-                          <h3
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface fp-group-hover-text-primary fp-leading-snug"
-                          >
-                            Fundos Imobiliários de Tijolo: Como Gerar Renda
-                            Mensal Isenta de IR
-                          </h3>
-                          <p
-                            class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-relaxed"
-                          >
-                            Entenda a dinâmica de galpões logísticos e o que
-                            analisar no P/VP antes do primeiro aporte
-                            financeiro.
-                          </p>
-                        </div>
-                        <div
-                          class="pt-2 d-flex align-items-center justify-content-between fp-border-t fp-border-surface-container-40"
-                        >
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Por Gabriel Santos, CNPI</span
-                          ><a
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
-                            href="#"
-                            >Ler Artigo
-                            <i
-                              aria-hidden="true"
-                              class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                            ></i
-                          ></a>
-                        </div>
-                      </article>
-                      <article
-                        class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm fp-border fp-border-surface-container-60 overflow-hidden d-flex flex-column justify-content-between fp-hover-shadow-md p-3 fp-group g-col-12 g-col-md-6"
-                      >
-                        <div class="d-flex flex-column gap-2">
-                          <div
-                            class="position-relative w-100 fp-h-44 fp-rounded-xl overflow-hidden fp-bg-surface-container"
-                          >
-                            <img
-                              alt="Supermarket grocery basket with receipts"
-                              class="w-100 h-100 object-fit-cover"
-                              src="../images/foto-supermarket-grocery-basket.png"
-                            />
-                          </div>
-                          <div
-                            class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-on-surface-variant pt-1"
-                          >
-                            <span class="fp-text-primary fw-semibold"
-                              >Inflação &amp; IPCA</span
-                            ><span class="">•</span
-                            ><span class="">4 min leitura</span>
-                          </div>
-                          <h3
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface fp-group-hover-text-primary fp-leading-snug"
-                          >
-                            IPCA vs. Inflação Pessoal: Por Que os Preços do
-                            Carrinho Parecem Subir Mais?
-                          </h3>
-                          <p
-                            class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-relaxed"
-                          >
-                            Entenda a composição do cálculo oficial do IBGE e
-                            como medir o peso real na sua cesta de compras
-                            familiar.
-                          </p>
-                        </div>
-                        <div
-                          class="pt-2 d-flex align-items-center justify-content-between fp-border-t fp-border-surface-container-40"
-                        >
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Por Rodrigo Mendes</span
-                          ><a
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
-                            href="#"
-                            >Ler Artigo
-                            <i
-                              aria-hidden="true"
-                              class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                            ></i
-                          ></a>
-                        </div>
-                      </article>
-                      <article
-                        class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm fp-border fp-border-surface-container-60 overflow-hidden d-flex flex-column justify-content-between fp-hover-shadow-md p-3 fp-group g-col-12 g-col-md-6"
-                      >
-                        <div class="d-flex flex-column gap-2">
-                          <div
-                            class="position-relative w-100 fp-h-44 fp-rounded-xl overflow-hidden fp-bg-surface-container"
-                          >
-                            <img
-                              alt="Young family planning budget"
-                              class="w-100 h-100 object-fit-cover"
-                              src="../images/foto-young-family-planning-budget.png"
-                            />
-                          </div>
-                          <div
-                            class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-on-surface-variant pt-1"
-                          >
-                            <span class="fp-text-primary fw-semibold"
-                              >Orçamento Familiar</span
-                            ><span class="">•</span
-                            ><span class="">5 min leitura</span>
-                          </div>
-                          <h3
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface fp-group-hover-text-primary fp-leading-snug"
-                          >
-                            A Regra 50-30-20 na Realidade Brasileira: Funciona
-                            com Renda Variável?
-                          </h3>
-                          <p
-                            class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-relaxed"
-                          >
-                            Um modelo adaptável para autônomos e assalariados
-                            equilibrarem gastos fixos, estilo de vida e
-                            reservas.
-                          </p>
-                        </div>
-                        <div
-                          class="pt-2 d-flex align-items-center justify-content-between fp-border-t fp-border-surface-container-40"
-                        >
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Por Marcela Faria</span
-                          ><a
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
-                            href="#"
-                            >Ler Artigo
-                            <i
-                              aria-hidden="true"
-                              class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                            ></i
-                          ></a>
-                        </div>
-                      </article>
-                      <article
-                        class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm fp-border fp-border-surface-container-60 overflow-hidden d-flex flex-column justify-content-between fp-hover-shadow-md p-3 fp-group g-col-12 g-col-md-6"
-                      >
-                        <div class="d-flex flex-column gap-2">
-                          <div
-                            class="position-relative w-100 fp-h-44 fp-rounded-xl overflow-hidden fp-bg-surface-container"
-                          >
-                            <img
-                              alt="Digital treasury bonds"
-                              class="w-100 h-100 object-fit-cover"
-                              src="../images/foto-digital-treasury-bonds.png"
-                            />
-                          </div>
-                          <div
-                            class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-on-surface-variant pt-1"
-                          >
-                            <span class="fp-text-primary fw-semibold"
-                              >Selic &amp; Juros</span
-                            ><span class="">•</span
-                            ><span class="">7 min leitura</span>
-                          </div>
-                          <h3
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface fp-group-hover-text-primary fp-leading-snug"
-                          >
-                            Tesouro Educa+ e Renda+: Como Planejar Faculdade e
-                            Futuro com Previsibilidade
-                          </h3>
-                          <p
-                            class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-relaxed"
-                          >
-                            Títulos públicos que pagam amortizações mensais
-                            indexadas à inflação oficial sem tarifas ocultas.
-                          </p>
-                        </div>
-                        <div
-                          class="pt-2 d-flex align-items-center justify-content-between fp-border-t fp-border-surface-container-40"
-                        >
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Por Equipe FinProsper</span
-                          ><a
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
-                            href="#"
-                            >Ler Artigo
-                            <i
-                              aria-hidden="true"
-                              class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                            ></i
-                          ></a>
-                        </div>
-                      </article>
-                      <article
-                        class="fp-bg-surface-container-lowest fp-rounded-2xl fp-shadow-sm fp-border fp-border-surface-container-60 overflow-hidden d-flex flex-column justify-content-between fp-hover-shadow-md p-3 fp-group g-col-12 g-col-md-6"
-                      >
-                        <div class="d-flex flex-column gap-2">
-                          <div
-                            class="position-relative w-100 fp-h-44 fp-rounded-xl overflow-hidden fp-bg-surface-container"
-                          >
-                            <img
-                              alt="Emergency savings vault"
-                              class="w-100 h-100 object-fit-cover"
-                              src="../images/foto-emergency-savings-vault.png"
-                            />
-                          </div>
-                          <div
-                            class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-on-surface-variant pt-1"
-                          >
-                            <span class="fp-text-primary fw-semibold"
-                              >Renda Fixa &amp; Reserva</span
-                            ><span class="">•</span
-                            ><span class="">5 min leitura</span>
-                          </div>
-                          <h3
-                            class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface fp-group-hover-text-primary fp-leading-snug"
-                          >
-                            Reserva de Emergência vs. Oportunidade: Critérios de
-                            Alocação Estratégica
-                          </h3>
-                          <p
-                            class="fp-limite-2-linhas fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-leading-relaxed"
-                          >
-                            Diferenças essenciais entre colchão de segurança e
-                            caixa tático para momentos oportunos de aporte.
-                          </p>
-                        </div>
-                        <div
-                          class="pt-2 d-flex align-items-center justify-content-between fp-border-t fp-border-surface-container-40"
-                        >
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                            >Por Gabriel Santos, CNPI</span
-                          ><a
-                            class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
-                            href="#"
-                            >Ler Artigo
-                            <i
-                              aria-hidden="true"
-                              class="fa-solid fa-arrow-right fp-icon fp-text-16px"
-                            ></i
-                          ></a>
-                        </div>
-                      </article>
-                    </div>
-                    <!-- Pagination / Load more row -->
-                    <div
-                      class="p-3 fp-rounded-xl fp-bg-surface-container-lowest fp-border fp-border-surface-container-60 d-flex align-items-center justify-content-between"
-                    >
-                      <span
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                        >Página 1 de 14 páginas</span
-                      >
-                      <div class="d-flex align-items-center gap-1">
-                        <button
-                          class="px-2 py-1 fp-rounded-lg fp-bg-surface-container fp-text-outline opacity-50 fp-cursor-not-allowed fp-font-label-md fp-text-label-md"
-                          disabled=""
-                        >
-                          Anterior
-                        </button>
-                        <button
-                          class="fp-w-8 fp-h-8 fp-rounded-lg fp-bg-primary fp-text-on-primary fp-font-label-md fp-text-label-md fw-bold"
-                        >
-                          1
-                        </button>
-                        <button
-                          class="fp-w-8 fp-h-8 fp-rounded-lg fp-bg-surface-container-low fp-hover-bg-surface-container fp-text-on-surface fp-font-label-md fp-text-label-md"
-                        >
-                          2
-                        </button>
-                        <button
-                          class="fp-w-8 fp-h-8 fp-rounded-lg fp-bg-surface-container-low fp-hover-bg-surface-container fp-text-on-surface fp-font-label-md fp-text-label-md"
-                        >
-                          3
-                        </button>
-                        <span class="px-1 fp-text-outline">...</span>
-                        <button
-                          class="px-2 py-1 fp-rounded-lg fp-bg-surface-container-low fp-hover-bg-surface-container fp-text-on-surface fp-font-label-md fp-text-label-md"
-                        >
-                          Próxima
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <!-- SIDEBAR COLUMN (4 COLS) -->
-                <aside class="d-flex flex-column gap-4 g-col-12 g-col-lg-4">
                   <!-- GLOSSÁRIO FINANCEIRO INTERATIVO -->
                   <div
-                    class="fp-bg-surface-container-lowest fp-rounded-2xl p-4 fp-shadow-sm fp-border fp-border-surface-container-60 d-flex flex-column gap-3"
+                    class="fp-bg-surface-container-lowest fp-rounded-2xl p-4 fp-shadow-sm fp-border fp-border-surface-container-60 d-flex flex-column gap-3 "
                   >
                     <div
                       class="d-flex align-items-center justify-content-between pb-1 fp-border-b fp-border-surface-container-60"
@@ -1621,139 +514,22 @@
                       <button
                         class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
                       >
-                        Ver todos os 180+ termos
+                        Ver todos os 50+ termos
                         <i
                           aria-hidden="true"
                           class="fa-solid fa-arrow-right fp-icon fp-text-14px"
                         ></i>
                       </button>
                     </div>
-                  </div>
-                  <!-- NEWSLETTER: BOLETIM DO POUPANÇA INTELIGENTE -->
+                  </div>  
+                          
+                  <!-- WIDGET: EDUCAÇÃO CONTINUADA / SIMULADOR RÁPIDO BANNER -->               
                   <div
-                    class="fp-bg-surface-container-lowest fp-rounded-2xl p-4 fp-shadow-sm fp-border fp-border-surface-container-60 position-relative overflow-hidden"
-                  >
-                    <div
-                      class="end-0 me-n6 bottom-0 mb-n6 position-absolute fp-w-36 fp-h-36 fp-rounded-full fp-bg-primary-10 pe-none"
-                    ></div>
-                    <div class="d-flex align-items-center gap-1 mb-2">
-                      <span
-                        class="fp-w-8 fp-h-8 fp-rounded-lg fp-bg-primary fp-text-on-primary d-flex align-items-center justify-content-center fp-shadow-sm"
-                      >
-                        <i
-                          aria-hidden="true"
-                          class="fa-solid fa-envelope-circle-check fp-icon fp-text-18px"
-                        ></i>
-                      </span>
-                      <span
-                        class="px-1 py-0 fp-rounded-full fp-bg-surface-container-low fp-text-primary fp-font-label-md fp-text-label-md fw-semibold"
-                        >Semanal &amp; Gratuito</span
-                      >
-                    </div>
-                    <h3
-                      class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface mb-1"
-                    >
-                      Boletim do Poupança Inteligente
-                    </h3>
-                    <p
-                      class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mb-3 fp-leading-relaxed"
-                    >
-                      Receba toda sexta-feira às 07h o resumo mastigado da
-                      semana econômica, simulações de títulos do Tesouro e
-                      alertas de oportunidade direto no seu e-mail.
-                    </p>
-                    <form
-                      class="d-flex flex-column gap-2"
-                      id="newsletterForm"
-                      onsubmit="assinarNewsletter(event)"
-                    >
-                      <div>
-                        <label
-                          class="d-block fp-font-label-md fp-text-label-md fp-text-on-surface-variant mb-1"
-                          for="newsletterEmail"
-                          >Seu melhor e-mail:</label
-                        >
-                        <input
-                          class="w-100 px-3 py-2 fp-rounded-lg fp-bg-surface-container-low fp-text-on-surface fp-placeholder-text-outline fp-font-body-md fp-text-body-md fp-border fp-border-surface-container-40"
-                          id="newsletterEmail"
-                          placeholder="nome@dominio.com.br"
-                          required=""
-                          type="email"
-                        />
-                      </div>
-                      <div class="d-flex align-items-start gap-2">
-                        <input
-                          class="mt-1 fp-w-4 fp-h-4 fp-rounded fp-text-primary"
-                          id="newsletterTerms"
-                          required=""
-                          type="checkbox"
-                        />
-                        <label
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-text-12px fp-leading-snug"
-                          for="newsletterTerms"
-                        >
-                          Concordo em receber conteúdos educacionais. Garantia
-                          de <strong>Zero Spam</strong> e cancelamento com 1
-                          clique a qualquer momento.
-                        </label>
-                      </div>
-                      <button
-                        class="w-100 py-2 fp-bg-primary fp-hover-bg-blue-700 fp-text-on-primary fp-font-label-lg fp-text-label-lg fp-rounded-lg fp-shadow-sm d-flex align-items-center justify-content-center gap-1"
-                        type="submit"
-                      >
-                        <span class="">Inscrever-se Gratuitamente</span>
-                        <i
-                          aria-hidden="true"
-                          class="fa-solid fa-paper-plane fp-icon fp-text-18px"
-                        ></i>
-                      </button>
-                    </form>
-                    <div
-                      class="d-none d-flex mt-2 p-2 fp-rounded-lg fp-bg-surface-container fp-text-primary fp-font-label-md fp-text-label-md align-items-center gap-2"
-                      id="newsletterSuccess"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-circle-check fp-icon fp-text-20px"
-                      ></i>
-                      <span class=""
-                        >Inscrição confirmada com sucesso! Verifique sua caixa
-                        de entrada.</span
-                      >
-                    </div>
-                    <div
-                      class="mt-3 pt-3 d-flex align-items-center justify-content-around text-center fp-border-t fp-border-surface-container-60"
-                    >
-                      <div>
-                        <span
-                          class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface d-block"
-                          >38.400+</span
-                        >
-                        <span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-text-11px"
-                          >Leitores ativos</span
-                        >
-                      </div>
-                      <div class="fp-w-px fp-h-8 fp-bg-surface-container"></div>
-                      <div>
-                        <span
-                          class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-primary d-block"
-                          >4.9/5.0</span
-                        >
-                        <span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fp-text-11px"
-                          >Nota dos alunos</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- WIDGET: EDUCAÇÃO CONTINUADA / SIMULADOR RÁPIDO BANNER -->
-                  <div
-                    class="fp-bg-primary fp-text-white fp-rounded-2xl p-4 fp-shadow-md d-flex flex-column justify-content-between position-relative overflow-hidden"
+                    class="fp-bg-primary fp-text-white fp-rounded-2xl p-4 fp-shadow-md d-flex flex-column justify-content-between position-relative overflow-hidden mt-4"
                   >
                     <div class="d-flex flex-column gap-1 position-relative z-1">
                       <div
-                        class="d-flex align-items-center gap-2 fp-text-primary-fixed mb-1"
+                        class="d-flex align-items-center gap-2 fp-text-primary-fixed mb-1 justify-content-center"
                       >
                         <i
                           aria-hidden="true"
@@ -1765,19 +541,19 @@
                         >
                       </div>
                       <h4
-                        class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-white fp-leading-snug"
+                        class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-white fp-leading-snug mx-auto"
                       >
                         Compare Poupança vs. Renda Fixa com as Taxas Atuais
                       </h4>
                       <p
-                        class="fp-font-body-sm fp-text-body-sm fp-text-blue-100 fp-leading-relaxed"
+                        class="fp-font-body-sm fp-text-body-sm fp-text-blue-100 fp-leading-relaxed mx-auto"
                       >
                         Descubra quanto R$ 5.000 investidos hoje renderiam a
                         mais no Tesouro Selic ou CDB comparado à caderneta
                         tradicional em 24 meses.
                       </p>
                     </div>
-                    <div class="mt-3 pt-1 position-relative z-1">
+                    <div class="mt-3 pt-1 mx-auto z-1">
                       <a
                         class="w-100 py-2 px-3 fp-bg-white fp-hover-bg-surface-container-low fp-text-primary fp-font-label-lg fp-text-label-lg fw-bold fp-rounded-lg d-inline-flex align-items-center justify-content-center gap-1 fp-shadow-sm"
                         href="../pages/solucao.html"
@@ -1789,72 +565,76 @@
                         ></i>
                       </a>
                     </div>
-                  </div>
-                </aside>
-              </div>
+                  </div> 
             </section>
             <!-- Interactive Modal / Tooltip Drawer for Glossary Terms (Pure JS Driven) -->
-
             <!-- Inline Micro-interactions Script -->
           </div>
         </main>
-        <footer
-          class="w-100 fp-bg-surface-container-lowest fp-border-t fp-border-surface-container-60 fp-shadow-0_-1px_6px_rgba0-0-0-0_02"
-        >
-          <div class="fp-max-w-1280px mx-auto px-4 py-6">
-            <div
-              class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4"
-            >
-              <div
-                class="d-flex flex-column align-items-center align-items-md-start gap-1"
-              >
-                <div class="d-flex align-items-center gap-1">
-                  <span
-                    class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                    >FinProsper</span
-                  ><span
-                    class="px-1 py-0 fp-rounded-full fp-bg-surface-container fp-text-primary fp-font-label-md fp-text-label-md fw-medium"
-                    >FinTech &amp; ESG</span
-                  >
-                </div>
-                <p
-                  class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                >
-                  © 2024 FinProsper Educação Financeira S.A. Todos os direitos
-                  reservados.
+        <footer class="ini-rodape">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <p class="ini-rodape-marca">FinProsper</p>
+                <p class="ini-rodape-texto">
+                  Educação financeira simples para quem quer começar a investir.
+                  Projeto acadêmico da Global Solution FIAP 2026.
                 </p>
               </div>
-              <div
-                class="d-flex align-items-center gap-2 px-3 py-2 fp-rounded-xl fp-bg-surface-container-low fp-border fp-border-surface-container-40"
-              >
-                <div
-                  class="fp-w-7 fp-h-7 fp-rounded-lg fp-bg-primary d-flex align-items-center justify-content-center"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa-solid fa-earth-americas fp-icon fp-text-on-primary fp-text-18px"
-                  ></i>
-                </div>
-                <div class="d-flex flex-column">
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold text-uppercase fp-tracking-wider"
-                    >Compromisso ODS ONU</span
-                  ><span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                    >ODS 4 (Educação de Qualidade) &amp; ODS 8 (Trabalho Decente
-                    e Crescimento Econômico)</span
-                  >
-                </div>
-              </div>
-              <div
-                class="d-flex flex-wrap align-items-center justify-content-center gap-3 fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-              >
-                <a class="fp-hover-text-on-surface" href="#">Termos de Uso</a
-                ><a class="fp-hover-text-on-surface" href="#">Privacidade</a
-                ><a class="fp-hover-text-on-surface" href="#">Segurança</a
-                ><a class="fp-hover-text-on-surface" href="#">Ajuda</a>
+              <div class="col-lg-8">
+                <h2 class="ini-rodape-titulo">Fontes dos dados</h2>
+                <ul class="ini-fontes">
+                  <li>
+                    NICOLAU, Analice. 91% dos brasileiros sem educação financeira
+                    na infância.
+                    <a
+                      href="https://jornaldebrasilia.com.br/blogs-e-colunas/analice-nicolau/91-dos-brasileiros-sem-educacao-financeira-na-infancia/"
+                      target="_blank"
+                      rel="noopener"
+                      >Jornal de Brasília<span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >, 5 jan. 2026.
+                  </li>
+                  <li>
+                    RUAS, Danielle. 55% dos brasileiros compreendem pouco ou nada
+                    de educação financeira.
+                    <a
+                      href="https://consumidormoderno.com.br/educacao-financeira-brasil/"
+                      target="_blank"
+                      rel="noopener"
+                      >Consumidor Moderno<span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >, 24 jul. 2025.
+                  </li>
+                  <li>
+                    TVT NEWS. Brasileiros não sabem quanto gastaram em jogos de
+                    aposta.
+                    <a
+                      href="https://tvtnews.com.br/brasileiros-nao-sabem-quanto-gastaram-em-jogos-de-aposta/"
+                      target="_blank"
+                      rel="noopener"
+                      >TVT News<span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >, 25 set. 2024.
+                  </li>
+                  <li>
+                    ONU BRASIL. Objetivos de Desenvolvimento Sustentável.
+                    <a
+                      href="https://brasil.un.org/pt-br/sdgs"
+                      target="_blank"
+                      rel="noopener"
+                      >brasil.un.org<span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >.
+                  </li>
+                </ul>
               </div>
             </div>
+            <p class="ini-rodape-copia">© 2026 FinProsper</p>
           </div>
         </footer>
       </div>
