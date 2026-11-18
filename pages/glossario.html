@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FinProsper | Glossário</title>
+    <meta
+      name="description"
+      content="FinProsper — educação financeira transparente, autônoma e inclusiva."
+    />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/fontawesome.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- reaproveita seções e cards da página inicial (classes .ini-*) -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/noticias.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho desktop (telas a partir de 992px) -->
+    <div class="d-none d-lg-block">
+      <header class="fixed-top cab">
+        <div
+          class="cab-conteudo mx-auto px-4 d-flex align-items-center justify-content-between gap-3"
+        >
+          <a class="d-flex align-items-center gap-1" href="../index.html">
+            <span class="cab-marca">FinProsper</span>
+            <span class="cab-selo">EDU</span>
+          </a>
+          <nav
+            class="d-flex align-items-center gap-1"
+            aria-label="Menu principal"
+          >
+            <a class="cab-link" href="../index.html"
+              >Início</a
+            >
+            <a
+              class="cab-link cab-link-ativo"
+              aria-current="page"
+              href="noticias.html"
+              >Glossário</a
+            >
+            <a class="cab-link" href="solucao.html"
+              >Simulador Avançado</a
+            >
+            <a class="cab-link" href="impacto.html"
+              >Impacto &amp; Métricas</a
+            >
+            <a class="cab-link" href="equipe.html"
+              >Equipe &amp; Sobre</a
+            >
+          </nav>
+          <div class="d-flex align-items-center gap-3">
+            <a
+              class="cab-botao d-none d-xl-inline-flex align-items-center gap-1"
+              href="solucao.html"
+            >
+              <i
+                aria-hidden="true"
+                class="fa-solid fa-circle-plus fp-icon cab-icone-20"
+              ></i>
+              <span>Novo Aporte / Simulação</span>
+            </a>
+            <div class="cab-status d-none d-xl-flex align-items-center gap-1">
+              <span class="cab-ponto"></span>
+              <span>Online</span>
+            </div>
+            <div
+              class="cab-avatar d-flex align-items-center justify-content-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fa-solid fa-user fp-icon cab-icone-18"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Cabeçalho e menu inferior mobile e tablet (telas menores que 992px) -->
+    <div class="d-lg-none">
+      <header class="fixed-top cab-mobile">
+        <div
+          class="cab-mobile-conteudo px-3 d-flex align-items-center justify-content-between"
+        >
+          <a class="d-flex align-items-center gap-2" href="../index.html">
+            <img
+              alt="FinProsper"
+              class="cab-logo"
+              src="../images/logo-finprosper.png"
+            />
+            <span class="d-flex flex-column">
+              <span class="d-flex align-items-center gap-1">
+                <span class="cab-mobile-marca">FinProsper</span>
+                <span class="cab-mobile-selo">Edu</span>
+              </span>
+              <span class="cab-mobile-pagina">Glossário</span>
+            </span>
+          </a>
+          <div class="d-flex align-items-center gap-2">
+            <div class="cab-mobile-status d-flex align-items-center gap-1">
+              <span class="cab-ponto cab-ponto-claro"></span>
+              <span>Online</span>
+            </div>
+            <img
+              alt="Perfil"
+              class="cab-mobile-avatar"
+              src="../images/avatar-camila-aluna.png"
+            />
+          </div>
+        </div>
+      </header>
+      <nav class="fixed-bottom nav-inf" aria-label="Menu principal">
+        <div
+          class="nav-inf-conteudo d-flex justify-content-around align-items-center px-1"
+        >
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="../index.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-house fp-icon nav-inf-icone"
+            ></i>
+            <span>Início</span>
+          </a>
+          <a
+            class="nav-inf-link nav-inf-ativo d-flex flex-column align-items-center justify-content-center"
+            aria-current="page"
+            href="noticias.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-book-open fp-icon nav-inf-icone"
+            ></i>
+            <span>Glossário</span>
+          </a>
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="solucao.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-graduation-cap fp-icon nav-inf-icone"
+            ></i>
+            <span>Solução</span>
+          </a>
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="impacto.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-arrow-trend-up fp-icon nav-inf-icone"
+            ></i>
+            <span>Impacto</span>
+          </a>
+          <a
+            class="nav-inf-link d-flex flex-column align-items-center justify-content-center"
+            href="equipe.html"
+          >
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-user-group fp-icon nav-inf-icone"
+            ></i>
+            <span>Equipe</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="pagina-noticias fp-bg-background fp-font-body-md fp-text-on-surface min-vh-100"
+    >
+      <main id="conteudo" class="w-100 pt-9 fp-bg-background">
+        <div class="d-flex flex-column w-100">
+          <!-- Apresentação do guia (mesmo padrão do hero da página inicial) -->
+          <section class="ini-hero" aria-labelledby="titulo-guia">
+            <div class="container">
+              <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-7">
+                  <p class="ini-etiqueta">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-graduation-cap fp-icon ini-icone-16"
+                    ></i>
+                    Conteúdo 100% didático e sem economês
+                  </p>
+                  <h1 id="titulo-guia" class="ini-titulo">
+                    Guia de Educação Financeira &amp; Glossário
+                  </h1>
+                  <p class="ini-lead">
+                    Conceitos essenciais e os termos técnicos usados no
+                    FinProsper explicados em português claro, para você
+                    entender cada simulação e decidir com segurança.
+                  </p>
+                  <!-- Sumário: atalhos para cada tópico -->
+                  <nav class="guia-sumario" aria-label="Tópicos do guia">
+                    <a href="#guia-1">1. O que é?</a>
+                    <a href="#guia-2">2. O que aprender?</a>
+                    <a href="#guia-3">3. Como começar?</a>
+                    <a href="#guia-4">4. Quando começar?</a>
+                    <a href="#guia-5">5. Por que é importante?</a>
+                    <a href="#guia-6">6. Erros a evitar</a>
+                    <a href="#guia-7">7. Quanto guardar?</a>
+                    <a href="#guia-8">8. Onde aprender mais?</a>
+                    <a href="#glossario">Glossário</a>
+                  </nav>
+                </div>
+                <div class="col-lg-5">
+                  <figure class="ini-figura">
+                    <img
+                      class="ini-imagem"
+                      src="../images/foto-young-family-planning-budget.png"
+                      alt="Ilustração de uma família"
+                    />
+                    <figcaption class="ini-legenda">
+                      <span class="ini-legenda-numero">8</span>
+                      tópicos essenciais para começar a cuidar do seu
+                      dinheiro.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 1. O que é Educação Financeira? -->
+          <section
+            class="ini-secao guia-topico"
+            id="guia-1"
+            aria-labelledby="guia-titulo-1"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 1 · Conceito</p>
+                <h2 id="guia-titulo-1" class="ini-subtitulo">
+                  O que é Educação Financeira?
+                </h2>
+              </div>
+              <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-book-open fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Definição</h3>
+                    <p class="ini-passo-texto">
+                      Conjunto de conhecimentos e hábitos que ajudam a:
+                    </p>
+                    <ul class="guia-tags">
+                      <li>Administrar o dinheiro</li>
+                      <li>Controlar gastos</li>
+                      <li>Planejar compras</li>
+                      <li>Economizar</li>
+                      <li>Investir</li>
+                    </ul>
+                  </article>
+                </div>
+                <div class="col-lg-5">
+                  <article class="ini-persona">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-bolt fp-icon guia-persona-icone"
+                    ></i>
+                    <h3 class="ini-persona-nome mt-3">Objetivo</h3>
+                    <p class="ini-citacao fst-normal mt-2">
+                      Utilizar os recursos de forma consciente, evitar dívidas
+                      e construir estabilidade financeira.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. O que aprender? -->
+          <section
+            class="ini-secao ini-secao-destaque guia-topico"
+            id="guia-2"
+            aria-labelledby="guia-titulo-2"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 2 · Conteúdos</p>
+                <h2 id="guia-titulo-2" class="ini-subtitulo">
+                  O que aprender?
+                </h2>
+                <p class="ini-texto">
+                  Os temas que formam a base de uma vida financeira
+                  equilibrada.
+                </p>
+              </div>
+              <ul class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4">
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-wallet fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Organização financeira</h3>
+                    <p class="ini-passo-texto">Entender ganhos e gastos.</p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-chart-pie fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Orçamento pessoal</h3>
+                    <p class="ini-passo-texto">Planejar o uso da renda.</p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-piggy-bank fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Economia</h3>
+                    <p class="ini-passo-texto">
+                      Desenvolver o hábito de poupar.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-shield-heart fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Reserva de emergência</h3>
+                    <p class="ini-passo-texto">
+                      Preparar-se para imprevistos.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-percent fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Juros</h3>
+                    <p class="ini-passo-texto">
+                      Entender seu funcionamento em dívidas e investimentos.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-arrow-trend-up fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Investimentos</h3>
+                    <p class="ini-passo-texto">
+                      Conhecer alternativas para rentabilizar o dinheiro.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-leaf fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Consumo consciente</h3>
+                    <p class="ini-passo-texto">
+                      Diferenciar necessidades de desejos.
+                    </p>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 3. Como começar? + PROPAGANDA 1 -->
+          <section
+            class="ini-secao guia-topico"
+            id="guia-3"
+            aria-labelledby="guia-titulo-3"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 3 · Primeiros passos</p>
+                <h2 id="guia-titulo-3" class="ini-subtitulo">
+                  Como começar?
+                </h2>
+                <p class="ini-texto">
+                  Cinco passos, na ordem, para sair do zero.
+                </p>
+              </div>
+              <ol class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                <li class="col">
+                  <article class="ini-passo">
+                    <span class="ini-passo-numero" aria-hidden="true">1</span>
+                    <h3 class="ini-passo-titulo">
+                      Conheça sua situação financeira
+                    </h3>
+                    <p class="ini-passo-texto">
+                      Registre renda, despesas e dívidas.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <span class="ini-passo-numero" aria-hidden="true">2</span>
+                    <h3 class="ini-passo-titulo">Crie um orçamento</h3>
+                    <p class="ini-passo-texto">Defina limites e metas.</p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <span class="ini-passo-numero" aria-hidden="true">3</span>
+                    <h3 class="ini-passo-titulo">Comece a economizar</h3>
+                    <p class="ini-passo-texto">
+                      Guarde valores compatíveis com sua realidade.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <span class="ini-passo-numero" aria-hidden="true">4</span>
+                    <h3 class="ini-passo-titulo">
+                      Construa uma reserva de emergência
+                    </h3>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <span class="ini-passo-numero" aria-hidden="true">5</span>
+                    <h3 class="ini-passo-titulo">
+                      Aprenda sobre investimentos e riscos
+                    </h3>
+                  </article>
+                </li>
+              </ol>
+
+              <!-- PROPAGANDA 1: funcionalidade de guardar dinheiro (ainda não existe no projeto: chamada preparada, botão desativado) -->
+              <aside
+                class="ini-chamada guia-chamada"
+                aria-labelledby="guia-promo-1"
+              >
+                <h2 id="guia-promo-1" class="ini-chamada-titulo">
+                  Comece a construir sua reserva financeira!
+                </h2>
+                <p class="ini-chamada-texto">
+                  Guardar dinheiro é um dos primeiros passos para conquistar
+                  estabilidade financeira. Utilize nossa plataforma para
+                  definir metas de economia, simular depósitos e acompanhar o
+                  crescimento das suas reservas.
+                </p>
+                <div class="guia-chamada-acao">
+                  <button
+                    class="btn btn-light btn-lg"
+                    type="button"
+                    disabled
+                    aria-describedby="guia-promo-1-aviso"
+                  >
+                    Comece a guardar
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-arrow-right fp-icon ini-icone-16"
+                    ></i>
+                  </button>
+                  <span id="guia-promo-1-aviso" class="guia-selo"
+                    >Em breve</span
+                  >
+                </div>
+              </aside>
+            </div>
+          </section>
+
+          <!-- 4. Quando começar? -->
+          <section
+            class="ini-secao ini-secao-destaque guia-topico"
+            id="guia-4"
+            aria-labelledby="guia-titulo-4"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 4 · Momento certo</p>
+                <h2 id="guia-titulo-4" class="ini-subtitulo">
+                  Quando começar?
+                </h2>
+                <p class="ini-texto">
+                  A melhor hora é o quanto antes. A educação financeira pode
+                  ser desenvolvida em qualquer idade:
+                </p>
+              </div>
+              <ul class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4">
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-piggy-bank fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Infância</h3>
+                    <p class="ini-passo-texto">
+                      Aprender o valor do dinheiro e poupar.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-graduation-cap fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Adolescência</h3>
+                    <p class="ini-passo-texto">
+                      Consumo consciente e planejamento.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-briefcase fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Vida adulta</h3>
+                    <p class="ini-passo-texto">
+                      Organizar renda, controlar dívidas e investir.
+                    </p>
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-umbrella-beach fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Terceira idade</h3>
+                    <p class="ini-passo-texto">
+                      Administrar patrimônio e aposentadoria.
+                    </p>
+                  </article>
+                </li>
+              </ul>
+              <div class="ini-alerta guia-dica">
+                <i
+                  aria-hidden="true"
+                  class="fa-solid fa-lightbulb fp-icon ini-alerta-icone"
+                ></i>
+                <p class="ini-alerta-texto">
+                  Quanto mais cedo os hábitos forem desenvolvidos, maiores as
+                  oportunidades de construir equilíbrio financeiro.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Por que a Educação Financeira é importante? -->
+          <section
+            class="ini-secao guia-topico"
+            id="guia-5"
+            aria-labelledby="guia-titulo-5"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 5 · Benefícios</p>
+                <h2 id="guia-titulo-5" class="ini-subtitulo">
+                  Por que a Educação Financeira é importante?
+                </h2>
+              </div>
+              <ul class="ini-dores guia-grade-3">
+                <li class="ini-dor">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-shield-halved fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Evitar dívidas e inadimplência</h3>
+                </li>
+                <li class="ini-dor">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-wallet fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Controlar melhor o dinheiro</h3>
+                </li>
+                <li class="ini-dor">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-rocket fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">
+                    Alcançar objetivos pessoais e profissionais
+                  </h3>
+                </li>
+                <li class="ini-dor">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-shield-heart fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Preparar-se para imprevistos</h3>
+                </li>
+                <li class="ini-dor">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-leaf fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Consumir conscientemente</h3>
+                </li>
+                <li class="ini-dor">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-building-columns fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Construir patrimônio</h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 6. Quais erros evitar? -->
+          <section
+            class="ini-secao ini-secao-destaque guia-topico"
+            id="guia-6"
+            aria-labelledby="guia-titulo-6"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 6 · Atenção</p>
+                <h2 id="guia-titulo-6" class="ini-subtitulo">
+                  Quais erros evitar?
+                </h2>
+              </div>
+              <ul class="ini-dores guia-grade-3">
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Gastar mais do que ganha</h3>
+                </li>
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Não acompanhar despesas</h3>
+                </li>
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Usar cartão sem planejamento</h3>
+                </li>
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Comprar por impulso</h3>
+                </li>
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">Ignorar juros e taxas</h3>
+                </li>
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">
+                    Investir sem conhecer os riscos
+                  </h3>
+                </li>
+                <li class="ini-dor guia-erro">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-xmark fp-icon ini-dor-icone"
+                  ></i>
+                  <h3 class="ini-dor-titulo">
+                    Não ter reserva de emergência
+                  </h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 7. Quanto guardar por mês? + PROPAGANDA 2 -->
+          <section
+            class="ini-secao guia-topico"
+            id="guia-7"
+            aria-labelledby="guia-titulo-7"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 7 · Regra 50-30-20</p>
+                <h2 id="guia-titulo-7" class="ini-subtitulo">
+                  Quanto guardar por mês?
+                </h2>
+                <p class="ini-texto">
+                  A regra 50-30-20 é uma referência que pode ser adaptada à
+                  sua realidade. Exemplo com uma renda de
+                  <strong>R$ 2.000</strong>:
+                </p>
+              </div>
+              <!-- Barra empilhada (mesmo padrão visual da barra 50/30/20 do simulador) -->
+              <div
+                class="guia-barra mb-4"
+                role="img"
+                aria-label="Divisão da renda: 50% necessidades, 30% desejos e 20% poupança e objetivos"
+              >
+                <span class="guia-cor-necessidades" style="width: 50%"
+                  >50%</span
+                >
+                <span class="guia-cor-desejos" style="width: 30%">30%</span>
+                <span class="guia-cor-poupanca" style="width: 20%">20%</span>
+              </div>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <article class="ini-dado">
+                    <span class="guia-legenda">
+                      <span class="guia-ponto guia-cor-necessidades"></span>
+                      50% · Necessidades
+                    </span>
+                    <p class="ini-dado-numero">R$ 1.000</p>
+                    <p class="ini-dado-texto">
+                      Moradia, alimentação, transporte e contas.
+                    </p>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="ini-dado">
+                    <span class="guia-legenda">
+                      <span class="guia-ponto guia-cor-desejos"></span>
+                      30% · Desejos
+                    </span>
+                    <p class="ini-dado-numero">R$ 600</p>
+                    <p class="ini-dado-texto">
+                      Lazer, compras e entretenimento.
+                    </p>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="ini-dado guia-dado-destaque">
+                    <span class="guia-legenda">
+                      <span class="guia-ponto guia-cor-poupanca"></span>
+                      20% · Poupança e objetivos
+                    </span>
+                    <p class="ini-dado-numero">R$ 400</p>
+                    <p class="ini-dado-texto">
+                      Reserva, investimentos e metas.
+                    </p>
+                  </article>
+                </div>
+              </div>
+
+              <!-- PROPAGANDA 2: simulador de investimentos (solucao.html) -->
+              <aside
+                class="ini-chamada guia-chamada"
+                aria-labelledby="guia-promo-2"
+              >
+                <h2 id="guia-promo-2" class="ini-chamada-titulo">
+                  Descubra o potencial do seu dinheiro!
+                </h2>
+                <p class="ini-chamada-texto">
+                  Já pensou em descobrir quanto seu dinheiro poderia render?
+                  Experimente nossa simulação de investimentos, compare
+                  cenários e entenda como os juros podem contribuir para seus
+                  objetivos financeiros.
+                </p>
+                <a class="btn btn-light btn-lg" href="solucao.html">
+                  Explore os investimentos
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-right fp-icon ini-icone-16"
+                  ></i>
+                </a>
+              </aside>
+            </div>
+          </section>
+
+          <!-- 8. Onde aprender mais? + PROPAGANDA 3 -->
+          <section
+            class="ini-secao ini-secao-destaque guia-topico"
+            id="guia-8"
+            aria-labelledby="guia-titulo-8"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Tópico 8 · Fontes confiáveis</p>
+                <h2 id="guia-titulo-8" class="ini-subtitulo">
+                  Onde aprender mais?
+                </h2>
+                <p class="ini-texto">
+                  Instituições oficiais com conteúdo gratuito sobre finanças e
+                  investimentos.
+                </p>
+              </div>
+              <ul class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4">
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-building-columns fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Banco Central</h3>
+                    <a
+                      class="ini-passo-link guia-link-fonte"
+                      href="https://www.bcb.gov.br/cidadaniafinanceira"
+                      target="_blank"
+                      rel="noopener"
+                      >bcb.gov.br/cidadaniafinanceira
+                      <i
+                        aria-hidden="true"
+                        class="fa-solid fa-arrow-up-right-from-square fp-icon ini-icone-16"
+                      ></i
+                      ><span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-money-check-dollar fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">Tesouro Direto</h3>
+                    <a
+                      class="ini-passo-link guia-link-fonte"
+                      href="https://www.tesourodireto.com.br/"
+                      target="_blank"
+                      rel="noopener"
+                      >tesourodireto.com.br
+                      <i
+                        aria-hidden="true"
+                        class="fa-solid fa-arrow-up-right-from-square fp-icon ini-icone-16"
+                      ></i
+                      ><span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-chart-line fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">ANBIMA</h3>
+                    <a
+                      class="ini-passo-link guia-link-fonte"
+                      href="https://www.anbima.com.br/"
+                      target="_blank"
+                      rel="noopener"
+                      >anbima.com.br
+                      <i
+                        aria-hidden="true"
+                        class="fa-solid fa-arrow-up-right-from-square fp-icon ini-icone-16"
+                      ></i
+                      ><span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >
+                  </article>
+                </li>
+                <li class="col">
+                  <article class="ini-passo">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-graduation-cap fp-icon ini-passo-icone"
+                    ></i>
+                    <h3 class="ini-passo-titulo">B3 Educação</h3>
+                    <a
+                      class="ini-passo-link guia-link-fonte"
+                      href="https://edu.b3.com.br/"
+                      target="_blank"
+                      rel="noopener"
+                      >edu.b3.com.br
+                      <i
+                        aria-hidden="true"
+                        class="fa-solid fa-arrow-up-right-from-square fp-icon ini-icone-16"
+                      ></i
+                      ><span class="visually-hidden">
+                        (abre em nova aba)</span
+                      ></a
+                    >
+                  </article>
+                </li>
+              </ul>
+
+              <!-- PROPAGANDA 3: ao final do tópico 8, leva à área de funcionalidades da página principal -->
+              <aside
+                class="ini-chamada guia-chamada"
+                aria-labelledby="guia-promo-3"
+              >
+                <h2 id="guia-promo-3" class="ini-chamada-titulo">
+                  Aprender é o primeiro passo. Praticar é o próximo!
+                </h2>
+                <p class="ini-chamada-texto">
+                  Agora que você conhece os fundamentos da educação
+                  financeira, coloque seus conhecimentos em prática. Organize
+                  suas economias, estabeleça objetivos e experimente
+                  diferentes possibilidades de investimento em nossa
+                  plataforma.
+                </p>
+                <a
+                  class="btn btn-light btn-lg"
+                  href="../index.html#titulo-solucao"
+                >
+                  Comece sua jornada financeira
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-right fp-icon ini-icone-16"
+                  ></i>
+                </a>
+              </aside>
+            </div>
+          </section>
+
+          <!-- Glossário -->
+          <section
+            class="ini-secao guia-topico"
+            id="glossario"
+            aria-labelledby="titulo-glossario"
+          >
+            <div class="container">
+              <div class="ini-cabecalho-secao">
+                <p class="ini-sobretitulo">Glossário</p>
+                <h2 id="titulo-glossario" class="ini-subtitulo">
+                  Termos técnicos explicados
+                </h2>
+                <p class="ini-texto">
+                  Palavras que aparecem no simulador e nas outras páginas do
+                  FinProsper, em linguagem simples.
+                </p>
+              </div>
+                <!-- GLOSSÁRIO FINANCEIRO INTERATIVO -->
+                <div
+                  class="fp-bg-surface-container-lowest fp-rounded-2xl p-4 fp-shadow-sm fp-border fp-border-surface-container-60 d-flex flex-column gap-3 "
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-between pb-1 fp-border-b fp-border-surface-container-60"
+                  >
+                    <div class="d-flex align-items-center gap-1">
+                      <span
+                        class="fp-w-2 fp-h-2 fp-rounded-full fp-bg-primary d-inline-block"
+                      ></span>
+                      <h3
+                        class="fp-font-headline-sm fp-text-headline-sm fw-bold fp-text-on-surface"
+                      >
+                        Glossário Rápido
+                      </h3>
+                    </div>
+                    <span
+                      class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
+                      >A-Z</span
+                    >
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-1 px-2 py-1 fp-rounded-lg fp-bg-surface-container-low fp-border fp-border-surface-container-40"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-magnifying-glass fp-icon fp-text-outline fp-text-18px"
+                    ></i
+                    ><input
+                      class="w-100 fp-bg-transparent fp-font-body-sm fp-text-body-sm fp-text-on-surface fp-placeholder-text-outline"
+                      id="glossarySearchInput"
+                      onkeyup="filtrarGlossario()"
+                      placeholder="Filtrar termo..."
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-column fp-divide-y fp-divide-surface-container-60"
+                    id="glossaryAccordionList"
+                  >
+                    <div
+                      class="glossary-item py-1"
+                      data-term="selic taxa basica de juros copom"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="w-100 text-start py-1 d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold fp-hover-text-primary"
+                        data-bs-target="#glossario-1"
+                        data-bs-toggle="collapse"
+                        type="button"
+                      >
+                        <span class="">Taxa Selic</span
+                        ><i
+                          aria-hidden="true"
+                          class="fa-solid fa-chevron-down fp-icon fp-text-16px fp-text-outline"
+                        ></i>
+                      </button>
+                      <div
+                        class="collapse glossary-content pt-1 fp-text-on-surface-variant fp-font-body-sm fp-text-13px fp-leading-relaxed"
+                        id="glossario-1"
+                      >
+                        Taxa básica de juros definida pelo Copom que baliza
+                        empréstimos e remunerações de Renda Fixa.
+                      </div>
+                    </div>
+                    <div
+                      class="glossary-item py-1"
+                      data-term="cdi certificado deposito interbancario banco"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="w-100 text-start py-1 d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold fp-hover-text-primary"
+                        data-bs-target="#glossario-2"
+                        data-bs-toggle="collapse"
+                        type="button"
+                      >
+                        <span class="">CDI (Depósito Interbancário)</span
+                        ><i
+                          aria-hidden="true"
+                          class="fa-solid fa-chevron-down fp-icon fp-text-16px fp-text-outline"
+                        ></i>
+                      </button>
+                      <div
+                        class="collapse glossary-content pt-1 fp-text-on-surface-variant fp-font-body-sm fp-text-13px fp-leading-relaxed"
+                        id="glossario-2"
+                      >
+                        Taxa média de juros interbancários. Serve como
+                        referência principal de CDBs e LCIs.
+                      </div>
+                    </div>
+                    <div
+                      class="glossary-item py-1"
+                      data-term="ipca inflacao precos ibge cesta de consumo"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="w-100 text-start py-1 d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold fp-hover-text-primary"
+                        data-bs-target="#glossario-3"
+                        data-bs-toggle="collapse"
+                        type="button"
+                      >
+                        <span class="">IPCA (Inflação Oficial)</span
+                        ><i
+                          aria-hidden="true"
+                          class="fa-solid fa-chevron-down fp-icon fp-text-16px fp-text-outline"
+                        ></i>
+                      </button>
+                      <div
+                        class="collapse glossary-content pt-1 fp-text-on-surface-variant fp-font-body-sm fp-text-13px fp-leading-relaxed"
+                        id="glossario-3"
+                      >
+                        Índice de preços medido pelo IBGE que expressa a
+                        variação do custo de vida familiar.
+                      </div>
+                    </div>
+                    <div
+                      class="glossary-item py-1"
+                      data-term="juros compostos rentabilidade exponencial tempo efeito bola de neve"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="w-100 text-start py-1 d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold fp-hover-text-primary"
+                        data-bs-target="#glossario-4"
+                        data-bs-toggle="collapse"
+                        type="button"
+                      >
+                        <span class="">Juros Compostos</span
+                        ><i
+                          aria-hidden="true"
+                          class="fa-solid fa-chevron-down fp-icon fp-text-16px fp-text-outline"
+                        ></i>
+                      </button>
+                      <div
+                        class="collapse glossary-content pt-1 fp-text-on-surface-variant fp-font-body-sm fp-text-13px fp-leading-relaxed"
+                        id="glossario-4"
+                      >
+                        Mecanismo de rendimento sobre rendimento que
+                        potencializa o crescimento patrimonial no longo prazo.
+                      </div>
+                    </div>
+                    <div
+                      class="glossary-item py-1"
+                      data-term="rentabilidade real liquida desconto ir inflacao poder de compra"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="w-100 text-start py-1 d-flex align-items-center justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold fp-hover-text-primary"
+                        data-bs-target="#glossario-5"
+                        data-bs-toggle="collapse"
+                        type="button"
+                      >
+                        <span class="">Rentabilidade Real Líquida</span
+                        ><i
+                          aria-hidden="true"
+                          class="fa-solid fa-chevron-down fp-icon fp-text-16px fp-text-outline"
+                        ></i>
+                      </button>
+                      <div
+                        class="collapse glossary-content pt-1 fp-text-on-surface-variant fp-font-body-sm fp-text-13px fp-leading-relaxed"
+                        id="glossario-5"
+                      >
+                        Ganho efetivo do capital após desconto de imposto de
+                        renda e inflação do período.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-1">
+                    <button
+                      class="fp-font-label-md fp-text-label-md fp-text-primary fw-semibold fp-hover-underline d-inline-flex align-items-center gap-1"
+                    >
+                      Ver todos os 50+ termos
+                      <i
+                        aria-hidden="true"
+                        class="fa-solid fa-arrow-right fp-icon fp-text-14px"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer class="rodape">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <p class="rodape-marca">FinProsper</p>
+            <p class="rodape-texto">
+              Educação financeira simples para quem quer começar a investir.
+              Projeto acadêmico da Global Solution FIAP 2026.
+            </p>
+          </div>
+          <div class="col-lg-8">
+            <h2 class="rodape-titulo">Fontes dos dados</h2>
+            <ul class="rodape-fontes">
+              <li>
+                NICOLAU, Analice. 91% dos brasileiros sem educação financeira
+                na infância.
+                <a
+                  href="https://jornaldebrasilia.com.br/blogs-e-colunas/analice-nicolau/91-dos-brasileiros-sem-educacao-financeira-na-infancia/"
+                  target="_blank"
+                  rel="noopener"
+                  >Jornal de Brasília<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >, 5 jan. 2026.
+              </li>
+              <li>
+                RUAS, Danielle. 55% dos brasileiros compreendem pouco ou nada
+                de educação financeira.
+                <a
+                  href="https://consumidormoderno.com.br/educacao-financeira-brasil/"
+                  target="_blank"
+                  rel="noopener"
+                  >Consumidor Moderno<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >, 24 jul. 2025.
+              </li>
+              <li>
+                TVT NEWS. Brasileiros não sabem quanto gastaram em jogos de
+                aposta.
+                <a
+                  href="https://tvtnews.com.br/brasileiros-nao-sabem-quanto-gastaram-em-jogos-de-aposta/"
+                  target="_blank"
+                  rel="noopener"
+                  >TVT News<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >, 25 set. 2024.
+              </li>
+              <li>
+                ONU BRASIL. Objetivos de Desenvolvimento Sustentável.
+                <a
+                  href="https://brasil.un.org/pt-br/sdgs"
+                  target="_blank"
+                  rel="noopener"
+                  >brasil.un.org<span class="visually-hidden">
+                    (abre em nova aba)</span
+                  ></a
+                >.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="rodape-copia">© 2026 FinProsper</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/funcoes.js"></script>
+    <script src="../js/noticias.js"></script>
+  </body>
+</html>

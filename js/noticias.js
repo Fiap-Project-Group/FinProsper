@@ -1,29 +1,7 @@
 // =============================================================
 // FinProsper — Glossário
-// Pílulas de categoria e filtro do glossário (acordeão do Bootstrap)
+// Filtro do glossário (acordeão do Bootstrap)
 // =============================================================
-
-// ---------- Pílulas de categoria ----------
-function marcarPilula(categoria) {
-  $(".pagina-noticias .filter-pill").removeClass(
-    "active-pill fp-bg-primary fp-text-on-primary fp-shadow-sm",
-  );
-  $(".pagina-noticias .filter-pill").addClass(
-    "fp-bg-surface-container fp-text-on-surface-variant",
-  );
-  $(".pagina-noticias [data-category='" + categoria + "']").removeClass(
-    "fp-bg-surface-container fp-text-on-surface-variant",
-  );
-  $(".pagina-noticias [data-category='" + categoria + "']").addClass(
-    "active-pill fp-bg-primary fp-text-on-primary fp-shadow-sm",
-  );
-}
-
-function ligarPilula(categoria) {
-  $(".pagina-noticias [data-category='" + categoria + "']").click(function () {
-    marcarPilula(categoria);
-  });
-}
 
 // ---------- Filtro do glossário ----------
 function filtrarGlossario() {
@@ -38,12 +16,3 @@ function filtrarGlossario() {
     }
   }
 }
-
-$(document).ready(function () {
-  ligarPilula("all");
-  ligarPilula("selic");
-  ligarPilula("inflacao");
-  ligarPilula("dividas");
-  ligarPilula("renda-fixa");
-  ligarPilula("orcamento");
-});

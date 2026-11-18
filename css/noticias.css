@@ -236,3 +236,166 @@
     line-height: 3rem;
   }
 }
+
+/* ==========================================================
+   Guia de Educação Financeira
+   A base visual vem do index.css (seções, cabeçalhos e cards
+   .ini-*). Aqui ficam só os complementos do guia.
+   ========================================================== */
+
+/* âncoras do sumário param abaixo do cabeçalho fixo */
+.pagina-noticias .guia-topico {
+  scroll-margin-top: 5rem;
+}
+.pagina-noticias a:focus-visible,
+.pagina-noticias button:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* Sumário: atalhos para cada tópico */
+.pagina-noticias .guia-sumario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pagina-noticias .guia-sumario a {
+  padding: 0.375rem 0.875rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  color: #444653;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.pagina-noticias .guia-sumario a:hover {
+  border-color: #1e40af;
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+/* Tópico 1: etiquetas dos hábitos e ícone do cartão azul */
+.pagina-noticias .guia-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pagina-noticias .guia-tags li {
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  background-color: #dbe1ff;
+  color: #1e40af;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.pagina-noticias .guia-persona-icone {
+  font-size: 32px;
+  color: #dbe1ff;
+}
+
+/* Tópicos 5 e 6: cartões com ícone e título alinhados ao centro */
+.pagina-noticias .guia-grade-3 .ini-dor {
+  align-items: center;
+}
+.pagina-noticias .guia-grade-3 .ini-dor-titulo {
+  margin-bottom: 0;
+}
+.pagina-noticias .guia-erro {
+  border-color: #fde2e2;
+}
+.pagina-noticias .guia-erro .ini-dor-icone {
+  color: #ba1a1a;
+}
+
+/* Tópico 4: dica com a cor principal (o .ini-alerta é laranja) */
+.pagina-noticias .guia-dica {
+  border-left-color: #1e40af;
+  background-color: #ffffff;
+}
+.pagina-noticias .guia-dica .ini-alerta-icone {
+  color: #1e40af;
+}
+
+/* Tópico 7: barra 50-30-20 (mesmo padrão da barra do simulador) */
+.pagina-noticias .guia-barra {
+  display: flex;
+  height: 3rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: #eaedff;
+}
+.pagina-noticias .guia-barra > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.pagina-noticias .guia-cor-necessidades {
+  background-color: #93c5fd;
+  color: #1e3a8a;
+}
+.pagina-noticias .guia-cor-desejos {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+.pagina-noticias .guia-cor-poupanca {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.pagina-noticias .guia-legenda {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #444653;
+}
+.pagina-noticias .guia-ponto {
+  flex-shrink: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+.pagina-noticias .guia-dado-destaque {
+  border-color: #bfdbfe;
+  background-color: #eff6ff;
+}
+
+/* Tópico 8: links das fontes */
+.pagina-noticias .guia-link-fonte {
+  word-break: break-word;
+}
+
+/* Chamadas promocionais (base: .ini-chamada da página inicial) */
+.pagina-noticias .guia-chamada {
+  margin-top: 3rem;
+}
+.pagina-noticias .guia-chamada .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pagina-noticias .guia-chamada-acao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.pagina-noticias .guia-selo {
+  padding: 0.125rem 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .pagina-noticias .guia-grade-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
