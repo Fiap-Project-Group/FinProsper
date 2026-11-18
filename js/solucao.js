@@ -1,180 +1,242 @@
 // =============================================================
-// FinProsper — Solução & Simulador
-// Simulador de juros compostos (página única e responsiva)
+// FinProsper — Simulador de investimentos (pages/solucao.html)
+// Lê as respostas da pessoa, percorre o array "investimentos"
+// (js/investimentos.js) e monta um cartão para cada item na página.
 // =============================================================
 
-// ---------- Simulador de juros compostos ----------
-var taxaAtual = 12.0;
-var textoBotaoSalvar = "";
-var simulacaoSalva = false;
+// Prazos que aparecem como opção (em anos)
+var PRAZOS = [1, 3, 5, 10, 20];
 
-function calcularJuros() {
-  var inicial = parseFloat($("#initial-val").val()) || 0;
-  var mensal = parseFloat($("#monthly-val").val()) || 0;
-  var anos = parseFloat($("#years-val").val()) || 1;
-  var meses = anos * 12;
-  $("#months-calc").text(`(${meses} meses)`);
+// Lê um campo numérico; vazio ou negativo vira 0
+function lerValor(id) {
+  var valor = parseFloat($("#" + id).val()) || 0;
+  if (valor < 0) {
+    valor = 0;
+  }
+  return valor;
+}
 
-  // Juros compostos: taxa anual convertida para mensal
-  var taxaAnual = taxaAtual / 100;
+// Descobre qual prazo está marcado
+function prazoEscolhido() {
+  for (var i = 0; i < PRAZOS.length; i++) {
+    if (document.getElementById("prazo-" + PRAZOS[i]).checked) {
+      return PRAZOS[i];
+    }
+  }
+  return 5;
+}
+
+function textoDoPrazo(anos) {
+  if (anos == 1) {
+    return "1 ano";
+  }
+  return `${anos} anos`;
+}
+
+// Juros compostos com depósitos mensais:
+// cada mês o saldo rende e recebe o novo depósito
+function calcularMontante(inicial, mensal, taxaAnual, meses) {
   var taxaMensal = (1 + taxaAnual) ** (1 / 12) - 1;
-  var fator = (1 + taxaMensal) ** meses;
-  var totalAcumulado = inicial * fator + mensal * ((fator - 1) / taxaMensal);
-
-  var totalInvestido = inicial + mensal * meses;
-  var totalJuros = totalAcumulado - totalInvestido;
-  if (totalJuros < 0) {
-    totalJuros = 0;
+  var saldo = inicial;
+  for (var i = 0; i < meses; i++) {
+    saldo = saldo * (1 + taxaMensal) + mensal;
   }
-
-  // Ganho real: desconta IPCA estimado de 4% ao ano
-  var taxaRealAnual = (1 + taxaAnual) / 1.04 - 1;
-  var taxaRealMensal = (1 + taxaRealAnual) ** (1 / 12) - 1;
-  var fatorReal = (1 + taxaRealMensal) ** meses;
-  var totalReal =
-    inicial * fatorReal + mensal * ((fatorReal - 1) / taxaRealMensal);
-
-  // Renda passiva estimada a 0,83% ao mês
-  var rendaPassiva = totalAcumulado * 0.0083;
-
-  $("#kpi-total-val").text(formatarMoeda(totalAcumulado, 0));
-  $("#kpi-invested-val").text(formatarMoeda(totalInvestido, 0));
-  $("#kpi-interest-val").text(formatarMoeda(totalJuros, 0));
-  $("#kpi-real-val").text(formatarMoeda(totalReal, 0) + ",00");
-  $("#kpi-passive-val").text(formatarMoeda(rendaPassiva, 0) + "/mês");
-
-  // Se a simulação mudou, o botão "Salvar" volta ao normal
-  if (simulacaoSalva) {
-    $("#save-sim-btn").html(textoBotaoSalvar);
-    $("#save-sim-btn").removeClass("fp-salvo");
-    $("#save-sim-btn").addClass("fp-bg-blue-600");
-    simulacaoSalva = false;
-  }
+  return saldo;
 }
 
-// Mantém o campo numérico e o controle deslizante com o mesmo valor
-function ligarCampoESlider(idCampo, idSlider) {
-  var campo = document.getElementById(idCampo);
-  var slider = document.getElementById(idSlider);
-  slider.addEventListener("change", function () {
-    $("#" + idCampo).val($("#" + idSlider).val());
-    calcularJuros();
-  });
-  campo.addEventListener("keyup", function () {
-    $("#" + idSlider).val($("#" + idCampo).val());
-    calcularJuros();
-  });
-  campo.addEventListener("change", function () {
-    $("#" + idSlider).val($("#" + idCampo).val());
-    calcularJuros();
-  });
-}
-
-function escolherTaxa(taxa) {
-  var seletor = "[data-rate='" + taxa + "']";
-
-  // desmarca todos os cartões
-  $(".pagina-solucao .rate-card").removeClass(
-    "fp-bg-blue-50 fp-border fp-border-blue-200",
-  );
-  $(".pagina-solucao .rate-card").addClass("fp-bg-surface-container-low");
-  $(".pagina-solucao .rate-card span:first-child").removeClass("fp-text-blue-700");
-  $(".pagina-solucao .rate-card span:first-child").addClass(
-    "fp-text-on-surface-variant",
-  );
-  $(".pagina-solucao .rate-card span:nth-child(2)").removeClass("fp-text-blue-700");
-  $(".pagina-solucao .rate-card span:nth-child(2)").addClass("fp-text-on-surface");
-
-  // marca o escolhido
-  $(seletor).removeClass("fp-bg-surface-container-low");
-  $(seletor).addClass("fp-bg-blue-50 fp-border fp-border-blue-200");
-  $(seletor + " span:first-child").removeClass("fp-text-on-surface-variant");
-  $(seletor + " span:first-child").addClass("fp-text-blue-700");
-  $(seletor + " span:nth-child(2)").removeClass("fp-text-on-surface");
-  $(seletor + " span:nth-child(2)").addClass("fp-text-blue-700");
-
-  taxaAtual = parseFloat(taxa);
-  calcularJuros();
-}
-
-function ligarTaxa(taxa) {
-  $("[data-rate='" + taxa + "']").click(function () {
-    escolherTaxa(taxa);
-  });
-}
-
-function escolherObjetivo(objetivo) {
-  $(".pagina-solucao .objective-btn").removeClass(
-    "fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold",
-  );
-  $(".pagina-solucao .objective-btn").addClass(
-    "fp-bg-transparent fp-text-on-surface-variant",
-  );
-  $("[data-target='" + objetivo + "']").removeClass(
-    "fp-bg-transparent fp-text-on-surface-variant",
-  );
-  $("[data-target='" + objetivo + "']").addClass(
-    "fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold",
-  );
-
-  // valores sugeridos para cada objetivo
-  var anos;
-  var mensal;
-  switch (objetivo) {
-    case "reserva":
-      anos = 2;
-      mensal = 800;
-      break;
-    case "aposentadoria":
-      anos = 25;
-      mensal = 1800;
-      break;
-    case "imovel":
-      anos = 5;
-      mensal = 2200;
-      break;
+// Classe de cor da etiqueta de risco
+function classeDoRisco(risco) {
+  switch (risco) {
+    case "Baixo":
+      return "sim-risco-baixo";
+    case "Médio":
+      return "sim-risco-medio";
     default:
-      anos = 10;
-      mensal = 1400;
+      return "sim-risco-alto";
   }
-  $("#years-val").val(anos);
-  $("#slider-years").val(anos);
-  $("#monthly-val").val(mensal);
-  $("#slider-monthly").val(mensal);
-  calcularJuros();
 }
 
-function ligarObjetivo(objetivo) {
-  $("[data-target='" + objetivo + "']").click(function () {
-    escolherObjetivo(objetivo);
+// Monta o HTML de um cartão a partir de um objeto do array
+function montarCartao(inv, posicao, anos, totalGuardado, montante) {
+  var taxaTexto = formatarNumero(inv.taxaAnual * 100, 2) + "% ao ano";
+  var rendimento = montante - totalGuardado;
+  var textoRendimento = "Não rendeu nada";
+  if (rendimento > 0.5) {
+    textoRendimento = "Rendeu " + formatarMoeda(rendimento, 0);
+  }
+  var resultado = `
+      <p class="sim-cartao-rotulo">Em ${textoDoPrazo(anos)} você teria</p>
+      <p class="sim-cartao-valor">${formatarMoeda(montante, 0)}</p>
+      <div class="sim-barra" aria-hidden="true">
+        <div class="sim-barra-preenchida" id="barra-${posicao}"></div>
+      </div>
+      <p class="sim-cartao-detalhe">
+        Você guardou ${formatarMoeda(totalGuardado, 0)} ·
+        <strong>${textoRendimento}</strong>
+      </p>`;
+
+  return `
+    <article class="sim-cartao">
+      <div class="sim-cartao-topo">
+        <span class="sim-cartao-icone">
+          <i aria-hidden="true" class="fa-solid ${inv.icone} fp-icon"></i>
+        </span>
+        <div class="sim-cartao-titulo">
+          <h3 class="sim-cartao-nome">${inv.nome}</h3>
+          <p class="sim-cartao-categoria">${inv.categoria}</p>
+        </div>
+        <span class="sim-risco ${classeDoRisco(inv.risco)}">Risco ${inv.risco}</span>
+      </div>
+      ${resultado}
+      <p class="sim-cartao-explicacao">${inv.explicacao}</p>
+      <ul class="sim-cartao-dados">
+        <li><span>Taxa usada</span><strong>${taxaTexto}</strong></li>
+        <li><span>Quando posso sacar</span><strong>${inv.resgate}</strong></li>
+        <li><span>A partir de</span><strong>${inv.minimo}</strong></li>
+        <li><span>Imposto de Renda</span><strong>${inv.impostoRenda}</strong></li>
+        <li><span>Garantia</span><strong>${inv.garantia}</strong></li>
+      </ul>
+    </article>`;
+}
+
+// Recalcula tudo e monta a lista na página
+function atualizarSimulacao() {
+  var mensal = lerValor("valor-mensal");
+  var inicial = lerValor("valor-inicial");
+  var anos = prazoEscolhido();
+  var meses = anos * 12;
+  var totalGuardado = inicial + mensal * meses;
+
+  var soSaqueImediato = document.getElementById("filtro-saque").checked;
+
+  // 1) calcula o montante de cada investimento e acha o maior
+  var montantes = [];
+  var maiorMontante = 0;
+  for (var i = 0; i < investimentos.length; i++) {
+    var montante = calcularMontante(inicial, mensal, investimentos[i].taxaAnual, meses);
+    montantes[i] = montante;
+    if (montante > maiorMontante) {
+      maiorMontante = montante;
+    }
+  }
+
+  // 2) monta os cartões, respeitando os filtros
+  $("#lista-investimentos").html("");
+  var visiveis = 0;
+  for (var j = 0; j < investimentos.length; j++) {
+    var inv = investimentos[j];
+    var mostrar = true;
+    if (soSaqueImediato && inv.saqueImediato == false) {
+      mostrar = false;
+    }
+    if (mostrar) {
+      $("#lista-investimentos").append(montarCartao(inv, j, anos, totalGuardado, montantes[j]));
+      if (maiorMontante > 0) {
+        var largura = (montantes[j] / maiorMontante) * 100;
+        $("#barra-" + j).css("width", largura + "%");
+      }
+      visiveis++;
+    }
+  }
+  $("#contador").text(`Mostrando ${visiveis} de ${investimentos.length} investimentos`);
+
+  // 3) resumo e destaque
+  if (totalGuardado == 0) {
+    $("#resumo").text("Digite quanto você consegue guardar por mês para ver a simulação.");
+    $("#destaque").html("");
+    return;
+  }
+
+  var textoResumo = `Guardando ${formatarMoeda(mensal, 0)} por mês durante ${textoDoPrazo(anos)} (${meses} meses), você vai tirar do bolso ${formatarMoeda(totalGuardado, 0)} no total`;
+  if (inicial > 0) {
+    textoResumo = textoResumo + `, contando os ${formatarMoeda(inicial, 0)} que você já tem`;
+  }
+  $("#resumo").text(textoResumo + ".");
+
+  // opção que mais rende e valor da poupança
+  var melhor = -1;
+  var poupanca = 0;
+  for (var k = 0; k < investimentos.length; k++) {
+    if (investimentos[k].nome == "Poupança") {
+      poupanca = montantes[k];
+    }
+    if (melhor == -1 || montantes[k] > montantes[melhor]) {
+      melhor = k;
+    }
+  }
+  var aMais = montantes[melhor] - poupanca;
+
+  $("#destaque").html(`
+    <i aria-hidden="true" class="fa-solid fa-lightbulb fp-icon sim-destaque-icone"></i>
+    <p>
+      Parado na conta, o seu dinheiro continua <strong>${formatarMoeda(totalGuardado, 0)}</strong>
+      — e perde valor com a inflação. Na poupança, ele vira
+      <strong>${formatarMoeda(poupanca, 0)}</strong>. Nesta simulação, quem rende
+      mais é <strong>${investimentos[melhor].nome}</strong>:
+      <strong>${formatarMoeda(montantes[melhor], 0)}</strong>, ou
+      <strong>${formatarMoeda(aMais, 0)} a mais</strong> do que na poupança.
+    </p>`);
+}
+
+// ---------- Ajuda: regra 50/30/20 ----------
+var valorSugerido = 0;
+
+function calcularSugestao() {
+  var renda = lerValor("renda-mensal");
+  valorSugerido = renda * 0.2;
+  valorSugerido = valorSugerido - (valorSugerido % 1); // sem centavos
+  if (renda > 0) {
+    $("#resultado-503020").html(
+      `Com renda de ${formatarMoeda(renda, 0)}, o ideal é guardar
+      <strong>${formatarMoeda(valorSugerido, 0)} por mês</strong>.`,
+    );
+    $("#usar-503020").removeClass("d-none");
+  } else {
+    $("#resultado-503020").html("");
+    $("#usar-503020").addClass("d-none");
+  }
+}
+
+// Liga um botão de valor sugerido (R$ 50, R$ 100...) ao campo
+function ligarAtalho(valor) {
+  $("#atalho-" + valor).click(function () {
+    $("#valor-mensal").val(valor);
+    atualizarSimulacao();
   });
+}
+
+// Liga uma opção de prazo à simulação
+function ligarPrazo(anos) {
+  document.getElementById("prazo-" + anos).addEventListener("change", atualizarSimulacao);
 }
 
 $(document).ready(function () {
-  ligarCampoESlider("initial-val", "slider-initial");
-  ligarCampoESlider("monthly-val", "slider-monthly");
-  ligarCampoESlider("years-val", "slider-years");
+  document.getElementById("valor-mensal").addEventListener("keyup", atualizarSimulacao);
+  document.getElementById("valor-mensal").addEventListener("change", atualizarSimulacao);
+  document.getElementById("valor-inicial").addEventListener("keyup", atualizarSimulacao);
+  document.getElementById("valor-inicial").addEventListener("change", atualizarSimulacao);
 
-  ligarTaxa("10.5");
-  ligarTaxa("12.0");
-  ligarTaxa("14.5");
+  ligarAtalho(50);
+  ligarAtalho(100);
+  ligarAtalho(200);
+  ligarAtalho(500);
 
-  ligarObjetivo("liberdade");
-  ligarObjetivo("reserva");
-  ligarObjetivo("aposentadoria");
-  ligarObjetivo("imovel");
+  for (var i = 0; i < PRAZOS.length; i++) {
+    ligarPrazo(PRAZOS[i]);
+  }
 
-  $("#toggle-inflation").click(calcularJuros);
+  $("#filtro-saque").click(atualizarSimulacao);
 
-  textoBotaoSalvar = $("#save-sim-btn").html();
-  $("#save-sim-btn").click(function () {
-    $("#save-sim-btn").html(
-      '<i aria-hidden="true" class="fa-solid fa-check fp-icon fp-text-18px"></i><span>Simulação Salva!</span>',
-    );
-    $("#save-sim-btn").removeClass("fp-bg-blue-600");
-    $("#save-sim-btn").addClass("fp-salvo");
-    simulacaoSalva = true;
+  $("#abrir-ajuda").click(function () {
+    $("#ajuda-503020").toggleClass("d-none");
+  });
+  document.getElementById("renda-mensal").addEventListener("keyup", calcularSugestao);
+  document.getElementById("renda-mensal").addEventListener("change", calcularSugestao);
+  $("#usar-503020").click(function () {
+    $("#valor-mensal").val(valorSugerido);
+    $("#ajuda-503020").addClass("d-none");
+    atualizarSimulacao();
   });
 
-  calcularJuros();
+  atualizarSimulacao();
 });

@@ -170,906 +170,255 @@
     <div
       class="pagina-solucao fp-bg-background fp-font-body-md fp-text-on-surface min-vh-100"
     >
-      <main id="conteudo" class="w-100 pt-9 fp-bg-background">
-        <div class="d-flex flex-column w-100">
-          <div
-            class="fp-max-w-1280px w-100 mx-auto px-4 py-4 d-flex flex-column gap-4"
-          >
-            <!-- Page Header & Strategic Banner -->
-            <div
-              class="position-relative overflow-hidden fp-rounded-2xl fp-bg-surface-container-low fp-border fp-border-surface-container p-4 fp-shadow-sm"
-            >
-              <div
-                class="position-relative z-1 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3"
-              >
-                <div class="d-flex flex-column gap-1 fp-max-w-2xl">
-                  <div class="d-flex align-items-center gap-1">
-                    <span
-                      class="px-1 py-0 fp-rounded-full fp-bg-primary-fixed fp-text-primary fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fw-semibold"
-                      >Algoritmo Quantitativo</span
-                    >
-                    <span
-                      class="fp-text-on-surface-variant fp-font-label-md fp-text-label-md"
-                      >• Modelo ODS 4 &amp; 8</span
-                    >
-                  </div>
-                  <h1
-                    class="fp-font-headline-lg fp-text-headline-lg fp-text-on-surface fp-tracking-tight fw-bold"
-                  >
-                    Simulador Financeiro Avançado &amp; Projeção Multicenário
-                  </h1>
-                  <p
-                    class="fp-font-body-md fp-text-body-md fp-text-on-surface-variant"
-                  >
-                    Metodologia integrada de juros compostos com desconto da
-                    inflação implícita (IPCA) e equalização de orçamento
-                    pessoal pela
-                    <strong class="fw-semibold fp-text-on-surface"
-                      >Regra 50/30/20</strong
-                    >.
+      <main id="conteudo" class="sim-pagina">
+        <!-- 1. Apresentação -->
+        <section class="sim-hero" aria-labelledby="titulo-simulador">
+          <div class="container">
+            <p class="sim-etiqueta">
+              <i
+                aria-hidden="true"
+                class="fa-solid fa-calculator fp-icon sim-icone-16"
+              ></i>
+              Simulador de investimentos
+            </p>
+            <h1 id="titulo-simulador" class="sim-titulo">
+              Quanto o seu dinheiro pode render?
+            </h1>
+            <p class="sim-lead">
+              Responda duas perguntas e compare, lado a lado, quanto você teria
+              em cada tipo de investimento. Sem cadastro e sem “economês”.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. As perguntas -->
+        <section class="sim-secao" aria-labelledby="titulo-perguntas">
+          <div class="container">
+            <h2 id="titulo-perguntas" class="visually-hidden">
+              Suas respostas
+            </h2>
+            <div class="sim-perguntas">
+              <!-- Pergunta 1: valor por mês -->
+              <div class="sim-pergunta">
+                <label class="sim-pergunta-titulo" for="valor-mensal">
+                  <span class="sim-numero">1</span>
+                  Quanto você consegue guardar por mês?
+                </label>
+                <div class="sim-campo-moeda">
+                  <span class="sim-prefixo" aria-hidden="true">R$</span>
+                  <input
+                    class="sim-campo"
+                    id="valor-mensal"
+                    type="number"
+                    min="0"
+                    step="10"
+                    value="100"
+                    inputmode="numeric"
+                  />
+                </div>
+                <div class="sim-atalhos" aria-label="Valores sugeridos">
+                  <button class="sim-atalho" type="button" id="atalho-50">
+                    R$ 50
+                  </button>
+                  <button class="sim-atalho" type="button" id="atalho-100">
+                    R$ 100
+                  </button>
+                  <button class="sim-atalho" type="button" id="atalho-200">
+                    R$ 200
+                  </button>
+                  <button class="sim-atalho" type="button" id="atalho-500">
+                    R$ 500
+                  </button>
+                </div>
+                <button class="sim-link" type="button" id="abrir-ajuda">
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-circle-question fp-icon sim-icone-16"
+                  ></i>
+                  Não sei quanto posso guardar
+                </button>
+                <!-- Ajuda: regra 50/30/20 -->
+                <div class="sim-ajuda d-none" id="ajuda-503020">
+                  <p class="sim-ajuda-texto">
+                    Pela <strong>regra 50/30/20</strong>, 50% da renda vai para
+                    as contas do mês, 30% para o que você gosta e
+                    <strong>20% para o futuro</strong>.
                   </p>
-                </div>
-                <div
-                  class="d-flex align-items-center gap-2 align-self-start align-self-md-auto fp-bg-surface-container-lowest fp-border fp-border-surface-container-high p-2 fp-rounded-xl fp-shadow-sm"
-                >
-                  <div
-                    class="fp-w-10 fp-h-10 fp-rounded-lg fp-bg-blue-100 d-flex align-items-center justify-content-center fp-text-primary-container"
+                  <label class="sim-rotulo" for="renda-mensal"
+                    >Qual é a sua renda mensal?</label
                   >
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-user-shield fp-icon fp-text-24px"
-                    ></i>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-on-surface text-uppercase fp-tracking-wider fw-semibold"
-                      >Cálculo Auditado</span
-                    >
-                    <span
-                      class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                      >CDI Atual: 10,50% a.a. | IPCA Ref: 4,00%</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Main Workspace: Asymmetric 12-Column Grid (7 cols inputs vs 5 cols projection) -->
-            <div class="grid gap-4 align-items-start">
-              <!-- Left Column: Input Controllers & Profile Modules (7 Columns) -->
-              <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-7">
-                <!-- Simulation Objective Tabs -->
-                <div
-                  class="fp-bg-surface-container-lowest fp-border fp-border-surface-container fp-rounded-xl p-3 fp-shadow-sm d-flex flex-column gap-2"
-                >
-                  <span
-                    class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-on-surface-variant fw-semibold"
-                    >1. Objetivo Patrimonial Prioritário</span
-                  >
-                  <div class="grid gap-1" id="objective-tabs">
-                    <button
-                      class="objective-btn d-flex align-items-center justify-content-center gap-1 py-2 px-3 fp-rounded-lg fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fp-font-label-md fp-text-label-md fw-semibold fp-hover-bg-blue-100 g-col-6 g-col-sm-3"
-                      data-target="liberdade"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-piggy-bank fp-icon fp-text-18px"
-                      ></i
-                      ><span class="">Independência</span></button
-                    ><button
-                      class="objective-btn d-flex align-items-center justify-content-center gap-1 py-2 px-3 fp-rounded-lg fp-bg-transparent fp-text-on-surface-variant fp-font-label-md fp-text-label-md fp-hover-bg-surface-container-low g-col-6 g-col-sm-3"
-                      data-target="reserva"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-shield-heart fp-icon fp-text-18px"
-                      ></i
-                      ><span class="">Reserva</span></button
-                    ><button
-                      class="objective-btn d-flex align-items-center justify-content-center gap-1 py-2 px-3 fp-rounded-lg fp-bg-transparent fp-text-on-surface-variant fp-font-label-md fp-text-label-md fp-hover-bg-surface-container-low g-col-6 g-col-sm-3"
-                      data-target="aposentadoria"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-hourglass-start fp-icon fp-text-18px"
-                      ></i
-                      ><span class="">Aposentadoria</span></button
-                    ><button
-                      class="objective-btn d-flex align-items-center justify-content-center gap-1 py-2 px-3 fp-rounded-lg fp-bg-transparent fp-text-on-surface-variant fp-font-label-md fp-text-label-md fp-hover-bg-surface-container-low g-col-6 g-col-sm-3"
-                      data-target="imovel"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-building fp-icon fp-text-18px"
-                      ></i
-                      ><span class="">Imóvel</span>
-                    </button>
-                  </div>
-                </div>
-                <!-- Parameters Card -->
-                <div
-                  class="fp-bg-surface-container-lowest fp-border fp-border-surface-container fp-rounded-xl p-4 fp-shadow-sm d-flex flex-column gap-3"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between pb-1"
-                  >
-                    <div class="d-flex align-items-center gap-1">
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-sliders fp-icon fp-text-blue-600 fp-text-20px"
-                      ></i>
-                      <h2
-                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                      >
-                        Parâmetros de Entrada
-                      </h2>
-                    </div>
-                    <span
-                      class="fp-font-label-md fp-text-label-md px-2 py-0 fp-rounded-full fp-bg-surface-container-low fp-text-on-surface-variant fw-medium"
-                      >Anualizado</span
-                    >
-                  </div>
-                  <div class="d-flex flex-column gap-2 py-1">
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <label
-                        class="fp-text-on-surface fw-medium"
-                        for="initial-val"
-                        >Aporte Inicial</label
-                      >
-                      <div
-                        class="d-flex align-items-center fp-bg-surface-container-low px-2 py-1 fp-rounded-lg"
-                      >
-                        <span
-                          class="fp-font-data-mono fp-text-body-sm fp-text-on-surface-variant me-1"
-                          >R$</span
-                        ><input
-                          class="fp-w-24 fp-font-data-mono fp-text-on-surface fp-bg-transparent text-end fw-semibold"
-                          id="initial-val"
-                          max="500000"
-                          min="0"
-                          step="500"
-                          type="number"
-                          value="5000"
-                        />
-                      </div>
-                    </div>
+                  <div class="sim-campo-moeda">
+                    <span class="sim-prefixo" aria-hidden="true">R$</span>
                     <input
-                      class="w-100 fp-h-1_5 fp-bg-surface-container fp-rounded-lg fp-cursor-pointer"
-                      id="slider-initial"
-                      max="100000"
+                      class="sim-campo"
+                      id="renda-mensal"
+                      type="number"
                       min="0"
-                      step="500"
-                      type="range"
-                      value="5000"
+                      step="100"
+                      placeholder="Ex.: 2500"
+                      inputmode="numeric"
                     />
-                    <div
-                      class="d-flex justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                    >
-                      <span class="">R$ 0</span><span class="">R$ 50.000</span
-                      ><span class="">R$ 100.000+</span>
-                    </div>
                   </div>
-                  <div
-                    class="d-flex flex-column gap-2 py-1 fp-border-t fp-border-surface-container"
+                  <p class="sim-ajuda-resultado" id="resultado-503020"></p>
+                  <button
+                    class="btn btn-primary d-none"
+                    type="button"
+                    id="usar-503020"
                   >
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <div class="d-flex flex-column">
-                        <label
-                          class="fp-text-on-surface fw-medium"
-                          for="monthly-val"
-                          >Aporte Mensal</label
-                        ><span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >Sugerido pela regra 50/30/20</span
-                        >
-                      </div>
-                      <div
-                        class="d-flex align-items-center fp-bg-surface-container-low px-2 py-1 fp-rounded-lg"
-                      >
-                        <span
-                          class="fp-font-data-mono fp-text-body-sm fp-text-on-surface-variant me-1"
-                          >R$</span
-                        ><input
-                          class="fp-w-24 fp-font-data-mono fp-text-on-surface fp-bg-transparent text-end fw-semibold"
-                          id="monthly-val"
-                          max="50000"
-                          min="50"
-                          step="50"
-                          type="number"
-                          value="1400"
-                        />
-                      </div>
-                    </div>
-                    <input
-                      class="w-100 fp-h-1_5 fp-bg-surface-container fp-rounded-lg fp-cursor-pointer"
-                      id="slider-monthly"
-                      max="10000"
-                      min="100"
-                      step="50"
-                      type="range"
-                      value="1400"
-                    />
-                    <div
-                      class="d-flex justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                    >
-                      <span class="">R$ 100/mês</span
-                      ><span class="">R$ 5.000/mês</span
-                      ><span class="">R$ 10.000/mês</span>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex flex-column gap-2 py-1 fp-border-t fp-border-surface-container"
-                  >
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <label
-                        class="fp-text-on-surface fw-medium"
-                        for="years-val"
-                        >Prazo de Aplicação</label
-                      >
-                      <div class="d-flex align-items-center gap-1">
-                        <div
-                          class="d-flex align-items-center fp-bg-surface-container-low px-2 py-1 fp-rounded-lg"
-                        >
-                          <input
-                            class="fp-w-10 fp-font-data-mono fp-text-on-surface fp-bg-transparent text-end fw-semibold"
-                            id="years-val"
-                            max="40"
-                            min="1"
-                            step="1"
-                            type="number"
-                            value="10"
-                          /><span
-                            class="fp-font-data-mono fp-text-body-sm fp-text-on-surface-variant ms-1"
-                            >anos</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          id="months-calc"
-                          >(120 meses)</span
-                        >
-                      </div>
-                    </div>
-                    <input
-                      class="w-100 fp-h-1_5 fp-bg-surface-container fp-rounded-lg fp-cursor-pointer"
-                      id="slider-years"
-                      max="35"
-                      min="1"
-                      step="1"
-                      type="range"
-                      value="10"
-                    />
-                    <div
-                      class="d-flex justify-content-between fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                    >
-                      <span class="">1 ano</span><span class="">10 anos</span
-                      ><span class="">20 anos</span
-                      ><span class="">35 anos</span>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex flex-column gap-1 pt-1 fp-border-t fp-border-surface-container"
-                  >
-                    <label class="fp-text-on-surface fw-medium"
-                      >Rentabilidade Esperada</label
-                    >
-                    <div class="grid gap-1" id="rate-presets">
-                      <button
-                        class="rate-card d-flex flex-column p-2 fp-rounded-xl fp-bg-surface-container-low text-start fp-hover-bg-surface-container g-col-12 g-col-sm-4"
-                        data-rate="10.5"
-                        type="button"
-                      >
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
-                          >Conservador</span
-                        ><span
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold mt-0"
-                          >10,5%</span
-                        ><span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >100% CDI</span
-                        ></button
-                      ><button
-                        class="rate-card d-flex flex-column p-2 fp-rounded-xl fp-bg-blue-50 fp-border fp-border-blue-200 text-start g-col-12 g-col-sm-4"
-                        data-rate="12.0"
-                        type="button"
-                      >
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-blue-700 fw-semibold"
-                          >Moderado</span
-                        ><span
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-blue-700 fw-bold mt-0"
-                          >12,0%</span
-                        ><span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >Multimercado + IPCA+</span
-                        ></button
-                      ><button
-                        class="rate-card d-flex flex-column p-2 fp-rounded-xl fp-bg-surface-container-low text-start fp-hover-bg-surface-container g-col-12 g-col-sm-4"
-                        data-rate="14.5"
-                        type="button"
-                      >
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
-                          >Agressivo</span
-                        ><span
-                          class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-bold mt-0"
-                          >14,5%</span
-                        ><span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >FIIs + Ações</span
-                        >
-                      </button>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between p-2 fp-rounded-lg fp-bg-surface-container-low-50 mt-1"
-                  >
-                    <div class="d-flex align-items-center gap-2">
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-money-bill-trend-up fp-icon fp-text-secondary fp-text-20px"
-                      ></i>
-                      <div class="d-flex flex-column">
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-medium"
-                          >Descontar Inflação (Ganho Real)</span
-                        ><span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >IPCA estimado ~ 4,0% a.a.</span
-                        >
-                      </div>
-                    </div>
-                    <div class="form-check form-switch m-0">
-                      <input
-                        aria-label="Descontar inflação"
-                        checked=""
-                        class="form-check-input"
-                        id="toggle-inflation"
-                        role="switch"
-                        type="checkbox"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <!-- 50/30/20 Budgeting Rule Context Card -->
-                <div
-                  class="fp-bg-surface-container-lowest fp-border fp-border-surface-container fp-rounded-xl p-4 fp-shadow-sm d-flex flex-column gap-3"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <div class="d-flex align-items-center gap-1">
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-chart-pie fp-icon fp-text-blue-600 fp-text-22px"
-                      ></i>
-                      <h2
-                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                      >
-                        Equilíbrio Orçamentário FinProsper 50/30/20
-                      </h2>
-                    </div>
-                    <span
-                      class="fp-font-label-md fp-text-label-md fp-text-blue-700 fp-bg-blue-50 fp-border fp-border-blue-200 px-1 py-0 fp-rounded-full fw-semibold"
-                      >Renda Base: R$ 5.500,00</span
-                    >
-                  </div>
-                  <p
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                  >
-                    A sustentabilidade do aporte mensal de
-                    <strong class="fp-text-on-surface fw-semibold"
-                      >R$ 1.400,00</strong
-                    >
-                    é garantida pela separação estruturada da sua renda
-                    líquida mensal:
-                  </p>
-                  <div class="d-flex flex-column gap-2">
-                    <!-- Progress Multi-bar -->
-                    <div
-                      class="fp-h-4 w-100 fp-bg-surface-container fp-rounded-full d-flex overflow-hidden"
-                    >
-                      <div
-                        class="h-100 fp-bg-blue-300 fp-text-blue-900 d-flex align-items-center justify-content-center fp-font-label-md fp-text-10px fw-semibold"
-                        style="width: 48%"
-                      >
-                        48%
-                      </div>
-                      <div
-                        class="h-100 fp-bg-blue-100 fp-text-blue-800 d-flex align-items-center justify-content-center fp-font-label-md fp-text-10px fw-semibold"
-                        style="width: 27%"
-                      >
-                        27%
-                      </div>
-                      <div
-                        class="h-100 fp-bg-blue-600 fp-text-white d-flex align-items-center justify-content-center fp-font-label-md fp-text-10px fw-bold"
-                        style="width: 25%"
-                      >
-                        25%
-                      </div>
-                    </div>
-                    <!-- Legends and Details -->
-                    <div class="grid gap-2 pt-1">
-                      <div
-                        class="d-flex flex-column p-1 fp-rounded fp-bg-surface-container-low g-col-12 g-col-sm-4"
-                      >
-                        <div class="d-flex align-items-center gap-1">
-                          <span
-                            class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-400"
-                          ></span>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold"
-                            >Necessidades Básicas</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-data-mono fw-bold fp-text-on-surface mt-1"
-                          >R$ 2.640,00</span
-                        >
-                        <span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >Teto 50% (Moradia, Alimentação)</span
-                        >
-                      </div>
-                      <div
-                        class="d-flex flex-column p-1 fp-rounded fp-bg-surface-container-low g-col-12 g-col-sm-4"
-                      >
-                        <div class="d-flex align-items-center gap-1">
-                          <span
-                            class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-200"
-                          ></span>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold"
-                            >Estilo de Vida &amp; Lazer</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-data-mono fw-bold fp-text-on-surface mt-1"
-                          >R$ 1.460,00</span
-                        >
-                        <span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >Teto 30% (Assinaturas, Jantares)</span
-                        >
-                      </div>
-                      <div
-                        class="d-flex flex-column p-1 fp-rounded fp-bg-blue-50 fp-border fp-border-blue-100 g-col-12 g-col-sm-4"
-                      >
-                        <div class="d-flex align-items-center gap-1">
-                          <span
-                            class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-600"
-                          ></span>
-                          <span
-                            class="fp-font-label-md fp-text-label-md fp-text-blue-700 fw-semibold"
-                            >Aportes para o Futuro</span
-                          >
-                        </div>
-                        <span
-                          class="fp-font-data-mono fw-bold fp-text-blue-700 mt-1"
-                          >R$ 1.400,00</span
-                        >
-                        <span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >Meta ~25% (Rumo à liberdade)</span
-                        >
-                      </div>
-                    </div>
-                  </div>
+                    Usar esse valor
+                  </button>
                 </div>
               </div>
-              <!-- Right Column: Projections, KPI Metrics & Native CSS Charts (5 Columns) -->
-              <div class="d-flex flex-column gap-4 g-col-12 g-col-lg-5">
-                <!-- Big Numbers Card -->
-                <div
-                  class="fp-bg-surface-container-lowest fp-border fp-border-surface-container fp-rounded-xl p-4 fp-shadow-sm d-flex flex-column gap-3"
+
+              <!-- Pergunta 2: prazo -->
+              <fieldset class="sim-pergunta">
+                <legend class="sim-pergunta-titulo">
+                  <span class="sim-numero">2</span>
+                  Por quanto tempo?
+                </legend>
+                <div class="sim-prazos">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="prazo"
+                    id="prazo-1"
+                  />
+                  <label class="btn sim-prazo" for="prazo-1">1 ano</label>
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="prazo"
+                    id="prazo-3"
+                  />
+                  <label class="btn sim-prazo" for="prazo-3">3 anos</label>
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="prazo"
+                    id="prazo-5"
+                    checked
+                  />
+                  <label class="btn sim-prazo" for="prazo-5">5 anos</label>
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="prazo"
+                    id="prazo-10"
+                  />
+                  <label class="btn sim-prazo" for="prazo-10">10 anos</label>
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="prazo"
+                    id="prazo-20"
+                  />
+                  <label class="btn sim-prazo" for="prazo-20">20 anos</label>
+                </div>
+                <label class="sim-rotulo" for="valor-inicial"
+                  >Já tem algum dinheiro guardado?
+                  <span class="sim-opcional">(opcional)</span></label
                 >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <span
-                      class="fp-font-label-md fp-text-label-md text-uppercase fp-tracking-wider fp-text-on-surface-variant fw-semibold"
-                      >Resultado Projetado em 10 Anos</span
-                    ><span
-                      class="d-flex align-items-center gap-1 fp-font-label-md fp-text-label-md fp-text-blue-700 fp-bg-blue-50 fp-border fp-border-blue-200 px-2 py-0 fp-rounded-full fw-semibold"
-                      ><i
-                        aria-hidden="true"
-                        class="fa-solid fa-arrow-trend-up fp-icon fp-text-16px"
-                      ></i>
-                      Juros Compostos</span
-                    >
-                  </div>
-                  <div class="d-flex flex-column py-1">
-                    <span
-                      class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant fw-medium"
-                      >Patrimônio Acumulado Bruto</span
-                    >
-                    <div class="d-flex align-items-baseline gap-1 mt-1">
-                      <span
-                        class="fp-font-data-mono fp-text-display-mobile fp-text-blue-700 fw-bold fp-tracking-tight"
-                        id="kpi-total-val"
-                        >R$ 342.850</span
-                      ><span
-                        class="fp-font-data-mono fp-text-body-sm fp-text-blue-700 fw-semibold"
-                        >,00</span
-                      >
-                    </div>
-                    <div
-                      class="d-flex align-items-center gap-1 fp-text-on-surface-variant fp-font-body-sm fp-text-body-sm mt-1"
-                    >
-                      <span class="">Ganho real corrigido:</span
-                      ><strong
-                        class="fw-semibold fp-text-on-surface"
-                        id="kpi-real-val"
-                        >R$ 254.120,00</strong
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="grid gap-3 py-2 fp-border-t fp-border-b fp-border-surface-container"
-                  >
-                    <div class="d-flex flex-column g-col-6">
-                      <span
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                        >Total Investido</span
-                      ><span
-                        class="fp-font-data-mono fp-text-headline-sm fp-text-on-surface fw-semibold mt-0"
-                        id="kpi-invested-val"
-                        >R$ 173.000</span
-                      ><span
-                        class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                        >50,4% do montante</span
-                      >
-                    </div>
-                    <div class="d-flex flex-column g-col-6">
-                      <span
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                        >Juros Recebidos</span
-                      ><span
-                        class="fp-font-data-mono fp-text-headline-sm fp-text-blue-600 fw-semibold mt-0"
-                        id="kpi-interest-val"
-                        >R$ 169.850</span
-                      ><span
-                        class="fp-font-label-md fp-text-label-md fp-text-blue-600 fw-medium"
-                        >lucro acumulado</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between pt-1"
-                  >
-                    <div class="d-flex align-items-center gap-2">
-                      <div
-                        class="fp-w-8 fp-h-8 fp-rounded-full fp-bg-blue-100 d-flex align-items-center justify-content-center fp-text-blue-700"
-                      >
-                        <i
-                          aria-hidden="true"
-                          class="fa-solid fa-money-bill-wave fp-icon fp-text-18px"
-                        ></i>
-                      </div>
-                      <div class="d-flex flex-column">
-                        <span class="fw-semibold fp-text-on-surface"
-                          >Renda Passiva Mensal</span
-                        ><span
-                          class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                          >Estimada a 0.83% a.m.</span
-                        >
-                      </div>
-                    </div>
-                    <span
-                      class="fp-font-data-mono fp-text-headline-sm fp-text-blue-700 fw-bold"
-                      id="kpi-passive-val"
-                      >R$ 2.845/mês</span
-                    >
-                  </div>
+                <div class="sim-campo-moeda">
+                  <span class="sim-prefixo" aria-hidden="true">R$</span>
+                  <input
+                    class="sim-campo"
+                    id="valor-inicial"
+                    type="number"
+                    min="0"
+                    step="100"
+                    placeholder="0"
+                    inputmode="numeric"
+                  />
                 </div>
-                <!-- Comparative HTML/CSS Native Chart Card -->
-                <div
-                  class="fp-bg-surface-container-lowest fp-border fp-border-surface-container fp-rounded-xl p-4 fp-shadow-sm d-flex flex-column gap-3"
-                >
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <div class="d-flex flex-column">
-                      <h3
-                        class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                      >
-                        Evolução do Rendimento Real
-                      </h3>
-                      <span
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                        >Comparativo acumulado em diferentes horizontes</span
-                      >
-                    </div>
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-chart-column fp-icon fp-text-on-surface-variant fp-text-20px"
-                    ></i>
-                  </div>
-                  <div class="d-flex flex-column gap-2 pt-2">
-                    <div
-                      class="fp-h-40 w-100 d-flex align-items-end justify-content-between gap-3 px-1 fp-border-b fp-border-surface-container pb-1"
-                    >
-                      <div
-                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                      >
-                        <div
-                          class="w-100 d-flex align-items-end justify-content-center gap-1 fp-h-28"
-                        >
-                          <div
-                            class="fp-w-3 fp-bg-blue-100 fp-rounded-t-sm fp-h-20pct"
-                            title="Poupança: R$ 22.400"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-300 fp-rounded-t-sm fp-h-24pct"
-                            title="Tesouro Direto: R$ 23.100"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-600 fp-rounded-t-sm fp-h-28pct"
-                            title="FinProsper: R$ 23.500"
-                          ></div>
-                        </div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                          >1 Ano</span
-                        >
-                      </div>
-                      <div
-                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                      >
-                        <div
-                          class="w-100 d-flex align-items-end justify-content-center gap-1 fp-h-28"
-                        >
-                          <div
-                            class="fp-w-3 fp-bg-blue-100 fp-rounded-t-sm fp-h-35pct"
-                            title="Poupança: R$ 59.800"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-300 fp-rounded-t-sm fp-h-44pct"
-                            title="Tesouro Direto: R$ 66.200"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-600 fp-rounded-t-sm fp-h-52pct"
-                            title="FinProsper: R$ 71.400"
-                          ></div>
-                        </div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                          >3 Anos</span
-                        >
-                      </div>
-                      <div
-                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                      >
-                        <div
-                          class="w-100 d-flex align-items-end justify-content-center gap-1 fp-h-28"
-                        >
-                          <div
-                            class="fp-w-3 fp-bg-blue-100 fp-rounded-t-sm fp-h-48pct"
-                            title="Poupança: R$ 104.000"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-300 fp-rounded-t-sm fp-h-62pct"
-                            title="Tesouro Direto: R$ 126.800"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-600 fp-rounded-t-sm fp-h-75pct"
-                            title="FinProsper: R$ 143.900"
-                          ></div>
-                        </div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                          >5 Anos</span
-                        >
-                      </div>
-                      <div
-                        class="flex-fill d-flex flex-column align-items-center gap-1 h-100 justify-content-end"
-                      >
-                        <div
-                          class="w-100 d-flex align-items-end justify-content-center gap-1 fp-h-28"
-                        >
-                          <div
-                            class="fp-w-3 fp-bg-blue-100 fp-rounded-t-sm fp-h-60pct"
-                            title="Poupança: R$ 228.000"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-300 fp-rounded-t-sm fp-h-82pct"
-                            title="Tesouro Direto: R$ 304.500"
-                          ></div>
-                          <div
-                            class="fp-w-3 fp-bg-blue-600 fp-rounded-t-sm fp-h-100pct"
-                            title="FinProsper: R$ 342.850"
-                          ></div>
-                        </div>
-                        <span
-                          class="fp-font-label-md fp-text-label-md fw-semibold fp-text-blue-700"
-                          >10 Anos</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="d-flex flex-wrap align-items-center justify-content-center gap-3 pt-1"
-                    >
-                      <div class="d-flex align-items-center gap-1">
-                        <span
-                          class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-100 fp-border fp-border-blue-200"
-                        ></span
-                        ><span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                          >Poupança</span
-                        >
-                      </div>
-                      <div class="d-flex align-items-center gap-1">
-                        <span
-                          class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-300"
-                        ></span
-                        ><span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant"
-                          >CDI / Tesouro</span
-                        >
-                      </div>
-                      <div class="d-flex align-items-center gap-1">
-                        <span
-                          class="fp-w-2_5 fp-h-2_5 fp-rounded-full fp-bg-blue-600"
-                        ></span
-                        ><span
-                          class="fp-font-label-md fp-text-label-md fp-text-on-surface fw-semibold"
-                          >FinProsper (12% a.a.)</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Strategy Insights & Call to Action Cards -->
-                <div
-                  class="fp-bg-surface-container-low fp-border fp-border-surface-container fp-rounded-xl p-3 d-flex flex-column gap-3"
-                >
-                  <div class="d-flex align-items-start gap-1">
-                    <i
-                      aria-hidden="true"
-                      class="fa-solid fa-lightbulb fp-icon fp-text-blue-600 fp-text-20px mt-0"
-                    ></i>
-                    <div class="d-flex flex-column">
-                      <span class="fw-semibold fp-text-on-surface"
-                        >Efeito da Bola de Neve Financeira</span
-                      >
-                      <p
-                        class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                      >
-                        A partir do <strong>6º ano</strong>, os juros mensais
-                        gerados superam o valor que você tira do próprio bolso
-                        todo mês. Seu patrimônio passará a trabalhar para você
-                        de forma autônoma.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="d-flex flex-column flex-sm-row align-items-center gap-1 pt-1"
-                  >
-                    <button
-                      class="w-100 flex-sm-fill py-2 px-3 fp-rounded-lg fp-bg-blue-600 fp-hover-bg-blue-700 fp-text-white fw-semibold fp-shadow-sm d-flex align-items-center justify-content-center gap-1"
-                      id="save-sim-btn"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-bookmark fp-icon fp-text-18px"
-                      ></i>
-                      <span class="">Salvar no Meu Perfil</span>
-                    </button>
-                    <button
-                      class="w-100 flex-sm-fill py-2 px-3 fp-rounded-lg fp-bg-surface-container-lowest fp-hover-bg-blue-50 fp-border fp-border-blue-200 fp-text-blue-700 fw-semibold d-flex align-items-center justify-content-center gap-1"
-                      id="export-pdf-btn"
-                      type="button"
-                    >
-                      <i
-                        aria-hidden="true"
-                        class="fa-solid fa-share-from-square fp-icon fp-text-18px"
-                      ></i>
-                      <span class="">Exportar Relatório</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Educational Bottom Card: Allocation Strategy Breakdown -->
-            <div
-              class="fp-bg-surface-container-lowest fp-border fp-border-surface-container fp-rounded-xl p-4 fp-shadow-sm d-flex flex-column gap-3"
-            >
-              <div
-                class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-1 pb-1"
-              >
-                <div class="d-flex flex-column">
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-blue-700 text-uppercase fw-bold fp-tracking-wider"
-                    >Alocação Sugerida</span
-                  >
-                  <h3
-                    class="fp-font-headline-sm fp-text-headline-sm fp-text-on-surface fw-semibold"
-                  >
-                    Distribuição de Ativos Recomendada
-                  </h3>
-                </div>
-                <div class="d-flex align-items-center gap-1">
-                  <span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant"
-                    >Rebalanceamento:</span
-                  ><span
-                    class="fp-font-label-md fp-text-label-md px-2 py-0 fp-rounded-full fp-bg-blue-50 fp-text-blue-700 fp-border fp-border-blue-200 fw-semibold"
-                    >Semestral</span
-                  >
-                </div>
-              </div>
-              <div class="grid gap-2">
-                <div
-                  class="d-flex flex-column p-3 fp-rounded-xl fp-bg-surface-container-low fp-border fp-border-surface-container g-col-6 g-col-md-3"
-                >
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
-                    >Renda Fixa Pós</span
-                  ><span
-                    class="fp-font-data-mono fp-text-headline-md fw-bold fp-text-on-surface mt-1"
-                    >40%</span
-                  ><span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-0"
-                    >Tesouro Selic &amp; CDBs</span
-                  >
-                </div>
-                <div
-                  class="d-flex flex-column p-3 fp-rounded-xl fp-bg-surface-container-low fp-border fp-border-surface-container g-col-6 g-col-md-3"
-                >
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
-                    >IPCA+ Longo</span
-                  ><span
-                    class="fp-font-data-mono fp-text-headline-md fw-bold fp-text-on-surface mt-1"
-                    >30%</span
-                  ><span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-0"
-                    >Proteção Inflacionária</span
-                  >
-                </div>
-                <div
-                  class="d-flex flex-column p-3 fp-rounded-xl fp-bg-surface-container-low fp-border fp-border-surface-container g-col-6 g-col-md-3"
-                >
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
-                    >Fundos Imobiliários</span
-                  ><span
-                    class="fp-font-data-mono fp-text-headline-md fw-bold fp-text-on-surface mt-1"
-                    >20%</span
-                  ><span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-0"
-                    >Renda Passiva Mensal</span
-                  >
-                </div>
-                <div
-                  class="d-flex flex-column p-3 fp-rounded-xl fp-bg-surface-container-low fp-border fp-border-surface-container g-col-6 g-col-md-3"
-                >
-                  <span
-                    class="fp-font-label-md fp-text-label-md fp-text-on-surface-variant fw-medium"
-                    >Ações / Globais</span
-                  ><span
-                    class="fp-font-data-mono fp-text-headline-md fw-bold fp-text-on-surface mt-1"
-                    >10%</span
-                  ><span
-                    class="fp-font-body-sm fp-text-body-sm fp-text-on-surface-variant mt-0"
-                    >Crescimento &amp; Valor</span
-                  >
-                </div>
-              </div>
+              </fieldset>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- 3. Resumo e destaque -->
+        <section class="sim-secao pt-0" aria-labelledby="titulo-resultado">
+          <div class="container">
+            <h2 id="titulo-resultado" class="sim-subtitulo">
+              O que acontece com o seu dinheiro
+            </h2>
+            <p class="sim-resumo" id="resumo" aria-live="polite"></p>
+            <div class="sim-destaque" id="destaque" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <!-- 4. Lista de investimentos (montada pelo JavaScript a partir do array) -->
+        <section class="sim-secao pt-0" aria-labelledby="titulo-lista">
+          <div class="container">
+            <div class="sim-lista-topo">
+              <div>
+                <h2 id="titulo-lista" class="sim-subtitulo">
+                  Compare os investimentos
+                </h2>
+                <p class="sim-contador" id="contador" aria-live="polite"></p>
+              </div>
+              <div class="sim-filtros">
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="filtro-saque"
+                  />
+                  <label class="form-check-label" for="filtro-saque"
+                    >Posso precisar do dinheiro a qualquer momento</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="sim-lista" id="lista-investimentos"></div>
+          </div>
+        </section>
+
+        <!-- 5. Como a conta é feita -->
+        <section class="sim-secao pt-0" aria-labelledby="titulo-conta">
+          <div class="container">
+            <div class="sim-explicacao">
+              <h2 id="titulo-conta" class="sim-subtitulo">
+                Como fazemos a conta
+              </h2>
+              <p>
+                Usamos <strong>juros compostos</strong>: todo mês, o dinheiro
+                rende sobre o que você guardou <em>e</em> sobre os juros dos
+                meses anteriores. É o efeito “bola de neve” — quanto mais
+                tempo, mais ele cresce.
+              </p>
+              <p>
+                As taxas são aproximadas, de novembro de 2026: Selic de 13,75%
+                ao ano (decisão do Copom de 04/11/2026), CDI de cerca de
+                13,65%, poupança com 8,29% nos últimos 12 meses e taxas do
+                Tesouro Direto de 11/11/2026. Na simulação, as taxas de hoje
+                ficam iguais durante todo o prazo; na vida real, elas mudam.
+              </p>
+              <p>
+                Os valores são <strong>antes do Imposto de Renda</strong>. Por
+                isso, a poupança e a LCI/LCA, que são isentas, rendem na
+                prática um pouco mais do que parece em comparação com as
+                outras.
+              </p>
+              <p class="sim-aviso">
+                <i
+                  aria-hidden="true"
+                  class="fa-solid fa-shield-halved fp-icon sim-icone-16"
+                ></i>
+                Esta é uma simulação educativa, não uma recomendação de
+                investimento. Rendimentos passados ou estimados não garantem
+                rendimentos futuros.
+              </p>
+              <a class="sim-link-glossario" href="noticias.html"
+                >Não entendeu algum termo? Veja o Glossário
+                <i
+                  aria-hidden="true"
+                  class="fa-solid fa-arrow-right fp-icon sim-icone-16"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
 
@@ -1143,6 +492,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/funcoes.js"></script>
+    <script src="../js/investimentos.js"></script>
     <script src="../js/solucao.js"></script>
   </body>
 </html>
