@@ -399,3 +399,314 @@
   }
 }
 
+/* ==========================================================
+   Glossário interativo (termos montados por js/noticias.js)
+   ========================================================== */
+
+/* Painel de busca, filtros e índice */
+.pagina-noticias .glo-painel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.pagina-noticias .glo-busca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  border: 2px solid #e2e7ff;
+  border-radius: 0.75rem;
+  background-color: #f2f3ff;
+}
+.pagina-noticias .glo-busca:focus-within {
+  border-color: #1e40af;
+  background-color: #ffffff;
+}
+.pagina-noticias .glo-busca-icone {
+  font-size: 20px;
+  color: #757684;
+}
+.pagina-noticias .glo-busca-campo {
+  flex-grow: 1;
+  min-width: 0;
+  padding: 0.875rem 0;
+  border: 0;
+  background-color: transparent;
+  color: #131b2e;
+  font-size: 1.0625rem;
+  outline: none;
+}
+.pagina-noticias .glo-busca-campo::-webkit-search-cancel-button {
+  display: none;
+}
+.pagina-noticias .glo-limpar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  color: #444653;
+}
+.pagina-noticias .glo-limpar:hover {
+  background-color: #e2e7ff;
+}
+.pagina-noticias .glo-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pagina-noticias .glo-filtro {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  color: #444653;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.pagina-noticias .glo-filtro:hover {
+  border-color: #1e40af;
+  color: #1e40af;
+}
+.pagina-noticias .glo-filtro[aria-pressed="true"] {
+  border-color: #1e40af;
+  background-color: #1e40af;
+  color: #ffffff;
+}
+.pagina-noticias .glo-barra-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.pagina-noticias .glo-contador {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #444653;
+}
+.pagina-noticias .glo-acoes {
+  display: flex;
+  gap: 1rem;
+}
+.pagina-noticias .glo-acoes button {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+.pagina-noticias .glo-acoes button:hover {
+  text-decoration: underline;
+}
+.pagina-noticias .glo-letras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e7ff;
+}
+.pagina-noticias .glo-letras:empty {
+  display: none;
+}
+.pagina-noticias .glo-letras a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background-color: #f2f3ff;
+  color: #1e40af;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+.pagina-noticias .glo-letras a:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+/* Grupos por letra */
+.pagina-noticias .glo-grupo {
+  scroll-margin-top: 5rem;
+}
+.pagina-noticias .glo-grupo + .glo-grupo {
+  margin-top: 2rem;
+}
+.pagina-noticias .glo-letra {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e40af;
+}
+.pagina-noticias .glo-letra::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e2e7ff;
+}
+
+/* Cartão do termo (acordeão do Bootstrap) */
+.pagina-noticias .glo-termo {
+  scroll-margin-top: 6rem;
+  border: 1px solid #e2e7ff;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.pagina-noticias .glo-termo:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.pagina-noticias .glo-termo-botao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  width: 100%;
+  padding: 1.125rem 1.25rem;
+  text-align: left;
+}
+.pagina-noticias .glo-termo-nome {
+  flex-grow: 1;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #131b2e;
+}
+.pagina-noticias .glo-termo-botao:hover .glo-termo-nome {
+  color: #1e40af;
+}
+.pagina-noticias .glo-seta {
+  color: #1e40af;
+  transition: transform 0.2s;
+}
+.pagina-noticias .glo-termo-botao[aria-expanded="true"] .glo-seta {
+  transform: rotate(180deg);
+}
+.pagina-noticias .glo-termo-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1.25rem 1.25rem;
+}
+.pagina-noticias .glo-sigla {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+.pagina-noticias .glo-definicao {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #444653;
+}
+.pagina-noticias .glo-exemplo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #1e40af;
+  border-radius: 0.5rem;
+  background-color: #eff6ff;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #131b2e;
+}
+.pagina-noticias .glo-exemplo .fp-icon {
+  margin-top: 0.2rem;
+  color: #1e40af;
+}
+.pagina-noticias .glo-onde {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e7ff;
+  font-size: 0.875rem;
+  color: #444653;
+}
+.pagina-noticias .glo-onde a {
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  background-color: #f2f3ff;
+  color: #1e40af;
+  font-weight: 600;
+}
+.pagina-noticias .glo-onde a:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+/* Etiqueta de categoria */
+.pagina-noticias .glo-categoria {
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pagina-noticias .glo-cat-basico {
+  background-color: #dbe1ff;
+  color: #1e40af;
+}
+.pagina-noticias .glo-cat-taxas {
+  background-color: #e0f2fe;
+  color: #075985;
+}
+.pagina-noticias .glo-cat-investimentos {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.pagina-noticias .glo-cat-regras {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.pagina-noticias .glo-cat-dividas {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Nada encontrado */
+.pagina-noticias .glo-vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem 1.5rem;
+  border: 1px dashed #c5c9e6;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+.pagina-noticias .glo-vazio.d-none {
+  display: none;
+}
+.pagina-noticias .glo-vazio-icone {
+  font-size: 36px;
+  color: #1e40af;
+}
+
+/* Celular: categoria vai para a linha de baixo do nome */
+@media (max-width: 575.98px) {
+  .pagina-noticias .glo-painel {
+    padding: 1rem;
+  }
+  .pagina-noticias .glo-termo-nome {
+    flex-basis: calc(100% - 2rem);
+    order: 1;
+  }
+  .pagina-noticias .glo-seta {
+    order: 2;
+  }
+  .pagina-noticias .glo-categoria {
+    order: 3;
+  }
+}
+
