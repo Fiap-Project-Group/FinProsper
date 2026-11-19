@@ -1,0 +1,17 @@
+GLOBAL SOLUTION 2026/2 - CITIZENTECH
+Engenharia de Software - 1º ano - FIAP
+
+Grupo: FinProsper
+Projeto: FinProsper - plataforma de educação financeira em linguagem simples
+para o brasileiro que quer começar a investir.
+
+Integrantes
+- João Marcos - RM569356
+- Igor Miguel - RM573567
+- Yago Avena - RM568635
+
+Link do vídeo pitch (acesso público):
+https://youtu.be/0QXePla2mDM
+
+Como abrir o projeto:
+abra o arquivo index.html no navegador (não precisa instalar nada).

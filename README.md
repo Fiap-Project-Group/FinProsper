@@ -66,7 +66,7 @@ FinProsper/
 
 ## Vídeo pitch
 
-Link (acesso público): ** **
+Link (acesso público): https://youtu.be/0QXePla2mDM
 
 ## Uso de IA generativa
 
