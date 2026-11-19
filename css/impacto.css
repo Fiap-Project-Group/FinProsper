@@ -215,3 +215,34 @@
   }
 }
 
+/* Alturas das barras do gráfico de evolução (antes estavam como CSS inline) */
+.impacto-altura-12 {
+  height: 12%;
+}
+.impacto-altura-14 {
+  height: 14%;
+}
+.impacto-altura-15 {
+  height: 15%;
+}
+.impacto-altura-16 {
+  height: 16%;
+}
+.impacto-altura-17 {
+  height: 17%;
+}
+.impacto-altura-24 {
+  height: 24%;
+}
+.impacto-altura-38 {
+  height: 38%;
+}
+.impacto-altura-54 {
+  height: 54%;
+}
+.impacto-altura-72 {
+  height: 72%;
+}
+.impacto-altura-98 {
+  height: 98%;
+}

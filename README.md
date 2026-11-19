@@ -21,7 +21,7 @@ apresentado no 1º ano de Engenharia de Software (FIAP).
 | --------------------- | --------------------------------------------- |
 | `index.html`          | Início: o problema, o cidadão, a solução e os ODS |
 | `pages/glossario.html` | Guia de educação financeira e glossário      |
-| `pages/solucao.html`  | Simulador de juros compostos e regra 50/30/20 |
+| `pages/solucao.html`  | Simulador: compara 12 investimentos de renda fixa (array de objetos) |
 | `pages/impacto.html`  | Painel de impacto e métricas                  |
 | `pages/equipe.html`   | Equipe, cultura e formulário de sugestões     |
 
@@ -48,15 +48,37 @@ FinProsper/
 │   ├── funcoes.js        funções de apoio (formatar moeda, normalizar texto...)
 │   ├── termos.js         dados do glossário (array de termos)
 │   ├── glossario.js      monta o glossário (busca, filtros, índice A-Z)
-│   ├── investimentos.js  dados do simulador
-│   ├── solucao.js
-│   └── equipe.js
-├── images/
+│   ├── investimentos.js  dados do simulador (array com 12 investimentos)
+│   ├── solucao.js        monta os cartões do simulador e faz os cálculos
+│   └── equipe.js         validação do formulário de sugestões
+├── img/            imagens do site
 └── scss/
     └── bootstrap-finprosper.scss
 ```
 
-## Como abrir
+## Integrantes
+
+| Nome         | RM       |
+| ------------ | -------- |
+| João Marcos  | RM569356 |
+| Igor Miguel  | RM573567 |
+| Yago Avena   | RM568635 |
+
+## Vídeo pitch
+
+Link (acesso público): ** **
+
+## Uso de IA generativa
+
+Declaramos as ferramentas de IA usadas no projeto, conforme as regras da Global Solution:
+
+- **Google Stitch**: geração do protótipo visual inicial (layout, paleta de cores e telas), que serviu de base para o design do site.
+- **Claude (Anthropic)**: apoio na conversão do protótipo para HTML, CSS, SASS, Bootstrap e JavaScript/jQuery usando só o conteúdo visto no curso, na revisão de responsividade e acessibilidade, na pesquisa das taxas usadas no simulador e na revisão de texto.
+
+Todo o código foi revisado e entendido pelo grupo, que fez as próprias alterações e decisões de conteúdo
+(problema, cidadão, ODS, glossário, formulário e simulador).
+
+## Como abrir e executar
 
 Não precisa instalar nada: basta abrir o `index.html` no navegador.
 jQuery e o JavaScript do Bootstrap são carregados por CDN, então é preciso estar conectado à internet.

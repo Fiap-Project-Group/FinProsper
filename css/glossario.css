@@ -710,3 +710,13 @@
   }
 }
 
+/* Larguras das faixas da barra 50/30/20 (antes estavam como CSS inline) */
+.guia-largura-20 {
+  width: 20%;
+}
+.guia-largura-30 {
+  width: 30%;
+}
+.guia-largura-50 {
+  width: 50%;
+}

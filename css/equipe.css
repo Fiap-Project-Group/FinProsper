@@ -268,3 +268,11 @@
   font-weight: 600;
   color: rgb(186, 26, 26);
 }
+
+/* Foco visível para quem navega pelo teclado (campos do formulário) */
+.pagina-equipe #form-sugestao input:focus-visible,
+.pagina-equipe #form-sugestao textarea:focus-visible,
+.pagina-equipe #form-sugestao button:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}

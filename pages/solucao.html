@@ -85,7 +85,7 @@
             <img
               alt="FinProsper"
               class="cab-logo"
-              src="../images/logo-finprosper.png"
+              src="../img/logo-finprosper.png"
             />
             <span class="d-flex flex-column">
               <span class="d-flex align-items-center gap-1">
@@ -103,7 +103,7 @@
             <img
               alt="Perfil"
               class="cab-mobile-avatar"
-              src="../images/avatar-camila-aluna.png"
+              src="../img/avatar-camila-aluna.png"
             />
           </div>
         </div>
@@ -362,6 +362,17 @@
                     class="form-check-input"
                     type="checkbox"
                     role="switch"
+                    id="filtro-risco"
+                  />
+                  <label class="form-check-label" for="filtro-risco"
+                    >Só os de baixo risco</label
+                  >
+                </div>
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
                     id="filtro-saque"
                   />
                   <label class="form-check-label" for="filtro-saque"
@@ -391,14 +402,17 @@
                 As taxas são aproximadas, de novembro de 2026: Selic de 13,75%
                 ao ano (decisão do Copom de 04/11/2026), CDI de cerca de
                 13,65%, poupança com 8,29% nos últimos 12 meses e taxas do
-                Tesouro Direto de 11/11/2026. Na simulação, as taxas de hoje
-                ficam iguais durante todo o prazo; na vida real, elas mudam.
+                Tesouro Direto de 11/11/2026. Para debêntures incentivadas e
+                CRI/CRA usamos taxas médias de mercado (cerca de IPCA + 7% e
+                CDI + 1,5% ao ano). Na simulação, as taxas de hoje ficam iguais
+                durante todo o prazo; na vida real, elas mudam.
               </p>
               <p>
                 Os valores são <strong>antes do Imposto de Renda</strong>. Por
-                isso, a poupança e a LCI/LCA, que são isentas, rendem na
-                prática um pouco mais do que parece em comparação com as
-                outras.
+                isso, a poupança, a LCI/LCA, as debêntures incentivadas e o
+                CRI/CRA, que são isentos, rendem na prática um pouco mais do que
+                parece em comparação com os outros. Debêntures e CRI/CRA pagam
+                mais porque têm mais risco: não contam com a garantia do FGC.
               </p>
               <p class="sim-aviso">
                 <i

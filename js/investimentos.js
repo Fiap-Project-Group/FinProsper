@@ -14,6 +14,9 @@
 // Só entram investimentos com rendimento que dá para estimar
 // (renda fixa). Ações, ETFs e fundos imobiliários ficaram de fora
 // porque o preço deles sobe e desce todos os dias.
+// Debêntures e CRI/CRA: risco médio (crédito privado, sem FGC).
+//   Debêntures incentivadas: cerca de IPCA + 7% ao ano
+//   CRI e CRA: cerca de CDI + 1,5% ao ano
 // =============================================================
 
 var investimentos = [
@@ -156,5 +159,33 @@ var investimentos = [
     garantia: "Governo Federal",
     explicacao:
       "Rende a inflação mais um ganho fixo (IPCA + 7,68% ao ano), protegendo o seu poder de compra no longo prazo.",
+  },
+  {
+    nome: "Debêntures incentivadas",
+    categoria: "Renda fixa · Crédito privado",
+    icone: "fa-briefcase",
+    taxaAnual: 0.119,
+    risco: "Médio",
+    saqueImediato: false,
+    resgate: "No vencimento (vender antes pode dar ganho ou perda)",
+    minimo: "Cerca de R$ 1.000",
+    impostoRenda: "Isento",
+    garantia: "Nenhuma: depende da empresa pagar",
+    explicacao:
+      "Você empresta dinheiro a uma empresa que constrói estradas, usinas ou saneamento (cerca de IPCA + 7% ao ano). Rende bem e é isento de IR, mas não tem FGC.",
+  },
+  {
+    nome: "CRI e CRA",
+    categoria: "Renda fixa · Crédito privado",
+    icone: "fa-building",
+    taxaAnual: 0.1535,
+    risco: "Médio",
+    saqueImediato: false,
+    resgate: "No vencimento",
+    minimo: "Cerca de R$ 1.000",
+    impostoRenda: "Isento",
+    garantia: "Nenhuma: depende de quem deve pagar",
+    explicacao:
+      "Você financia dívidas ligadas a imóveis (CRI) ou ao agronegócio (CRA), em torno de CDI + 1,5% ao ano. Paga mais porque o risco de calote é maior e não tem FGC.",
   },
 ];

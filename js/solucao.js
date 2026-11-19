@@ -107,6 +107,7 @@ function atualizarSimulacao() {
   var meses = anos * 12;
   var totalGuardado = inicial + mensal * meses;
 
+  var soBaixoRisco = document.getElementById("filtro-risco").checked;
   var soSaqueImediato = document.getElementById("filtro-saque").checked;
 
   // 1) calcula o montante de cada investimento e acha o maior
@@ -126,6 +127,9 @@ function atualizarSimulacao() {
   for (var j = 0; j < investimentos.length; j++) {
     var inv = investimentos[j];
     var mostrar = true;
+    if (soBaixoRisco && inv.risco != "Baixo") {
+      mostrar = false;
+    }
     if (soSaqueImediato && inv.saqueImediato == false) {
       mostrar = false;
     }
@@ -153,15 +157,17 @@ function atualizarSimulacao() {
   }
   $("#resumo").text(textoResumo + ".");
 
-  // opção que mais rende e valor da poupança
+  // opção de baixo risco que mais rende e valor da poupança
   var melhor = -1;
   var poupanca = 0;
   for (var k = 0; k < investimentos.length; k++) {
     if (investimentos[k].nome == "Poupança") {
       poupanca = montantes[k];
     }
-    if (melhor == -1 || montantes[k] > montantes[melhor]) {
-      melhor = k;
+    if (investimentos[k].risco == "Baixo") {
+      if (melhor == -1 || montantes[k] > montantes[melhor]) {
+        melhor = k;
+      }
     }
   }
   var aMais = montantes[melhor] - poupanca;
@@ -171,8 +177,8 @@ function atualizarSimulacao() {
     <p>
       Parado na conta, o seu dinheiro continua <strong>${formatarMoeda(totalGuardado, 0)}</strong>
       — e perde valor com a inflação. Na poupança, ele vira
-      <strong>${formatarMoeda(poupanca, 0)}</strong>. Nesta simulação, quem rende
-      mais é <strong>${investimentos[melhor].nome}</strong>:
+      <strong>${formatarMoeda(poupanca, 0)}</strong>. Entre as opções de baixo risco, quem
+      rende mais é <strong>${investimentos[melhor].nome}</strong>:
       <strong>${formatarMoeda(montantes[melhor], 0)}</strong>, ou
       <strong>${formatarMoeda(aMais, 0)} a mais</strong> do que na poupança.
     </p>`);
@@ -225,6 +231,7 @@ $(document).ready(function () {
     ligarPrazo(PRAZOS[i]);
   }
 
+  $("#filtro-risco").click(atualizarSimulacao);
   $("#filtro-saque").click(atualizarSimulacao);
 
   $("#abrir-ajuda").click(function () {
