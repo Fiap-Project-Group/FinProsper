@@ -218,13 +218,53 @@
   }
 }
 
-/* Até 991px: as duas colunas de parcerias viram uma só (o grid de 12 colunas
-   com espaçamento grande não cabe na largura do celular) */
-@media (max-width: 991.98px) {
-  .pagina-equipe .equipe-grade-parcerias {
-    grid-template-columns: 1fr;
-  }
-  .pagina-equipe .equipe-grade-parcerias > * {
-    grid-column: auto;
-  }
+/* ---------- Formulário de sugestões ---------- */
+/* card centralizado e com largura confortável para leitura */
+.pagina-equipe .equipe-sugestao {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+/* verificação dos campos */
+.pagina-equipe .equipe-obrigatorio {
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  color: rgb(68, 70, 83);
+}
+/* campo com erro: contorno vermelho e fundo levemente rosado */
+.pagina-equipe .equipe-campo-invalido {
+  background-color: #fff5f5;
+  box-shadow: 0 0 0 2px rgb(186, 26, 26);
+}
+.pagina-equipe input[type="checkbox"].equipe-campo-invalido {
+  outline: 2px solid rgb(186, 26, 26);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.pagina-equipe .equipe-erro {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: rgb(186, 26, 26);
+}
+.pagina-equipe .equipe-erro .fp-icon {
+  margin-top: 0.15rem;
+  font-size: 12px;
+}
+.pagina-equipe .equipe-contador {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: rgb(68, 70, 83);
+}
+.pagina-equipe .equipe-resumo-erros {
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-left: 4px solid rgb(186, 26, 26);
+  border-radius: 0.5rem;
+  background-color: #fff5f5;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(186, 26, 26);
 }

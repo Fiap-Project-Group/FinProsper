@@ -1,237 +1,237 @@
 /* ==========================================================
-   FinProsper — Glossário (pages/noticias.html)
+   FinProsper — Glossário (pages/glossario.html)
    ========================================================== */
 
-.pagina-noticias .fp-h-2 {
+.pagina-glossario .fp-h-2 {
   height: 0.5rem;
 }
-.pagina-noticias .fp-h-4 {
+.pagina-glossario .fp-h-4 {
   height: 1rem;
 }
-.pagina-noticias .fp-h-8 {
+.pagina-glossario .fp-h-8 {
   height: 2rem;
 }
-.pagina-noticias .fp-w-2 {
+.pagina-glossario .fp-w-2 {
   width: 0.5rem;
 }
-.pagina-noticias .fp-w-8 {
+.pagina-glossario .fp-w-8 {
   width: 2rem;
 }
-.pagina-noticias .fp-max-w-2xl {
+.pagina-glossario .fp-max-w-2xl {
   max-width: 42rem;
 }
-.pagina-noticias .fp-max-w-1280px {
+.pagina-glossario .fp-max-w-1280px {
   max-width: 1280px;
 }
-.pagina-noticias .fp-cursor-pointer {
+.pagina-glossario .fp-cursor-pointer {
   cursor: pointer;
 }
-.pagina-noticias .fp-rounded {
+.pagina-glossario .fp-rounded {
   border-radius: 0.125rem;
 }
-.pagina-noticias .fp-rounded-2xl {
+.pagina-glossario .fp-rounded-2xl {
   border-radius: 1rem;
 }
-.pagina-noticias .fp-rounded-full {
+.pagina-glossario .fp-rounded-full {
   border-radius: 0.75rem;
 }
-.pagina-noticias .fp-rounded-lg {
+.pagina-glossario .fp-rounded-lg {
   border-radius: 0.25rem;
 }
-.pagina-noticias .fp-rounded-xl {
+.pagina-glossario .fp-rounded-xl {
   border-radius: 0.5rem;
 }
-.pagina-noticias .fp-border {
+.pagina-glossario .fp-border {
   border-width: 1px;
 }
-.pagina-noticias .fp-border-b {
+.pagina-glossario .fp-border-b {
   border-bottom-width: 1px;
 }
-.pagina-noticias .fp-border-t {
+.pagina-glossario .fp-border-t {
   border-top-width: 1px;
 }
-.pagina-noticias .fp-bg-background {
+.pagina-glossario .fp-bg-background {
   background-color: rgb(250, 248, 255);
 }
-.pagina-noticias .fp-bg-primary {
+.pagina-glossario .fp-bg-primary {
   background-color: rgb(30, 64, 175);
 }
-.pagina-noticias .fp-bg-primary-10 {
+.pagina-glossario .fp-bg-primary-10 {
   background-color: rgba(30, 64, 175, 0.1);
 }
-.pagina-noticias .fp-bg-surface-container {
+.pagina-glossario .fp-bg-surface-container {
   background-color: rgb(234, 237, 255);
 }
-.pagina-noticias .fp-bg-surface-container-low {
+.pagina-glossario .fp-bg-surface-container-low {
   background-color: rgb(242, 243, 255);
 }
-.pagina-noticias .fp-bg-surface-container-lowest {
+.pagina-glossario .fp-bg-surface-container-lowest {
   background-color: rgb(255, 255, 255);
 }
-.pagina-noticias .fp-bg-transparent {
+.pagina-glossario .fp-bg-transparent {
   background-color: transparent;
 }
-.pagina-noticias .fp-bg-white {
+.pagina-glossario .fp-bg-white {
   background-color: rgb(255, 255, 255);
 }
-.pagina-noticias .fp-font-body-md {
+.pagina-glossario .fp-font-body-md {
   font-family: Inter, sans-serif;
 }
-.pagina-noticias .fp-font-body-sm {
+.pagina-glossario .fp-font-body-sm {
   font-family: Inter, sans-serif;
 }
-.pagina-noticias .fp-font-headline-sm {
+.pagina-glossario .fp-font-headline-sm {
   font-family: Manrope, sans-serif;
 }
-.pagina-noticias .fp-font-headline-lg {
+.pagina-glossario .fp-font-headline-lg {
   font-family: Manrope, sans-serif;
 }
-.pagina-noticias .fp-font-label-md {
+.pagina-glossario .fp-font-label-md {
   font-family: Inter, sans-serif;
 }
-.pagina-noticias .fp-font-label-lg {
+.pagina-glossario .fp-font-label-lg {
   font-family: Inter, sans-serif;
 }
-.pagina-noticias .fp-text-11px {
+.pagina-glossario .fp-text-11px {
   font-size: 11px;
 }
-.pagina-noticias .fp-text-12px {
+.pagina-glossario .fp-text-12px {
   font-size: 12px;
 }
-.pagina-noticias .fp-text-13px {
+.pagina-glossario .fp-text-13px {
   font-size: 13px;
 }
-.pagina-noticias .fp-text-14px {
+.pagina-glossario .fp-text-14px {
   font-size: 14px;
 }
-.pagina-noticias .fp-text-16px {
+.pagina-glossario .fp-text-16px {
   font-size: 16px;
 }
-.pagina-noticias .fp-text-18px {
+.pagina-glossario .fp-text-18px {
   font-size: 18px;
 }
-.pagina-noticias .fp-text-20px {
+.pagina-glossario .fp-text-20px {
   font-size: 20px;
 }
-.pagina-noticias .fp-text-22px {
+.pagina-glossario .fp-text-22px {
   font-size: 22px;
 }
-.pagina-noticias .fp-text-body-md {
+.pagina-glossario .fp-text-body-md {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
 }
-.pagina-noticias .fp-text-body-sm {
+.pagina-glossario .fp-text-body-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
-.pagina-noticias .fp-text-headline-lg {
+.pagina-glossario .fp-text-headline-lg {
   font-size: 2.5rem;
   line-height: 3rem;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
-.pagina-noticias .fp-text-headline-md {
+.pagina-glossario .fp-text-headline-md {
   font-size: 1.75rem;
   line-height: 2.25rem;
   letter-spacing: -0.015em;
   font-weight: 600;
 }
-.pagina-noticias .fp-text-headline-sm {
+.pagina-glossario .fp-text-headline-sm {
   font-size: 1.25rem;
   line-height: 1.75rem;
   letter-spacing: -0.01em;
   font-weight: 600;
 }
-.pagina-noticias .fp-text-label-lg {
+.pagina-glossario .fp-text-label-lg {
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0.01em;
   font-weight: 600;
 }
-.pagina-noticias .fp-text-label-md {
+.pagina-glossario .fp-text-label-md {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
 }
-.pagina-noticias .fp-leading-relaxed {
+.pagina-glossario .fp-leading-relaxed {
   line-height: 1.625;
 }
-.pagina-noticias .fp-leading-snug {
+.pagina-glossario .fp-leading-snug {
   line-height: 1.375;
 }
-.pagina-noticias .fp-tracking-tight {
+.pagina-glossario .fp-tracking-tight {
   letter-spacing: -0.025em;
 }
-.pagina-noticias .fp-tracking-wider {
+.pagina-glossario .fp-tracking-wider {
   letter-spacing: 0.05em;
 }
-.pagina-noticias .fp-text-blue-100 {
+.pagina-glossario .fp-text-blue-100 {
   color: rgb(219, 234, 254);
 }
-.pagina-noticias .fp-text-on-primary {
+.pagina-glossario .fp-text-on-primary {
   color: rgb(255, 255, 255);
 }
-.pagina-noticias .fp-text-on-surface {
+.pagina-glossario .fp-text-on-surface {
   color: rgb(19, 27, 46);
 }
-.pagina-noticias .fp-text-on-surface-variant {
+.pagina-glossario .fp-text-on-surface-variant {
   color: rgb(68, 70, 83);
 }
-.pagina-noticias .fp-text-outline {
+.pagina-glossario .fp-text-outline {
   color: rgb(117, 118, 132);
 }
-.pagina-noticias .fp-text-primary {
+.pagina-glossario .fp-text-primary {
   color: rgb(30, 64, 175);
 }
-.pagina-noticias .fp-text-white {
+.pagina-glossario .fp-text-white {
   color: rgb(255, 255, 255);
 }
-.pagina-noticias .fp-shadow-md {
+.pagina-glossario .fp-shadow-md {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
-.pagina-noticias .fp-shadow-sm {
+.pagina-glossario .fp-shadow-sm {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
-.pagina-noticias .fp-hover-bg-blue-700:hover {
+.pagina-glossario .fp-hover-bg-blue-700:hover {
   background-color: rgb(29, 78, 216);
 }
-.pagina-noticias .fp-hover-bg-surface-container:hover {
+.pagina-glossario .fp-hover-bg-surface-container:hover {
   background-color: rgb(234, 237, 255);
 }
-.pagina-noticias .fp-hover-bg-surface-container-low:hover {
+.pagina-glossario .fp-hover-bg-surface-container-low:hover {
   background-color: rgb(242, 243, 255);
 }
-.pagina-noticias .fp-hover-text-on-surface:hover {
+.pagina-glossario .fp-hover-text-on-surface:hover {
   color: rgb(19, 27, 46);
 }
-.pagina-noticias .fp-hover-text-primary:hover {
+.pagina-glossario .fp-hover-text-primary:hover {
   color: rgb(30, 64, 175);
 }
-.pagina-noticias .fp-hover-underline:hover {
+.pagina-glossario .fp-hover-underline:hover {
   text-decoration-line: underline;
 }
-.pagina-noticias .fp-hover-shadow-md:hover {
+.pagina-glossario .fp-hover-shadow-md:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
-.pagina-noticias .fp-group:hover .fp-group-hover-text-primary {
+.pagina-glossario .fp-group:hover .fp-group-hover-text-primary {
   color: rgb(30, 64, 175);
 }
 
 /* Acordeão do glossário: a seta vira para cima quando o termo está aberto */
-.pagina-noticias .glossary-item button[aria-expanded="true"] .fa-chevron-down::before {
+.pagina-glossario .glossary-item button[aria-expanded="true"] .fa-chevron-down::before {
   content: "\f077";
 }
 
 /* ---------- Responsividade (media queries) ---------- */
 /* Celular: títulos menores para caber na tela */
 @media (max-width: 767.98px) {
-  .pagina-noticias .fp-text-headline-lg {
+  .pagina-glossario .fp-text-headline-lg {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
-  .pagina-noticias .fp-text-display {
+  .pagina-glossario .fp-text-display {
     font-size: 2.5rem;
     line-height: 3rem;
   }
@@ -244,22 +244,22 @@
    ========================================================== */
 
 /* âncoras do sumário param abaixo do cabeçalho fixo */
-.pagina-noticias .guia-topico {
+.pagina-glossario .guia-topico {
   scroll-margin-top: 5rem;
 }
-.pagina-noticias a:focus-visible,
-.pagina-noticias button:focus-visible {
+.pagina-glossario a:focus-visible,
+.pagina-glossario button:focus-visible {
   outline: 3px solid #f59e0b;
   outline-offset: 3px;
 }
 
 /* Sumário: atalhos para cada tópico */
-.pagina-noticias .guia-sumario {
+.pagina-glossario .guia-sumario {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.pagina-noticias .guia-sumario a {
+.pagina-glossario .guia-sumario a {
   padding: 0.375rem 0.875rem;
   border: 1px solid #e2e7ff;
   border-radius: 9999px;
@@ -268,19 +268,19 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
-.pagina-noticias .guia-sumario a:hover {
+.pagina-glossario .guia-sumario a:hover {
   border-color: #1e40af;
   background-color: #1e40af;
   color: #ffffff;
 }
 
 /* Tópico 1: etiquetas dos hábitos e ícone do cartão azul */
-.pagina-noticias .guia-tags {
+.pagina-glossario .guia-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.pagina-noticias .guia-tags li {
+.pagina-glossario .guia-tags li {
   padding: 0.375rem 0.875rem;
   border-radius: 9999px;
   background-color: #dbe1ff;
@@ -288,62 +288,62 @@
   font-size: 0.9375rem;
   font-weight: 600;
 }
-.pagina-noticias .guia-persona-icone {
+.pagina-glossario .guia-persona-icone {
   font-size: 32px;
   color: #dbe1ff;
 }
 
 /* Tópicos 5 e 6: cartões com ícone e título alinhados ao centro */
-.pagina-noticias .guia-grade-3 .ini-dor {
+.pagina-glossario .guia-grade-3 .ini-dor {
   align-items: center;
 }
-.pagina-noticias .guia-grade-3 .ini-dor-titulo {
+.pagina-glossario .guia-grade-3 .ini-dor-titulo {
   margin-bottom: 0;
 }
-.pagina-noticias .guia-erro {
+.pagina-glossario .guia-erro {
   border-color: #fde2e2;
 }
-.pagina-noticias .guia-erro .ini-dor-icone {
+.pagina-glossario .guia-erro .ini-dor-icone {
   color: #ba1a1a;
 }
 
 /* Tópico 4: dica com a cor principal (o .ini-alerta é laranja) */
-.pagina-noticias .guia-dica {
+.pagina-glossario .guia-dica {
   border-left-color: #1e40af;
   background-color: #ffffff;
 }
-.pagina-noticias .guia-dica .ini-alerta-icone {
+.pagina-glossario .guia-dica .ini-alerta-icone {
   color: #1e40af;
 }
 
 /* Tópico 7: barra 50-30-20 (mesmo padrão da barra do simulador) */
-.pagina-noticias .guia-barra {
+.pagina-glossario .guia-barra {
   display: flex;
   height: 3rem;
   border-radius: 9999px;
   overflow: hidden;
   background-color: #eaedff;
 }
-.pagina-noticias .guia-barra > span {
+.pagina-glossario .guia-barra > span {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.9375rem;
   font-weight: 700;
 }
-.pagina-noticias .guia-cor-necessidades {
+.pagina-glossario .guia-cor-necessidades {
   background-color: #93c5fd;
   color: #1e3a8a;
 }
-.pagina-noticias .guia-cor-desejos {
+.pagina-glossario .guia-cor-desejos {
   background-color: #dbeafe;
   color: #1e40af;
 }
-.pagina-noticias .guia-cor-poupanca {
+.pagina-glossario .guia-cor-poupanca {
   background-color: #2563eb;
   color: #ffffff;
 }
-.pagina-noticias .guia-legenda {
+.pagina-glossario .guia-legenda {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -353,38 +353,38 @@
   letter-spacing: 0.04em;
   color: #444653;
 }
-.pagina-noticias .guia-ponto {
+.pagina-glossario .guia-ponto {
   flex-shrink: 0;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 9999px;
 }
-.pagina-noticias .guia-dado-destaque {
+.pagina-glossario .guia-dado-destaque {
   border-color: #bfdbfe;
   background-color: #eff6ff;
 }
 
 /* Tópico 8: links das fontes */
-.pagina-noticias .guia-link-fonte {
+.pagina-glossario .guia-link-fonte {
   word-break: break-word;
 }
 
 /* Chamadas promocionais (base: .ini-chamada da página inicial) */
-.pagina-noticias .guia-chamada {
+.pagina-glossario .guia-chamada {
   margin-top: 3rem;
 }
-.pagina-noticias .guia-chamada .btn {
+.pagina-glossario .guia-chamada .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
-.pagina-noticias .guia-chamada-acao {
+.pagina-glossario .guia-chamada-acao {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
 }
-.pagina-noticias .guia-selo {
+.pagina-glossario .guia-selo {
   padding: 0.125rem 0.75rem;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -394,17 +394,17 @@
 }
 
 @media (min-width: 992px) {
-  .pagina-noticias .guia-grade-3 {
+  .pagina-glossario .guia-grade-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* ==========================================================
-   Glossário interativo (termos montados por js/noticias.js)
+   Glossário interativo (termos montados por js/glossario.js)
    ========================================================== */
 
 /* Painel de busca, filtros e índice */
-.pagina-noticias .glo-painel {
+.pagina-glossario .glo-painel {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -414,7 +414,7 @@
   border-radius: 1rem;
   background-color: #ffffff;
 }
-.pagina-noticias .glo-busca {
+.pagina-glossario .glo-busca {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -423,15 +423,15 @@
   border-radius: 0.75rem;
   background-color: #f2f3ff;
 }
-.pagina-noticias .glo-busca:focus-within {
+.pagina-glossario .glo-busca:focus-within {
   border-color: #1e40af;
   background-color: #ffffff;
 }
-.pagina-noticias .glo-busca-icone {
+.pagina-glossario .glo-busca-icone {
   font-size: 20px;
   color: #757684;
 }
-.pagina-noticias .glo-busca-campo {
+.pagina-glossario .glo-busca-campo {
   flex-grow: 1;
   min-width: 0;
   padding: 0.875rem 0;
@@ -441,10 +441,10 @@
   font-size: 1.0625rem;
   outline: none;
 }
-.pagina-noticias .glo-busca-campo::-webkit-search-cancel-button {
+.pagina-glossario .glo-busca-campo::-webkit-search-cancel-button {
   display: none;
 }
-.pagina-noticias .glo-limpar {
+.pagina-glossario .glo-limpar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,15 +453,15 @@
   border-radius: 9999px;
   color: #444653;
 }
-.pagina-noticias .glo-limpar:hover {
+.pagina-glossario .glo-limpar:hover {
   background-color: #e2e7ff;
 }
-.pagina-noticias .glo-filtros {
+.pagina-glossario .glo-filtros {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.pagina-noticias .glo-filtro {
+.pagina-glossario .glo-filtro {
   padding: 0.5rem 1rem;
   border: 1px solid #e2e7ff;
   border-radius: 9999px;
@@ -470,50 +470,50 @@
   font-size: 0.9375rem;
   font-weight: 600;
 }
-.pagina-noticias .glo-filtro:hover {
+.pagina-glossario .glo-filtro:hover {
   border-color: #1e40af;
   color: #1e40af;
 }
-.pagina-noticias .glo-filtro[aria-pressed="true"] {
+.pagina-glossario .glo-filtro[aria-pressed="true"] {
   border-color: #1e40af;
   background-color: #1e40af;
   color: #ffffff;
 }
-.pagina-noticias .glo-barra-acoes {
+.pagina-glossario .glo-barra-acoes {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
 }
-.pagina-noticias .glo-contador {
+.pagina-glossario .glo-contador {
   font-size: 0.9375rem;
   font-weight: 600;
   color: #444653;
 }
-.pagina-noticias .glo-acoes {
+.pagina-glossario .glo-acoes {
   display: flex;
   gap: 1rem;
 }
-.pagina-noticias .glo-acoes button {
+.pagina-glossario .glo-acoes button {
   font-size: 0.9375rem;
   font-weight: 600;
   color: #1e40af;
 }
-.pagina-noticias .glo-acoes button:hover {
+.pagina-glossario .glo-acoes button:hover {
   text-decoration: underline;
 }
-.pagina-noticias .glo-letras {
+.pagina-glossario .glo-letras {
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
   padding-top: 1rem;
   border-top: 1px solid #e2e7ff;
 }
-.pagina-noticias .glo-letras:empty {
+.pagina-glossario .glo-letras:empty {
   display: none;
 }
-.pagina-noticias .glo-letras a {
+.pagina-glossario .glo-letras a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -525,19 +525,19 @@
   font-family: "Manrope", sans-serif;
   font-weight: 800;
 }
-.pagina-noticias .glo-letras a:hover {
+.pagina-glossario .glo-letras a:hover {
   background-color: #1e40af;
   color: #ffffff;
 }
 
 /* Grupos por letra */
-.pagina-noticias .glo-grupo {
+.pagina-glossario .glo-grupo {
   scroll-margin-top: 5rem;
 }
-.pagina-noticias .glo-grupo + .glo-grupo {
+.pagina-glossario .glo-grupo + .glo-grupo {
   margin-top: 2rem;
 }
-.pagina-noticias .glo-letra {
+.pagina-glossario .glo-letra {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -547,7 +547,7 @@
   font-weight: 800;
   color: #1e40af;
 }
-.pagina-noticias .glo-letra::after {
+.pagina-glossario .glo-letra::after {
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -555,16 +555,16 @@
 }
 
 /* Cartão do termo (acordeão do Bootstrap) */
-.pagina-noticias .glo-termo {
+.pagina-glossario .glo-termo {
   scroll-margin-top: 6rem;
   border: 1px solid #e2e7ff;
   border-radius: 1rem;
   background-color: #ffffff;
 }
-.pagina-noticias .glo-termo:hover {
+.pagina-glossario .glo-termo:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
 }
-.pagina-noticias .glo-termo-botao {
+.pagina-glossario .glo-termo-botao {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -573,40 +573,40 @@
   padding: 1.125rem 1.25rem;
   text-align: left;
 }
-.pagina-noticias .glo-termo-nome {
+.pagina-glossario .glo-termo-nome {
   flex-grow: 1;
   font-family: "Manrope", sans-serif;
   font-size: 1.1875rem;
   font-weight: 700;
   color: #131b2e;
 }
-.pagina-noticias .glo-termo-botao:hover .glo-termo-nome {
+.pagina-glossario .glo-termo-botao:hover .glo-termo-nome {
   color: #1e40af;
 }
-.pagina-noticias .glo-seta {
+.pagina-glossario .glo-seta {
   color: #1e40af;
   transition: transform 0.2s;
 }
-.pagina-noticias .glo-termo-botao[aria-expanded="true"] .glo-seta {
+.pagina-glossario .glo-termo-botao[aria-expanded="true"] .glo-seta {
   transform: rotate(180deg);
 }
-.pagina-noticias .glo-termo-corpo {
+.pagina-glossario .glo-termo-corpo {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   padding: 0 1.25rem 1.25rem;
 }
-.pagina-noticias .glo-sigla {
+.pagina-glossario .glo-sigla {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1e40af;
 }
-.pagina-noticias .glo-definicao {
+.pagina-glossario .glo-definicao {
   font-size: 1.0625rem;
   line-height: 1.6;
   color: #444653;
 }
-.pagina-noticias .glo-exemplo {
+.pagina-glossario .glo-exemplo {
   display: flex;
   align-items: flex-start;
   gap: 0.625rem;
@@ -618,11 +618,11 @@
   line-height: 1.5;
   color: #131b2e;
 }
-.pagina-noticias .glo-exemplo .fp-icon {
+.pagina-glossario .glo-exemplo .fp-icon {
   margin-top: 0.2rem;
   color: #1e40af;
 }
-.pagina-noticias .glo-onde {
+.pagina-glossario .glo-onde {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -632,49 +632,49 @@
   font-size: 0.875rem;
   color: #444653;
 }
-.pagina-noticias .glo-onde a {
+.pagina-glossario .glo-onde a {
   padding: 0.125rem 0.625rem;
   border-radius: 9999px;
   background-color: #f2f3ff;
   color: #1e40af;
   font-weight: 600;
 }
-.pagina-noticias .glo-onde a:hover {
+.pagina-glossario .glo-onde a:hover {
   background-color: #1e40af;
   color: #ffffff;
 }
 
 /* Etiqueta de categoria */
-.pagina-noticias .glo-categoria {
+.pagina-glossario .glo-categoria {
   padding: 0.125rem 0.625rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 700;
   white-space: nowrap;
 }
-.pagina-noticias .glo-cat-basico {
+.pagina-glossario .glo-cat-basico {
   background-color: #dbe1ff;
   color: #1e40af;
 }
-.pagina-noticias .glo-cat-taxas {
+.pagina-glossario .glo-cat-taxas {
   background-color: #e0f2fe;
   color: #075985;
 }
-.pagina-noticias .glo-cat-investimentos {
+.pagina-glossario .glo-cat-investimentos {
   background-color: #dcfce7;
   color: #166534;
 }
-.pagina-noticias .glo-cat-regras {
+.pagina-glossario .glo-cat-regras {
   background-color: #fef3c7;
   color: #92400e;
 }
-.pagina-noticias .glo-cat-dividas {
+.pagina-glossario .glo-cat-dividas {
   background-color: #fee2e2;
   color: #991b1b;
 }
 
 /* Nada encontrado */
-.pagina-noticias .glo-vazio {
+.pagina-glossario .glo-vazio {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -685,27 +685,27 @@
   background-color: #ffffff;
   text-align: center;
 }
-.pagina-noticias .glo-vazio.d-none {
+.pagina-glossario .glo-vazio.d-none {
   display: none;
 }
-.pagina-noticias .glo-vazio-icone {
+.pagina-glossario .glo-vazio-icone {
   font-size: 36px;
   color: #1e40af;
 }
 
 /* Celular: categoria vai para a linha de baixo do nome */
 @media (max-width: 575.98px) {
-  .pagina-noticias .glo-painel {
+  .pagina-glossario .glo-painel {
     padding: 1rem;
   }
-  .pagina-noticias .glo-termo-nome {
+  .pagina-glossario .glo-termo-nome {
     flex-basis: calc(100% - 2rem);
     order: 1;
   }
-  .pagina-noticias .glo-seta {
+  .pagina-glossario .glo-seta {
     order: 2;
   }
-  .pagina-noticias .glo-categoria {
+  .pagina-glossario .glo-categoria {
     order: 3;
   }
 }

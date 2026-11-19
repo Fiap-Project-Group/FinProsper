@@ -20,10 +20,10 @@ apresentado no 1º ano de Engenharia de Software (FIAP).
 | Arquivo               | Conteúdo                                      |
 | --------------------- | --------------------------------------------- |
 | `index.html`          | Início: o problema, o cidadão, a solução e os ODS |
-| `pages/noticias.html` | Glossário financeiro                          |
+| `pages/glossario.html` | Guia de educação financeira e glossário      |
 | `pages/solucao.html`  | Simulador de juros compostos e regra 50/30/20 |
 | `pages/impacto.html`  | Painel de impacto e métricas                  |
-| `pages/equipe.html`   | Equipe, cultura e formulário de parcerias     |
+| `pages/equipe.html`   | Equipe, cultura e formulário de sugestões     |
 
 Todas as páginas têm um layout único e responsivo: grid e flexbox (do Bootstrap e próprios) e
 media queries nos arquivos CSS de cada página. Só o cabeçalho muda de formato: no celular e no
@@ -40,13 +40,15 @@ FinProsper/
 │   ├── fontawesome.css   ícones usados no site
 │   ├── style.css         estilos compartilhados (base, cabeçalho, menu e rodapé)
 │   ├── index.css         estilos da página inicial
-│   ├── noticias.css      estilos do glossário
+│   ├── glossario.css     estilos do guia e do glossário
 │   ├── solucao.css       estilos do simulador
 │   ├── impacto.css       estilos do painel de impacto
 │   └── equipe.css        estilos da página da equipe
 ├── js/
 │   ├── funcoes.js        funções de apoio (formatar moeda, normalizar texto...)
-│   ├── noticias.js
+│   ├── termos.js         dados do glossário (array de termos)
+│   ├── glossario.js      monta o glossário (busca, filtros, índice A-Z)
+│   ├── investimentos.js  dados do simulador
 │   ├── solucao.js
 │   └── equipe.js
 ├── images/
